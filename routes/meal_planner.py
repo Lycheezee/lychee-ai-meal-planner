@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 from helper import generate_first_meal_plan
 from helpers.calculate_bmi import calculate_bmi
 from helpers.calculate_age import calculate_age
