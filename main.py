@@ -11,11 +11,12 @@ class MealRequest(BaseModel):
     weight: float
     gender: str
     exercise_rate: str
-    dob: str  # Format: YYYY-MM-DD
+    dob: str
     macro_preference: str
 
 @app.post("/api/meal-plan")
 def create_meal_plan(data: MealRequest):
+    print(data)
     plan = generate_meal_plan_api(
         height=data.height,
         weight=data.weight,
