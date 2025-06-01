@@ -12,7 +12,7 @@ def generate_meal_plan_api(
     dob: str,
     macro_preference: str
 ):
-    df = pd.read_csv("./dataset/daily_food_nutrition_dataset.csv")
+    df = pd.read_csv("./dataset/daily_food_nutrition_dataset_with_ids.csv")
     
     age = calculate_age(dob)
     bmi = calculate_bmi(weight, height)
