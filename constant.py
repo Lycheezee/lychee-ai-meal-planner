@@ -5,63 +5,63 @@
 # American Heart Association — dietary cholesterol recommendation
 
 male_targets = {
-    'Calories (kcal)': 2500,
-    'Protein (g)': 56,
-    'Carbohydrates (g)': 350,
-    'Fat (g)': 80,
-    'Fiber (g)': 38,
-    'Sugars (g)': 50,
-    'Sodium (mg)': 2300,
-    'Cholesterol (mg)': 300
+    'calories': 2500,
+    'proteins': 56,
+    'carbohydrates': 350,
+    'fats': 80,
+    'fibers': 38,
+    'sugars': 50,
+    'sodium': 2300,
+    'cholesterol': 300
 }
 
 female_targets = {
-    'Calories (kcal)': 2000,
-    'Protein (g)': 46,
-    'Carbohydrates (g)': 275,
-    'Fat (g)': 65,
-    'Fiber (g)': 25,
-    'Sugars (g)': 50,
-    'Sodium (mg)': 2300,
-    'Cholesterol (mg)': 300
+    'calories': 2000,
+    'proteins': 46,
+    'carbohydrates': 275,
+    'fats': 65,
+    'fibers': 25,
+    'sugars': 50,
+    'sodium': 2300,
+    'cholesterol': 300
 }
 
 # Macro preferences adjustment factors (multiplicative)
 macro_preferences = {
     "high protein": {
-        "Protein (g)": 1.75,        # 35% protein vs 20% baseline
-        "Carbohydrates (g)": 0.7,   # 35% carbs vs 50%
-        "Fat (g)": 1.0,             # 30% fat = baseline
+        "proteins": 1.75,        # 35% protein vs 20% baseline
+        "carbohydrates": 0.7,   # 35% carbs vs 50%
+        "fats": 1.0,             # 30% fat = baseline
     },
     "low carb": {
-        "Protein (g)": 1.5,         # 30% protein vs 20%
-        "Carbohydrates (g)": 0.6,   # 30% carbs vs 50%
-        "Fat (g)": 1.33,            # 40% fat vs 30%
+        "proteins": 1.5,         # 30% protein vs 20%
+        "carbohydrates": 0.6,   # 30% carbs vs 50%
+        "fats": 1.33,            # 40% fat vs 30%
     },
     "balanced": {
-        "Protein (g)": 1.0,         # 20%
-        "Carbohydrates (g)": 1.0,   # 50%
-        "Fat (g)": 1.0,             # 30%
+        "proteins": 1.0,         # 20%
+        "carbohydrates": 1.0,   # 50%
+        "fats": 1.0,             # 30%
     },
     "keto": {
-        "Protein (g)": 0.75,        # 15% protein vs 20%
-        "Carbohydrates (g)": 0.2,   # 10% carbs vs 50%
-        "Fat (g)": 2.5,             # 75% fat vs 30%
+        "proteins": 0.75,        # 15% protein vs 20%
+        "carbohydrates": 0.2,   # 10% carbs vs 50%
+        "fats": 2.5,             # 75% fat vs 30%
     },
     "high carb": {
-        "Protein (g)": 1.0,         # 20%
-        "Carbohydrates (g)": 1.2,   # 60% carbs vs 50%
-        "Fat (g)": 0.67,            # 20% fat vs 30%
+        "proteins": 1.0,         # 20%
+        "carbohydrates": 1.2,   # 60% carbs vs 50%
+        "fats": 0.67,            # 20% fat vs 30%
     },
     "low fat": {
-        "Protein (g)": 1.25,        # 25% protein vs 20%
-        "Carbohydrates (g)": 1.2,   # 60% carbs vs 50%
-        "Fat (g)": 0.5,             # 15% fat vs 30%
+        "proteins": 1.25,        # 25% protein vs 20%
+        "carbohydrates": 1.2,   # 60% carbs vs 50%
+        "fats": 0.5,             # 15% fat vs 30%
     },
     "mediterranean": {
-        "Protein (g)": 0.75,        # 15% protein vs 20%
-        "Carbohydrates (g)": 1.0,   # 50% carbs = baseline
-        "Fat (g)": 1.17,            # 35% fat vs 30%
+        "proteins": 0.75,        # 15% protein vs 20%
+        "carbohydrates": 1.0,   # 50% carbs = baseline
+        "fats": 1.17,            # 35% fat vs 30%
     }
 }
 

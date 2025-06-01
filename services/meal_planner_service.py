@@ -1,5 +1,5 @@
 import pandas as pd
-from helper import generate_first_meal_plan
+from helpers.helper import generate_first_meal_plan
 from helpers.calculate_bmi import calculate_bmi
 from helpers.calculate_age import calculate_age
 from pandas.api.types import CategoricalDtype
@@ -17,7 +17,7 @@ def generate_meal_plan_api(
     age = calculate_age(dob)
     bmi = calculate_bmi(weight, height)
     
-    meal_plan = generate_first_meal_plan(df, gender, bmi, exercise_rate, age, macro_preference)
+    meal_plan, daily_targets = generate_first_meal_plan(df, gender, bmi, exercise_rate, age, macro_preference)
 
     # Removed total row calculation and concatenation.
     # Reorder and export (optional)
@@ -29,4 +29,4 @@ def generate_meal_plan_api(
     result_df = result_df.sort_values('Meal_Type').reset_index(drop=True)
     result_df.to_csv("results/first_meal_plan.csv", index=False)
 
-    return meal_plan.to_dict(orient="records")
+    return meal_plan.to_dict(orient="records"), daily_targets

@@ -16,7 +16,7 @@ class MealRequest(BaseModel):
 @router.post("/meal-plan")
 def create_meal_plan(data: MealRequest):
     print(f"Generating meal plan for: {data.gender}, height: {data.height}, weight: {data.weight}")
-    plan = generate_meal_plan_api(
+    plan, daily_targets = generate_meal_plan_api(
         height=data.height,
         weight=data.weight,
         gender=data.gender,
@@ -26,4 +26,5 @@ def create_meal_plan(data: MealRequest):
     )
     print(f"Generated meal plan with {len(plan)} items")
     encoded_plan = jsonable_encoder(plan)
-    return {"meal_plan": encoded_plan}
+    encoded_targets = jsonable_encoder(daily_targets)
+    return {"meal_plan": encoded_plan, "daily_targets": encoded_targets}
