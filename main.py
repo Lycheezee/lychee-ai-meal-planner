@@ -1,32 +1,20 @@
 from fastapi import FastAPI
-from fastapi.encoders import jsonable_encoder
-from pydantic import BaseModel
-from routes.meal_planner import generate_meal_plan_api
-from routes.similar_meal_plan import router as similar_meal_plan_router
+from routers import meal_planner, similar_meal_planner
 
-app = FastAPI()
+app = FastAPI(
+    title="Meal Planner API",
+    description="API for generating personalized meal plans",
+    version="1.0.0"
+)
 
-class MealRequest(BaseModel):
-    height: float
-    weight: float
-    gender: str
-    exercise_rate: str
-    dob: str
-    macro_preference: str
+# Include routers
+app.include_router(meal_planner.router)
+app.include_router(similar_meal_planner.router)
 
-@app.post("/api/meal-plan")
-def create_meal_plan(data: MealRequest):
-    print(data)
-    plan = generate_meal_plan_api(
-        height=data.height,
-        weight=data.weight,
-        gender=data.gender,
-        exercise_rate=data.exercise_rate,
-        dob=data.dob,
-        macro_preference=data.macro_preference
-    )
-    print(plan)
-    encoded_plan = jsonable_encoder(plan)
-    return {"meal_plan": encoded_plan}
+@app.get("/")
+def read_root():
+    return {"message": "Meal Planner API is running"}
 
-app.include_router(similar_meal_plan_router)
+@app.get("/health")
+def health_check():
+    return {"status": "healthy"}
