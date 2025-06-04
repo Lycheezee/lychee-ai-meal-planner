@@ -44,7 +44,7 @@ class SimilarMealPlanService:
                 if neighbor_food.lower() not in visited:
                     meal_plan.append(neighbor_food)
                     current_food = neighbor_food
-                    visited.add(neighbor_food.lower())
+                    visited.add(neighbor_food.lower())                 
                     found = True
                     break
             

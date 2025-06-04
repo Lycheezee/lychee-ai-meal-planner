@@ -1,8 +1,8 @@
-Meal_Type,Category,Food_Item
-Breakfast,Meat,Pork Chop
-Breakfast,Fruits,Grapes
-Lunch,Grains,Bread
-Lunch,Vegetables,Tomato
-Snack,Beverages,Coffee
-Snack,Dairy,Yogurt
-Dinner,Snacks,Popcorn
+meal_type,category,food_item
+Breakfast,Meat,Chicken Breast
+Breakfast,Dairy,Yogurt
+Lunch,Snacks,Chips
+Lunch,Beverages,Milkshake
+Dinner,Fruits,Orange
+Dinner,Grains,Pasta
+Dinner,Vegetables,Carrot

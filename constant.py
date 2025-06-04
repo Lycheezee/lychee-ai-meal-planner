@@ -3,27 +3,73 @@
 # WHO Guidelines on Sugars Intake — recommended limit for added sugars
 # FDA Guidance on Sodium — daily sodium limit
 # American Heart Association — dietary cholesterol recommendation
+# Calorie ranges updated based on research data for ages 18-60, weight ranges 50-90kg (male) and 45-85kg (female)
 
+# Base calories for different activity levels based on physical activity level (PAL)
+activity_calories = {
+    'male': {
+        # Sedentary/light activity (PAL 1.40-1.69)
+        'sedentary': {
+            'min': 1700,    # Lower bound (50kg)
+            'max': 3050,    # Upper bound (90kg)
+            'mid': 2375     # Midpoint value
+        },
+        # Active/moderately active (PAL 1.70-1.99)
+        'moderate': {
+            'min': 2050,    # Lower bound (50kg)
+            'max': 3600,    # Upper bound (90kg)
+            'mid': 2825     # Midpoint value
+        },
+        # Vigorous/vigorously active (PAL 2.00-2.40)
+        'active': {
+            'min': 2350,    # Lower bound (50kg)
+            'max': 4200,    # Upper bound (90kg)
+            'mid': 3275     # Midpoint value
+        }
+    },
+    'female': {
+        # Sedentary/light activity (PAL 1.40-1.69)
+        'sedentary': {
+            'min': 1600,    # Lower bound (45kg)
+            'max': 2800,    # Upper bound (85kg)
+            'mid': 2200     # Midpoint value
+        },
+        # Active/moderately active (PAL 1.70-1.99)
+        'moderate': {
+            'min': 1800,    # Lower bound (45kg)
+            'max': 3300,    # Upper bound (85kg)
+            'mid': 2550     # Midpoint value
+        },
+        # Vigorous/vigorously active (PAL 2.00-2.40)
+        'active': {
+            'min': 2000,    # Lower bound (45kg)
+            'max': 3850,    # Upper bound (85kg)
+            'mid': 2925     # Midpoint value
+        }
+    }
+}
+
+# Default targets (moderate activity level with mid-range weight)
 male_targets = {
-    'calories': 2500,
-    'proteins': 56,
-    'carbohydrates': 350,
-    'fats': 80,
-    'fibers': 38,
-    'sugars': 50,
-    'sodium': 2300,
-    'cholesterol': 300
+    'calories': 2825,  # Based on moderate activity level midpoint
+    'proteins': 70,    # ~10% of calories - 1g protein = 4 kcal
+    'carbohydrates': 353,  # ~50% of calories - 1g carb = 4 kcal
+    'fats': 94,        # ~30% of calories - 1g fat = 9 kcal
+    'fibers': 38,      # Based on dietary guidelines for adult men
+    'sugars': 50,      # Limit based on WHO recommendations
+    'sodium': 2300,    # FDA guidance in mg
+    'cholesterol': 300 # AHA recommendation in mg
 }
 
 female_targets = {
-    'calories': 2000,
-    'proteins': 46,
-    'carbohydrates': 275,
-    'fats': 65,
-    'fibers': 25,
-    'sugars': 50,
-    'sodium': 2300,
-    'cholesterol': 300
+    'calories': 2550,  # Based on moderate activity level midpoint
+    'proteins': 64,    # ~10% of calories - 1g protein = 4 kcal
+    'carbohydrates': 319,  # ~50% of calories - 1g carb = 4 kcal
+    'fats': 85,        # ~30% of calories - 1g fat = 9 kcal
+    'fibers': 25,      # Based on dietary guidelines for adult women
+    'sugars': 50,      # Limit based on WHO recommendations
+    'sodium': 2300,    # FDA guidance in mg
+    'cholesterol': 300 # AHA recommendation in mg
 }
 
 # Macro preferences adjustment factors (multiplicative)
@@ -66,13 +112,36 @@ macro_preferences = {
 }
 
 
-target_adjustment = {
-    'Low': 0.8,
-    'Low+': 0.9,
-    'Med': 1.0,
-    'High-': 1.1,
-    'High': 1.2
+# Weight-based adjustment factors
+weight_adjustment = {
+    'very_light': 0.8,    # Lower end of weight range 
+    'light': 0.9,         # Lower-middle of weight range
+    'medium': 1.0,        # Middle of weight range
+    'heavy': 1.1,         # Upper-middle of weight range
+    'very_heavy': 1.2     # Upper end of weight range
 }
 
+# Age-based adjustment factors
+age_adjustment = {
+    'youth': 1.10,        # Ages 18-24, higher metabolism
+    'young_adult': 1.05,  # Ages 25-35
+    'adult': 1.00,        # Ages 36-50, reference level
+    'middle_aged': 0.95,  # Ages 51-65
+    'senior': 0.90,       # Ages 66-75
+    'elderly': 0.85       # Ages 76+
+}
 
-gender_adjusment = 0.02
+# Activity level adjustment factors
+activity_adjustment = {
+    'sedentary': 0.85,     # Sedentary (PAL 1.40-1.55)
+    'light': 0.95,         # Light activity (PAL 1.56-1.69)
+    'moderate': 1.0,       # Moderate activity (PAL 1.70-1.85) - reference
+    'active': 1.15,        # Active (PAL 1.86-1.99)
+    'very_active': 1.30    # Very active (PAL 2.00-2.40)
+}
+
+# Gender-specific reference weights (kg)
+reference_weight = {
+    'male': 70,   # Reference weight for men
+    'female': 60  # Reference weight for women
+}
