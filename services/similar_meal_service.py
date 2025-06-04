@@ -2,6 +2,8 @@ import pandas as pd
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import StandardScaler
 from datetime import datetime, timedelta
+import pickle
+import os
 
 class SimilarMealPlanService:
     def __init__(self):
@@ -10,11 +12,43 @@ class SimilarMealPlanService:
         self.features = ["calories", "proteins", "carbohydrates", "fats", "fibers", "sugars", "sodium", "cholesterol"]
         X = self.df[self.features]
 
-        self.scaler = StandardScaler()
-        self.X_scaled = self.scaler.fit_transform(X)
-
-        self.knn = NearestNeighbors(n_neighbors=6, metric='euclidean')
-        self.knn.fit(self.X_scaled)
+        # Load pre-trained KNN model and scaler
+        model_path = "models/best_primary_knn_model.pkl"
+        try:
+            if os.path.exists(model_path):
+                print(f"Loading pre-trained KNN model from {model_path}")
+                with open(model_path, 'rb') as f:
+                    model_data = pickle.load(f)
+                
+                # Extract model and scaler from saved data
+                if isinstance(model_data, dict):
+                    self.knn = model_data.get('model')
+                    self.scaler = model_data.get('scaler')
+                    if self.scaler is not None:
+                        self.X_scaled = self.scaler.transform(X)
+                    else:
+                        # Fallback: create new scaler if not saved
+                        self.scaler = StandardScaler()
+                        self.X_scaled = self.scaler.fit_transform(X)
+                else:
+                    # If model_data is just the model object
+                    self.knn = model_data
+                    self.scaler = StandardScaler()
+                    self.X_scaled = self.scaler.fit_transform(X)
+                
+                print("✅ Pre-trained model loaded successfully")
+            else:
+                raise FileNotFoundError(f"Model file not found: {model_path}")
+                
+        except Exception as e:
+            print(f"⚠️ Failed to load pre-trained model: {e}")
+            print("🔄 Falling back to training new model...")
+            
+            # Fallback: train new model
+            self.scaler = StandardScaler()
+            self.X_scaled = self.scaler.fit_transform(X)
+            self.knn = NearestNeighbors(n_neighbors=6, metric='euclidean')
+            self.knn.fit(self.X_scaled)
 
         # Load start foods from first meal plan
         try:
