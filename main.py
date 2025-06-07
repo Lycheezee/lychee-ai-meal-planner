@@ -18,3 +18,5 @@ def read_root():
 @app.get("/health")
 def health_check():
     return {"status": "healthy"}
+
+# uvicorn main:app --reload --host 0.0.0.0 --port 8000

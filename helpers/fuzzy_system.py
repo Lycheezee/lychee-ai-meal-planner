@@ -270,5 +270,5 @@ def fuzzy_calorie_adjustment(bmi, exercise_rate, age):
     adjustment = round(num / den, 2)
     
     # Safety limits: never go below 0.6 or above 1.5
-    return max(0.6, min(1.5, adjustment)), bmi_mem, ex_mem, age_mem
+    return max(0.6, min(1.5, adjustment))
 

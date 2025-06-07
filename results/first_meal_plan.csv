@@ -1,8 +1,10 @@
 meal_type,category,food_item
-Breakfast,Meat,Chicken Breast
-Breakfast,Dairy,Yogurt
-Lunch,Snacks,Chips
-Lunch,Beverages,Milkshake
-Dinner,Fruits,Orange
-Dinner,Grains,Pasta
-Dinner,Vegetables,Carrot
+Breakfast,Grains,Oats
+Breakfast,Dairy,Paneer
+Lunch,Meat,Beef Steak
+Lunch,Vegetables,Potato
+Lunch,Grains,Quinoa
+Snack,Snacks,Chips
+Dinner,Meat,Chicken Breast
+Dinner,Vegetables,Tomato
+Dinner,Grains,Bread

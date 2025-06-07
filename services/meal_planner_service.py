@@ -14,9 +14,9 @@ def generate_meal_plan_api(
 ):
     # Use the cleaned dataset with new column names
     df = pd.read_csv("./dataset/daily_food_nutrition_dataset_cleaned.csv")
-    print(df)
+
     age = calculate_age(dob)
-    bmi = calculate_bmi(weight, height)
+    bmi = calculate_bmi(height,weight)
     
     meal_plan, daily_targets = generate_first_meal_plan(df, gender, bmi, exercise_rate, age, macro_preference)
 
@@ -27,14 +27,12 @@ def generate_meal_plan_api(
     result_df = meal_plan[['meal_type', 'category', 'food_item']].copy()
     result_df['meal_type'] = result_df['meal_type'].astype(meal_type_order)
     result_df = result_df.sort_values('meal_type').reset_index(drop=True)
-    result_df.to_csv("results/first_meal_plan.csv", index=False)
-
-    # Transform the meal plan data to the new format
+    result_df.to_csv("results/first_meal_plan.csv", index=False)    # Transform the meal plan data to the new format
     transformed_meal_plan = []
     for _, row in meal_plan.iterrows():
         transformed_item = {
             "foodId": row.get("id", ""),
-            "foodItem": row.get("food_item", ""),
+            "name": row.get("food_item", ""),
             "mealType": row.get("meal_type", ""),
             "fats": float(row.get("fats", 0)),
             "calories": float(row.get("calories", 0)),

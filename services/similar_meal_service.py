@@ -89,9 +89,32 @@ class SimilarMealPlanService:
             meal_plan.append(meal_plan[-1])
         
         return meal_plan
-
+    
     def generate_similar_meal_plans(self, days=30, start_foods=[]):
         meal_plans = []
+        
+        # Convert food IDs to food names if necessary
+        processed_start_foods = []
+        for food in start_foods:
+            # Check if food is an ID (24-character hexadecimal string) or exists in ID column
+            if len(food) == 24 and all(c in '0123456789abcdef' for c in food.lower()):
+                # It's likely a food ID, convert to food name
+                food_row = self.df[self.df['id'] == food]
+                if not food_row.empty:
+                    food_name = food_row.iloc[0]['food_item']
+                    processed_start_foods.append(food_name)
+                else:
+                    # ID not found, keep original value
+                    processed_start_foods.append(food)
+            else:
+                # Check if it exists in the ID column anyway
+                food_row = self.df[self.df['id'] == food]
+                if not food_row.empty:
+                    food_name = food_row.iloc[0]['food_item']
+                    processed_start_foods.append(food_name)
+                else:
+                    # Assume it's already a food name
+                    processed_start_foods.append(food)
         
         # Generate dates starting from today
         start_date = datetime.now()
@@ -101,13 +124,13 @@ class SimilarMealPlanService:
             
             # Create meals for this day using all start foods
             meals = []
-            for food in start_foods:
+            for food in processed_start_foods:
                 # Get the food for this specific day from the meal plan
                 food_plan = self.generate_meal_plan(food, days)
                 if day < len(food_plan):
                     current_food = food_plan[day]
                     meals.append({
-                        "foodId": current_food,
+                        "name": current_food,
                         "status": "not_completed"
                     })
             

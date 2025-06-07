@@ -97,29 +97,28 @@ def calculate_nutritional_score(food_row: pd.Series, target_nutrition: Dict[str,
         }
     
     score = 0.0
-    
-    # Calorie alignment score
-    calorie_ratio = min(food_row['Calories (kcal)'] / target_nutrition['calories'], 2.0)
+      # Calorie alignment score
+    calorie_ratio = min(food_row['calories'] / target_nutrition['calories'], 2.0)
     calorie_score = 1.0 - abs(1.0 - calorie_ratio)
     score += weights['calories'] * max(0, calorie_score)
     
     # Protein score (higher is generally better)
-    protein_ratio = food_row['Protein (g)'] / target_nutrition['proteins']
+    protein_ratio = food_row['proteins'] / target_nutrition['proteins']
     protein_score = min(protein_ratio, 1.5) / 1.5  # Cap at 1.5x target
     score += weights['protein'] * protein_score
     
     # Carbohydrate alignment
-    carb_ratio = food_row['Carbohydrates (g)'] / target_nutrition['carbohydrates']
+    carb_ratio = food_row['carbohydrates'] / target_nutrition['carbohydrates']
     carb_score = 1.0 - abs(1.0 - min(carb_ratio, 2.0))
     score += weights['carbohydrates'] * max(0, carb_score)
     
     # Fat alignment
-    fat_ratio = food_row['Fat (g)'] / target_nutrition['fats']
+    fat_ratio = food_row['fats'] / target_nutrition['fats']
     fat_score = 1.0 - abs(1.0 - min(fat_ratio, 2.0))
     score += weights['fat'] * max(0, fat_score)
     
     # Fiber bonus (higher is better)
-    fiber_score = min(food_row['Fiber (g)'] / target_nutrition['fibers'], 1.0)
+    fiber_score = min(food_row['fibers'] / target_nutrition['fibers'], 1.0)
     score += weights['fiber'] * fiber_score
     
     return score
@@ -130,13 +129,12 @@ def select_optimal_food(df: pd.DataFrame, category: str, meal_type: str,
     """Select optimal food item from a category for a specific meal type"""
     if selected_foods is None:
         selected_foods = []
-    
-    # Filter foods from the category that haven't been selected yet
-    category_foods = df[(df['Category'] == category) & (~df['Food_Item'].isin(selected_foods))]
+      # Filter foods from the category that haven't been selected yet
+    category_foods = df[(df['category'] == category) & (~df['food_item'].isin(selected_foods))]
     
     if category_foods.empty:
         # If no new foods available, allow repetition but from different meals
-        category_foods = df[df['Category'] == category]
+        category_foods = df[df['category'] == category]
     
     if category_foods.empty:
         return None
@@ -159,7 +157,7 @@ def select_optimal_food(df: pd.DataFrame, category: str, meal_type: str,
 
 
 def generate_first_meal_plan(df: pd.DataFrame, gender: str, bmi: float, 
-                           exercise_rate: str, age: int, macro_preference: str) -> pd.DataFrame:
+                           exercise_rate: str, age: int, macro_preference: str) -> Tuple[pd.DataFrame, Dict[str, float]]:
     """
     Generate an optimized meal plan based on advanced nutritional algorithms.
     
@@ -180,11 +178,9 @@ def generate_first_meal_plan(df: pd.DataFrame, gender: str, bmi: float,
     Returns:
         pd.DataFrame: Optimized meal plan with nutritional information
     """
-    
-    # Step 1: Calculate personalized nutritional targets using the enhanced fuzzy system
-    calorie_adjustment, bmi_mem, ex_mem, age_mem = fuzzy_calorie_adjustment(bmi, exercise_rate, age)
-    print(f"Fuzzy system outputs - BMI membership: {bmi_mem}, Exercise membership: {ex_mem}, Age membership: {age_mem}")
-    print(f"Calorie adjustment factor based on BMI, activity level, and age: {calorie_adjustment:.2f}, ")
+      # Step 1: Calculate personalized nutritional targets using the enhanced fuzzy system
+    calorie_adjustment = fuzzy_calorie_adjustment(bmi, exercise_rate, age)
+    print(f"Calorie adjustment factor based on BMI, activity level, and age: {calorie_adjustment:.2f}")
     
     # Get base targets according to gender
     daily_targets = male_targets.copy() if gender.lower() == 'male' else female_targets.copy()
@@ -241,43 +237,40 @@ def generate_first_meal_plan(df: pd.DataFrame, gender: str, bmi: float,
                 
                 # Select optimal food from this category
                 selected_food = select_optimal_food(df, category, meal_type, item_targets, selected_foods)
-                
                 if selected_food is not None:
                     # Add meal type information
                     food_record = selected_food.copy()
-                    food_record['Meal_Type'] = meal_type
+                    food_record['meal_type'] = meal_type
                     foods_for_meal.append(food_record)
-                    selected_foods.append(selected_food['Food_Item'])
+                    selected_foods.append(selected_food['food_item'])
                     
                     # Update remaining targets
-                    remaining_targets['calories'] -= selected_food['Calories (kcal)']
-                    remaining_targets['proteins'] -= selected_food['Protein (g)']
-                    remaining_targets['carbohydrates'] -= selected_food['Carbohydrates (g)']
-                    remaining_targets['fats'] -= selected_food['Fat (g)']
-                    remaining_targets['fibers'] -= selected_food['Fiber (g)']
+                    remaining_targets['calories'] -= selected_food['calories']
+                    remaining_targets['proteins'] -= selected_food['proteins']
+                    remaining_targets['carbohydrates'] -= selected_food['carbohydrates']
+                    remaining_targets['fats'] -= selected_food['fats']
+                    remaining_targets['fibers'] -= selected_food['fibers']
         
         meal_plans.extend(foods_for_meal)
     
     # Step 4: Create final meal plan DataFrame
     if meal_plans:
         final_meal_plan = pd.DataFrame(meal_plans)
-        
-        # Reorder columns for better presentation
-        column_order = ['Meal_Type', 'Category', 'Food_Item', 'Calories (kcal)', 
-                       'Protein (g)', 'Carbohydrates (g)', 'Fat (g)', 'Fiber (g)', 
-                       'Sugars (g)', 'Sodium (mg)', 'Cholesterol (mg)']
+          # Reorder columns for better presentation
+        column_order = ['meal_type', 'category', 'food_item', 'id', 'calories', 
+                       'proteins', 'carbohydrates', 'fats', 'fibers', 
+                       'sugars', 'sodium', 'cholesterol', 'water_intake']
         
         # Only include columns that exist in the dataframe
         available_columns = [col for col in column_order if col in final_meal_plan.columns]
         final_meal_plan = final_meal_plan[available_columns]
-        
-        # Sort by meal type order
+          # Sort by meal type order
         meal_order = ['Breakfast', 'Lunch', 'Snack', 'Dinner']
-        final_meal_plan['Meal_Type'] = pd.Categorical(final_meal_plan['Meal_Type'], 
+        final_meal_plan['meal_type'] = pd.Categorical(final_meal_plan['meal_type'], 
                                                      categories=meal_order, ordered=True)
-        final_meal_plan = final_meal_plan.sort_values('Meal_Type').reset_index(drop=True)
+        final_meal_plan = final_meal_plan.sort_values('meal_type').reset_index(drop=True)
         
-        return final_meal_plan
+        return final_meal_plan, daily_targets
     else:
         print("Warning: No suitable foods found for meal plan generation.")
-        return pd.DataFrame()
+        return pd.DataFrame(), daily_targets
