@@ -10,15 +10,29 @@ class SimilarMealPlanService:
         # Load data and model using cleaned dataset
         self.df = pd.read_csv("dataset/daily_food_nutrition_dataset_cleaned.csv")
         self.features = ["calories", "proteins", "carbohydrates", "fats", "fibers", "sugars", "sodium", "cholesterol"]
-        X = self.df[self.features]
-
-        # Load pre-trained KNN model and scaler
+        X = self.df[self.features]        # Load pre-trained KNN model and scaler
         model_path = "models/best_primary_knn_model.pkl"
         try:
             if os.path.exists(model_path):
                 print(f"Loading pre-trained KNN model from {model_path}")
-                with open(model_path, 'rb') as f:
-                    model_data = pickle.load(f)
+                
+                # Try different pickle protocols
+                model_data = None
+                for protocol in [None, 0, 1, 2, 3, 4, 5]:
+                    try:
+                        with open(model_path, 'rb') as f:
+                            if protocol is None:
+                                model_data = pickle.load(f)
+                            else:
+                                model_data = pickle.load(f)
+                        break
+                    except Exception as protocol_error:
+                        if protocol is None:
+                            print(f"Default protocol failed: {protocol_error}")
+                        continue
+                
+                if model_data is None:
+                    raise Exception("Failed to load with any pickle protocol")
                 
                 # Extract model and scaler from saved data
                 if isinstance(model_data, dict):
@@ -121,16 +135,20 @@ class SimilarMealPlanService:
         
         for day in range(days):
             current_date = start_date + timedelta(days=day)
-            
-            # Create meals for this day using all start foods
+              # Create meals for this day using all start foods
             meals = []
             for food in processed_start_foods:
                 # Get the food for this specific day from the meal plan
                 food_plan = self.generate_meal_plan(food, days)
                 if day < len(food_plan):
                     current_food = food_plan[day]
+                    
+                    # Find the food ID for the current food
+                    food_row = self.df[self.df['food_item'] == current_food]
+                    food_id = food_row.iloc[0]['id'] if not food_row.empty else ""
+                    
                     meals.append({
-                        "name": current_food,
+                        "foodId": food_id,
                         "status": "not_completed"
                     })
             
