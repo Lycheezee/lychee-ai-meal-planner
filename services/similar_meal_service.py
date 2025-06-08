@@ -3,6 +3,7 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import StandardScaler
 from datetime import datetime, timedelta
 import pickle
+import joblib
 import os
 
 class SimilarMealPlanService:
@@ -12,8 +13,33 @@ class SimilarMealPlanService:
         self.features = ["calories", "proteins", "carbohydrates", "fats", "fibers", "sugars", "sodium", "cholesterol"]
         X = self.df[self.features]        # Load pre-trained KNN model and scaler
         model_path = "models/best_primary_knn_model.pkl"
+        joblib_path = "models/best_primary_knn_model.joblib"
+        
         try:
-            if os.path.exists(model_path):
+            # Try loading with joblib first (recommended for scikit-learn)
+            if os.path.exists(joblib_path):
+                print(f"Loading pre-trained KNN model from {joblib_path}")
+                model_data = joblib.load(joblib_path)
+                
+                # Extract model and scaler from saved data
+                if isinstance(model_data, dict):
+                    self.knn = model_data.get('model')
+                    self.scaler = model_data.get('scaler')
+                    if self.scaler is not None:
+                        self.X_scaled = self.scaler.transform(X)
+                    else:
+                        # Fallback: create new scaler if not saved
+                        self.scaler = StandardScaler()
+                        self.X_scaled = self.scaler.fit_transform(X)
+                else:
+                    # If model_data is just the model object
+                    self.knn = model_data
+                    self.scaler = StandardScaler()
+                    self.X_scaled = self.scaler.fit_transform(X)
+                
+                print("✅ Pre-trained model loaded successfully with joblib")
+                
+            elif os.path.exists(model_path):
                 print(f"Loading pre-trained KNN model from {model_path}")
                 
                 # Try different pickle protocols
@@ -50,9 +76,9 @@ class SimilarMealPlanService:
                     self.scaler = StandardScaler()
                     self.X_scaled = self.scaler.fit_transform(X)
                 
-                print("✅ Pre-trained model loaded successfully")
+                print("✅ Pre-trained model loaded successfully with pickle")
             else:
-                raise FileNotFoundError(f"Model file not found: {model_path}")
+                raise FileNotFoundError(f"Model file not found: {model_path} or {joblib_path}")
                 
         except Exception as e:
             print(f"⚠️ Failed to load pre-trained model: {e}")
@@ -63,6 +89,20 @@ class SimilarMealPlanService:
             self.X_scaled = self.scaler.fit_transform(X)
             self.knn = NearestNeighbors(n_neighbors=6, metric='euclidean')
             self.knn.fit(self.X_scaled)
+            
+            # Save the new model with joblib for better compatibility
+            try:
+                os.makedirs("models", exist_ok=True)
+                model_data = {
+                    'model': self.knn,
+                    'scaler': self.scaler,
+                    'features': self.features,
+                    'dataset_shape': self.df.shape
+                }
+                joblib.dump(model_data, joblib_path)
+                print(f"✅ New model saved with joblib to {joblib_path}")
+            except Exception as save_error:
+                print(f"⚠️ Failed to save new model: {save_error}")
 
         # Load start foods from first meal plan
         try:
