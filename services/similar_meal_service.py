@@ -8,108 +8,21 @@ import os
 
 class SimilarMealPlanService:
     def __init__(self):
-        # Load data and model using cleaned dataset
         self.df = pd.read_csv("dataset/daily_food_nutrition_dataset_cleaned.csv")
         self.features = ["calories", "proteins", "carbohydrates", "fats", "fibers", "sugars", "sodium", "cholesterol"]
-        X = self.df[self.features]        # Load pre-trained KNN model and scaler
-        model_path = "models/best_primary_knn_model.pkl"
-        joblib_path = "models/best_primary_knn_model.joblib"
+        X = self.df[self.features] 
         
-        try:
-            # Try loading with joblib first (recommended for scikit-learn)
-            if os.path.exists(joblib_path):
-                print(f"Loading pre-trained KNN model from {joblib_path}")
-                model_data = joblib.load(joblib_path)
-                
-                # Extract model and scaler from saved data
-                if isinstance(model_data, dict):
-                    self.knn = model_data.get('model')
-                    self.scaler = model_data.get('scaler')
-                    if self.scaler is not None:
-                        self.X_scaled = self.scaler.transform(X)
-                    else:
-                        # Fallback: create new scaler if not saved
-                        self.scaler = StandardScaler()
-                        self.X_scaled = self.scaler.fit_transform(X)
-                else:
-                    # If model_data is just the model object
-                    self.knn = model_data
-                    self.scaler = StandardScaler()
-                    self.X_scaled = self.scaler.fit_transform(X)
-                
-                print("✅ Pre-trained model loaded successfully with joblib")
-                
-            elif os.path.exists(model_path):
-                print(f"Loading pre-trained KNN model from {model_path}")
-                
-                # Try different pickle protocols
-                model_data = None
-                for protocol in [None, 0, 1, 2, 3, 4, 5]:
-                    try:
-                        with open(model_path, 'rb') as f:
-                            if protocol is None:
-                                model_data = pickle.load(f)
-                            else:
-                                model_data = pickle.load(f)
-                        break
-                    except Exception as protocol_error:
-                        if protocol is None:
-                            print(f"Default protocol failed: {protocol_error}")
-                        continue
-                
-                if model_data is None:
-                    raise Exception("Failed to load with any pickle protocol")
-                
-                # Extract model and scaler from saved data
-                if isinstance(model_data, dict):
-                    self.knn = model_data.get('model')
-                    self.scaler = model_data.get('scaler')
-                    if self.scaler is not None:
-                        self.X_scaled = self.scaler.transform(X)
-                    else:
-                        # Fallback: create new scaler if not saved
-                        self.scaler = StandardScaler()
-                        self.X_scaled = self.scaler.fit_transform(X)
-                else:
-                    # If model_data is just the model object
-                    self.knn = model_data
-                    self.scaler = StandardScaler()
-                    self.X_scaled = self.scaler.fit_transform(X)
-                
-                print("✅ Pre-trained model loaded successfully with pickle")
-            else:
-                raise FileNotFoundError(f"Model file not found: {model_path} or {joblib_path}")
-                
-        except Exception as e:
-            print(f"⚠️ Failed to load pre-trained model: {e}")
-            print("🔄 Falling back to training new model...")
+        print(f"⚠️ Failed to load pre-trained model: {e}")
+        print("🔄 Falling back to training new model...")
+        
+        # Fallback: train new model
+        self.scaler = StandardScaler()
+        self.X_scaled = self.scaler.fit_transform(X)
+        self.knn = NearestNeighbors(n_neighbors=6, metric='euclidean')
+        self.knn.fit(self.X_scaled)
+        
+        self.start_foods = []
             
-            # Fallback: train new model
-            self.scaler = StandardScaler()
-            self.X_scaled = self.scaler.fit_transform(X)
-            self.knn = NearestNeighbors(n_neighbors=6, metric='euclidean')
-            self.knn.fit(self.X_scaled)
-            
-            # Save the new model with joblib for better compatibility
-            try:
-                os.makedirs("models", exist_ok=True)
-                model_data = {
-                    'model': self.knn,
-                    'scaler': self.scaler,
-                    'features': self.features,
-                    'dataset_shape': self.df.shape
-                }
-                joblib.dump(model_data, joblib_path)
-                print(f"✅ New model saved with joblib to {joblib_path}")
-            except Exception as save_error:
-                print(f"⚠️ Failed to save new model: {save_error}")
-
-        # Load start foods from first meal plan
-        try:
-            firstMealDf = pd.read_csv("results/first_meal_plan.csv")
-            self.start_foods = firstMealDf["food_item"].dropna().tolist()
-        except FileNotFoundError:
-            self.start_foods = []
 
     def generate_meal_plan(self, start_food, days=30):
         meal_plan = [start_food]
