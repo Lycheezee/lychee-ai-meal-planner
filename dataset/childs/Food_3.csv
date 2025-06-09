@@ -1,0 +1,657 @@
+Food,ProductType,FlavorVariant,Calories-kcl,Protein-g,Carb-g,Fiber-g,Sugar-g,Sodium-g,SaturatedFat-g,MonounsaturatedFat-g,PolyunsaturatedFat-g,TransaFat-g,MeasureQuantity,MeasureType,MQCalories-kcl,MQGmWt,MQCalories100gm-kcl
+Andrea'S,Gluten Free Soft Dinner Roll, Prepared From Recipe,257,5.7,40.2,2.9,3.0,544,4.84,4.51,4.37,0.49,1.0,Roll,177,69.0,257
+Archway,Home Style Cookies,Chocolate Chip Ice Box,497,4.3,65.0,2.0,34.1,270,8.1,8.9,1.4,5.83,1.0,Serving,119,24.0,497
+Archway,Home Style Cookies,Coconut Macaroon,460,3.0,61.2,5.1,45.2,200,20.1,1.6,0.8,0.49,1.0,Serving,101,22.0,460
+Archway,Home Style Cookies,Date Filled Oatmeal,400,4.7,68.2,2.1,34.3,331,2.8,4.8,1.1,3.36,1.0,Serving,100,25.0,400
+Archway,Home Style Cookies,Dutch Cocoa,431,4.5,69.4,2.6,35.4,384,3.6,5.9,1.2,4.24,1.0,Serving,103,24.0,431
+Archway,Home Style Cookies,Frosty Lemon,430,4.4,64.8,0.7,33.4,449,5.8,5.8,0.9,0.49,1.0,Serving,112,26.0,430
+Archway,Home Style Cookies,Iced Molasses,420,3.5,69.1,1.0,38.4,605,4.2,4.8,2.4,3.08,1.0,Serving,118,28.0,420
+Archway,Home Style Cookies,Iced Oatmeal,435,4.9,66.8,2.0,37.2,377,4.6,5.6,2.7,3.58,1.0,Serving,122,28.0,435
+Archway,Home Style Cookies,Molasses,403,4.3,69.4,1.2,36.4,577,2.8,4.9,1.1,3.34,1.0,Serving,105,26.0,403
+Archway,Home Style Cookies,Oatmeal,421,5.5,68.2,2.9,34.5,394,3.2,5.7,1.3,3.88,1.0,Serving,105,25.0,421
+Archway,Home Style Cookies,Oatmeal Raisin,406,5.2,69.3,2.7,39.6,339,2.8,4.9,1.2,3.32,1.0,Serving,106,26.0,406
+Archway,Home Style Cookies,Old Fashioned Molasses,406,4.3,70.6,1.1,36.1,561,2.8,4.8,1.0,3.25,1.0,Serving,106,26.0,406
+Archway,Home Style Cookies,Old Fashioned Windmill Cookies,468,5.2,72.2,1.8,32.6,471,3.8,7.8,1.7,4.3,1.0,Serving,94,20.0,468
+Archway,Home Style Cookies,Peanut Butter,480,9.0,58.5,2.8,32.6,404,5.4,10.2,4.2,0.49,1.0,Serving,101,21.0,480
+Archway,Home Style Cookies,Raspberry Filled,400,4.4,65.9,2.2,31.8,334,5.2,4.1,1.1,2.85,1.0,Serving,100,25.0,400
+Archway,Home Style Cookies,Reduced Fat Ginger Snaps,424,4.7,76.2,1.1,36.3,406,2.6,3.6,1.7,3.31,1.0,Serving,136,32.0,424
+Archway,Home Style Cookies,Strawberry Filled,400,4.4,65.9,2.2,31.8,377,5.2,4.1,1.1,2.85,1.0,Serving,100,25.0,400
+Archway,Home Style Cookies,Sugar Free Oatmeal,442,5.5,67.2,1.9,1.3,308,4.9,7.9,1.3,0.49,1.0,Serving,106,24.0,442
+Artificial,Blueberry Muffin Mix,Dry,407,4.7,77.5,3.33,19.0,760,1.9,3.7,1.7,0.49,1.0,Muffin,126,31.0,407
+Austin,Cheddar Cheese Crackers,Sandwich-Type,494,7.5,60.0,1.3,13.5,900,6.1,5.4,12.1,0.32,1.0,Package,193,39.0,494
+Austin,Cheddar Cheese Crackers,Sandwich-Type,489,7.8,62.6,1.3,14.3,978,5.8,4.9,11.0,0.3,1.0,Package,191,39.0,489
+Austin,Cheddar Cheese Crackers,Sandwich-Type,495,7.9,61.4,1.8,14.6,839,6.1,5.3,11.8,0.31,1.0,Package,193,39.0,495
+Austin,Chocolatey Peanut Butter Crackers,Sandwich-Type,479,7.7,66.2,2.0,17.3,584,4.1,5.8,9.2,0.23,1.0,Package,187,39.0,479
+Austin,Grilled Cheese Crackers,Sandwich-Type,493,7.9,62.0,1.3,12.6,910,5.9,5.0,11.0,0.77,1.0,Package,192,39.0,493
+Austin,Pb & J Crackers,Sandwich-Type,484,7.6,65.7,2.0,16.7,582,4.5,5.9,9.6,0.25,1.0,Package,189,39.0,484
+Austin,Peanut Butter Crackers,Sandwich-Type,492,10.8,59.0,3.2,9.0,843,3.7,8.4,12.0,0.15,1.0,Package,192,39.0,492
+Austin,Peanut Butter Crackers,Sandwich-Type,489,10.6,60.2,3.2,11.6,772,3.6,8.2,8.5,0.14,1.0,Package,191,39.0,489
+Bagels,Cinnamon-Raisin, Prepared From Recipe,274,9.8,55.2,2.3,6.0,344,0.3,0.2,0.7,0.49,1.0,"Mini Bagel, (2-1/2"" Dia)",71,26.0,274
+Bagels,Cinnamon-Raisin,Toasted,294,10.6,59.3,2.5,6.4,370,0.3,0.2,0.7,0.49,1.0,"Mini Bagel, (2-1/2"" Dia)",71,24.0,294
+Bagels,Egg, Prepared From Recipe,278,10.6,53.0,2.3,19.0,505,0.4,0.4,0.6,0.49,1.0,Oz,79,28.0,278
+Bagels,Oat Bran, Prepared From Recipe,255,10.7,53.3,3.6,1.6,590,0.2,0.2,0.5,0.49,1.0,"Mini Bagel, (2-1/2"" Dia)",66,26.0,255
+Bagels,Wheat, Prepared From Recipe,250,10.2,48.9,4.1,6.1,439,0.0,0.3,0.9,0.0,1.0,Bagel,245,98.0,250
+Barbara Dee,Winter Mints Cookies, Prepared From Recipe,515,3.9,67.1,2.0,35.8,290,18.0,2.7,3.8,0.4,4.0,Cookies,160,31.0,515
+Bear Naked,Double Chocolate Cookies, Prepared From Recipe,423,6.6,66.9,7.0,35.2,200,4.1,8.4,4.2,0.0,1.0,Cookie,127,30.0,423
+Bear Naked,Fruit & Nut Cookies, Prepared From Recipe,443,7.5,61.6,7.1,29.4,133,5.1,8.5,7.3,0.0,1.0,Cookie,133,30.0,443
+Biscuits,Mixed Grain,Refrigerated Dough,263,6.1,47.4,3.33,19.0,670,1.4,2.9,0.9,0.49,1.0,Oz,75,28.0,263
+Biscuits,Plain Or Buttermilk,Prepared From Recipe,353,7.0,44.6,1.5,2.2,580,4.3,6.9,4.2,0.49,1.0,Oz,100,28.0,353
+Bread,Boston Brown,Canned,195,5.2,43.3,4.7,2.4,631,0.3,0.2,0.6,0.49,1.0,Oz,55,28.0,195
+Bread,Chapati Or Roti,Plain,297,11.3,46.4,4.9,2.7,409,2.0,1.9,1.1,0.03,1.0,Piece,202,68.0,297
+Bread,Cheese, Prepared From Recipe,408,10.4,44.8,2.1,2.1,750,6.3,4.3,9.2,0.0,1.0,Slice,196,48.0,408
+Bread,Cornbread,Prepared From Recipe,266,6.7,43.5,3.33,19.0,658,1.6,1.8,3.2,0.49,1.0,Oz,75,28.0,266
+Bread,Cracked-Wheat, Prepared From Recipe,260,8.7,49.5,5.5,19.0,538,0.9,1.9,0.7,0.49,1.0,Oz,74,28.0,260
+Bread,Egg, Prepared From Recipe,287,9.5,47.8,2.3,1.8,380,1.6,2.3,1.1,0.49,1.0,Oz,81,28.0,287
+Bread,Egg,Toasted,315,10.5,52.6,2.5,1.9,417,1.6,3.0,1.1,0.49,1.0,Oz,89,28.0,315
+Bread,French Or Vienna,Includes Sourdough,272,10.8,51.9,2.2,4.6,602,0.5,0.4,0.9,0.01,1.0,Oz,77,28.0,272
+Bread,Gluten-Free,White,298,5.4,51.2,5.5,11.3,515,0.6,4.7,2.0,0.02,1.0,Slice,83,28.0,298
+Bread,Gluten-Free,Whole Grain,309,7.3,49.1,4.9,9.8,510,0.3,5.4,2.4,0.02,1.0,Slice,77,25.0,309
+Bread,Irish Soda,Prepared From Recipe,290,6.6,56.0,2.6,19.0,398,1.1,2.0,1.5,0.49,1.0,Oz,82,28.0,290
+Bread,Italian, Prepared From Recipe,271,8.8,50.1,3.2,3.2,550,0.0,0.8,1.4,0.49,1.0,Oz,77,28.0,271
+Bread,Oat Bran, Prepared From Recipe,236,10.4,39.8,4.5,7.7,353,0.7,1.6,1.7,0.49,1.0,Oz,67,28.0,236
+Bread,Oat Bran,Toasted,259,11.4,43.7,4.9,8.5,387,0.8,1.7,1.9,0.49,1.0,Oz,73,28.0,259
+Bread,Oatmeal, Prepared From Recipe,269,8.4,48.5,4.0,8.1,447,0.7,1.6,1.7,0.49,1.0,Oz,76,28.0,269
+Bread,Oatmeal,Toasted,292,9.2,52.7,4.3,8.8,486,0.8,1.7,1.9,0.49,1.0,Oz,83,28.0,292
+Bread,Pita,Whole-Wheat,262,9.8,55.9,6.1,2.9,527,0.1,0.2,0.7,0.49,1.0,"Pita, Large (6-1/2"" Dia)",168,64.0,262
+Bread,Potato, Prepared From Recipe,266,12.5,47.1,6.3,9.4,375,0.0,0.0,0.0,0.0,1.0,Slice,85,32.0,266
+Bread,Protein,Includes Gluten,245,12.1,43.8,3.0,1.4,404,0.3,0.2,1.0,0.49,1.0,Oz,69,28.0,245
+Bread,Pumpernickel,Toasted,275,9.5,52.2,7.1,0.6,655,0.5,1.0,1.4,0.49,1.0,Oz,78,28.0,275
+Bread,Reduced-Calorie,Oat Bran,201,8.0,41.3,12.0,3.5,459,0.4,0.7,1.7,0.49,1.0,Oz,57,28.0,201
+Bread,Reduced-Calorie,Oatmeal,210,7.6,43.3,3.33,19.0,388,0.6,0.8,1.4,0.49,1.0,Oz,60,28.0,210
+Bread,Reduced-Calorie,Rye,203,9.1,40.5,12.0,2.3,513,0.4,0.7,0.8,0.49,1.0,Oz,58,28.0,203
+Bread,Reduced-Calorie,Wheat,217,13.3,42.5,11.1,3.7,332,0.8,0.5,1.2,0.05,1.0,Oz,62,28.0,217
+Bread,Reduced-Calorie,White,207,8.7,44.3,9.7,4.8,479,0.5,1.1,0.6,0.49,1.0,Oz,59,28.0,207
+Bread,Rice Bran, Prepared From Recipe,243,8.9,43.5,4.9,4.7,269,0.7,1.7,1.8,0.49,1.0,Oz,69,28.0,243
+Bread,Rice Bran,Toasted,264,9.7,47.3,5.3,5.1,292,0.8,1.8,1.9,0.49,1.0,Oz,75,28.0,264
+Bread,Wheat, Prepared From Recipe,267,10.7,48.7,4.0,5.9,508,0.8,0.6,1.5,0.03,1.0,Oz,76,28.0,267
+Bread,Wheat Bran, Prepared From Recipe,248,8.8,47.8,4.0,9.7,486,0.8,1.6,0.6,0.49,1.0,Oz,70,28.0,248
+Bread,Wheat Germ,Toasted,293,10.7,54.3,2.3,4.1,621,0.7,1.4,0.8,0.49,1.0,Oz,83,28.0,293
+Bread,White Wheat, Prepared From Recipe,238,10.7,43.9,9.2,5.0,478,0.6,0.4,1.0,0.03,1.0,Slice,67,28.0,238
+Bread,White,Commercially Prepared,266,8.9,49.4,2.7,5.7,490,0.7,0.6,1.6,0.03,1.0,Slice,77,29.0,266
+Bread,White,Prepared From Recipe,285,7.9,49.6,2.0,19.0,359,1.2,1.3,2.8,0.49,1.0,Oz,81,28.0,285
+Bread,White,Prepared From Recipe,274,7.7,53.6,2.0,19.0,336,0.4,0.5,1.4,0.49,1.0,Oz,78,28.0,274
+Bread,Whole-Wheat,Commercially Prepared,252,12.5,42.7,6.0,4.3,455,0.7,0.6,1.6,0.02,1.0,Slice,81,32.0,252
+Bread,Whole-Wheat,Prepared From Recipe,278,8.4,51.4,6.0,3.8,346,0.8,1.2,2.9,0.49,1.0,Oz,79,28.0,278
+Breakfast Tart,Low Fat, Prepared From Recipe,372,4.0,76.8,1.5,4.9,361,1.4,3.3,0.9,0.49,1.0,Tart,193,52.0,372
+Cake,Fruitcake,Commercially Prepared,324,2.9,61.6,3.7,27.4,101,1.0,4.2,3.3,0.49,1.0,Oz,92,28.0,324
+Cake,Gingerbread,Prepared From Recipe,356,3.9,49.2,3.33,19.0,327,4.1,7.1,4.2,0.49,1.0,Oz,101,28.0,356
+Cake,Pineapple Upside-Down,Prepared From Recipe,319,3.5,50.5,0.8,19.0,319,2.9,5.2,3.3,0.49,1.0,Oz,90,28.0,319
+Cake,Pound,Commercially Prepared,283,5.4,61.0,1.1,34.3,341,0.3,0.2,0.4,0.49,1.0,Oz,80,28.0,283
+Cake,Shortcake,Biscuit-Type,346,6.1,48.5,3.33,19.0,506,3.8,6.0,3.6,0.49,1.0,Oz,98,28.0,346
+Cake,Snack Cakes,Creme-Filled,399,3.6,60.3,3.2,37.8,332,4.9,8.5,1.8,0.49,1.0,Oz,113,28.0,399
+Cake,Snack Cakes,Creme-Filled,374,3.5,64.0,1.0,37.3,470,4.1,4.9,1.9,1.62,1.0,Oz,106,28.0,374
+Cake,White,Prepared From Recipe,356,4.4,63.2,1.0,57.4,284,3.9,3.7,2.2,0.49,1.0,Oz,101,28.0,356
+Cake,Yellow,Commercially Prepared,391,3.0,56.2,0.3,41.8,269,2.9,7.6,6.4,0.49,1.0,Serving,260,67.0,391
+Cheesecake,Prepared From Mix,No-Bake Type,274,5.5,35.5,1.9,19.0,380,6.7,4.5,0.8,0.49,1.0,Oz,78,28.0,274
+Cinnamon Buns,Frosted,Includes Honey Buns,452,4.5,48.6,1.2,25.7,305,12.6,8.7,3.7,0.3,1.0,Bun,260,65.0,452
+Cookies,Butter Or Sugar,With Chocolate Icing Or Filling,503,4.1,68.8,1.9,33.8,348,14.8,2.7,5.1,0.49,3.0,Cookies,156,31.0,503
+Cookies,Chocolate,With Icing Or Coating,507,4.5,67.9,2.3,32.0,380,16.5,2.6,3.6,0.37,4.0,Cookies,162,32.0,507
+Cookies,With Peanut Butter Filling,Chocolate-Coated,562,8.1,52.9,3.5,30.9,371,19.2,8.4,6.3,0.27,2.0,Cookies,141,25.0,562
+Cookies,Brownies,Commercially Prepared,405,4.8,63.9,2.1,36.6,286,4.2,9.0,2.3,0.49,1.0,Oz,115,28.0,405
+Cookies,Brownies,Prepared From Recipe,466,6.2,50.2,3.33,19.0,343,7.3,10.8,9.4,0.49,1.0,Oz,132,28.0,466
+Cookies,Butter,Commercially Prepared,467,6.1,68.9,0.8,20.2,282,11.1,5.5,1.0,0.49,1.0,Oz,132,28.0,467
+Cookies,Butter,Commercially Prepared,467,6.1,68.9,0.8,19.0,351,11.1,5.5,1.0,0.49,1.0,Oz,132,28.0,467
+Cookies,Chocolate Chip Sandwich,With Creme Filling,425,2.9,63.5,0.0,38.2,279,5.9,4.5,6.4,0.0,1.0,Cookie,145,34.0,425
+Cookies,Chocolate Chip,Commercially Prepared,444,3.6,65.8,1.8,37.1,276,9.8,7.0,1.8,0.06,1.0,Cookie,63,14.0,444
+Cookies,Chocolate Chip,Commercially Prepared,450,3.9,73.4,1.6,39.8,244,4.2,6.7,5.0,0.49,1.0,Oz,128,28.0,450
+Cookies,Chocolate Chip,Prepared From Recipe,488,5.7,58.2,3.33,19.0,341,14.1,8.2,4.5,0.49,1.0,Oz,138,28.0,488
+Cookies,Chocolate Chip,Prepared From Recipe,488,5.7,58.4,2.8,19.0,361,8.1,10.4,8.4,0.49,1.0,Oz,138,28.0,488
+Cookies,Chocolate Cream Covered,Biscuit Sticks,447,10.0,51.1,5.0,25.0,213,12.6,2.1,6.7,0.49,1.0,Serving,179,40.0,447
+Cookies,Chocolate Sandwich,With Creme Filling,436,2.9,76.2,2.9,41.2,471,2.9,4.7,3.4,0.0,1.0,Serving,148,34.0,436
+Cookies,Chocolate Sandwich,With Creme Filling,464,5.2,71.0,2.9,40.7,388,5.6,9.3,3.6,0.11,3.0,Cookie,167,36.0,464
+Cookies,Chocolate Sandwich,With Creme Filling,461,4.5,68.0,4.1,19.7,342,4.0,9.2,7.9,0.49,1.0,Oz,131,28.0,461
+Cookies,Chocolate Sandwich,With Extra Creme Filling,497,4.3,68.2,2.7,46.0,351,5.5,16.1,2.5,0.49,1.0,Oz,141,28.0,497
+Cookies,Chocolate,Made With Rice Cereal,440,3.2,63.3,1.6,40.3,210,11.3,4.0,3.0,0.0,1.0,Cookie,260,62.0,440
+Cookies, Fortune, Prepared From Recipe,378,4.2,84.0,1.6,45.4,31,0.7,1.3,0.5,0.49,1.0,Oz,107,28.0,378
+Cookies, Fudge, Cake-Type (Includes Trolley Cakes),349,5.0,78.3,2.8,19.0,192,1.1,1.8,0.5,0.49,1.0,Oz,99,28.0,349
+Cookies, Gingersnaps, Prepared From Recipe,416,5.6,76.9,2.2,19.9,501,2.5,5.4,1.4,0.49,1.0,Oz,118,28.0,416
+Cookies, Gluten-Free, Chocolate Sandwich,474,2.2,76.0,2.5,49.0,275,7.9,6.1,1.8,0.1,3.0,Cookies,209,44.0,474
+Cookies, Gluten-Free, Chocolate Wafer,541,4.1,62.8,1.6,41.0,122,15.3,9.5,2.3,0.1,3.0,Cookies,124,23.0,541
+Cookies, Gluten-Free, Lemon Wafer,515,0.0,74.4,0.0,42.3,111,10.5,8.3,2.7,0.04,3.0,Cookies,155,30.0,515
+Cookies, Gluten-Free, Vanilla Sandwich,493,2.7,74.6,0.5,46.7,201,7.0,8.3,2.9,0.06,3.0,Cookies,217,44.0,493
+Cookies, Graham Crackers, Chocolate-Coated,500,4.0,66.8,2.2,37.3,265,17.2,2.7,4.9,0.55,3.0,Pieces,135,27.0,500
+Cookies, Graham Crackers, Plain Or Honey (Includes Cinnamon),430,6.7,77.7,3.4,24.9,459,1.6,2.5,5.4,0.06,1.0,Oz,122,28.0,430
+Cookies, Graham Crackers, Plain Or Honey,386,5.7,78.0,5.7,22.9,629,0.0,1.7,3.4,0.0,1.0,Serving,135,35.0,386
+Cookies, Ladyfingers, With Lemon Juice And Rind,365,10.6,59.7,1.0,25.4,147,3.1,3.8,1.4,0.49,1.0,Oz,103,28.0,365
+Cookies, Ladyfingers, Without Lemon Juice And Rind,363,10.6,59.7,1.0,19.0,147,3.0,3.7,1.4,0.49,1.0,Oz,103,28.0,363
+Cookies, Marie Biscuit, Prepared From Recipe,406,7.1,70.5,3.5,21.2,370,5.3,2.7,1.7,0.0,5.0,Cookie,114,28.0,406
+Cookies, Marshmallow, Chocolate-Coated (Includes Marshmallow Pies),421,4.0,67.7,2.0,44.8,188,4.7,9.3,1.9,0.49,1.0,Oz,119,28.0,421
+Cookies, Marshmallow, With Rice Cereal And Chocolate Chips,435,4.6,63.3,0.0,40.9,341,11.4,4.2,1.8,0.0,1.0,Bar,96,22.0,435
+Cookies, Molasses, Prepared From Recipe,430,5.6,73.8,1.0,17.6,459,3.2,7.1,1.7,0.49,1.0,Oz,122,28.0,430
+Cookies, Oatmeal, Commercially Prepared,450,6.2,68.7,2.8,24.7,383,4.5,10.0,2.5,0.49,1.0,Oz,128,28.0,450
+Cookies, Oatmeal, Commercially Prepared,409,6.1,65.7,2.7,19.0,349,3.6,8.0,2.2,0.49,1.0,Oz,116,28.0,409
+Cookies, Oatmeal, Commercially Prepared,449,4.8,69.9,2.9,31.7,273,2.7,7.6,6.8,0.49,1.0,Oz,127,28.0,449
+Cookies, Oatmeal, Prepared From Recipe,435,6.5,68.4,3.33,19.0,538,3.2,6.9,5.0,0.49,1.0,Oz,123,28.0,435
+Cookies, Oatmeal, Prepared From Recipe,447,6.8,66.4,3.33,19.0,598,3.6,7.7,5.6,0.49,1.0,Oz,127,28.0,447
+Cookies, Oatmeal, Reduced Fat,365,4.0,64.6,16.1,32.1,562,4.1,3.3,2.3,0.0,1.0,Cookie,91,25.0,365
+Cookies, Oatmeal, Refrigerated Dough,471,6.0,65.7,2.8,19.0,327,5.3,11.7,3.0,0.49,1.0,Oz,134,28.0,471
+Cookies, Peanut Butter Sandwich, Regular,478,8.8,65.6,1.9,35.4,368,5.0,11.2,3.8,0.49,1.0,Oz,136,28.0,478
+Cookies, Peanut Butter Sandwich, Special Dietary,535,10.0,50.8,3.33,19.0,412,4.9,15.4,12.0,0.49,1.0,Oz,152,28.0,535
+Cookies, Peanut Butter, Commercially Prepared,473,8.9,58.2,2.1,28.6,463,6.8,10.8,3.6,1.25,1.0,Oz,134,28.0,473
+Cookies, Peanut Butter, Commercially Prepared,457,5.3,57.7,1.7,19.0,336,6.1,13.8,3.2,0.49,1.0,Oz,130,28.0,457
+Cookies, Peanut Butter, Prepared From Recipe,475,9.0,58.9,3.33,19.0,518,4.4,10.8,7.2,0.49,1.0,Oz,135,28.0,475
+Cookies, Peanut Butter, Refrigerated Dough,503,9.1,57.3,1.2,19.0,436,6.2,14.5,4.9,0.49,1.0,Oz,143,28.0,503
+Cookies, Raisin, Soft-Type,401,4.1,68.0,1.2,47.6,418,3.5,7.6,1.8,0.49,1.0,Oz,114,28.0,401
+Cookies, Shortbread, Commercially Prepared,542,4.9,58.3,1.8,19.0,281,8.2,18.6,4.1,0.49,1.0,Oz,154,28.0,542
+Cookies, Shortbread, Commercially Prepared,514,5.4,63.8,1.3,21.7,353,8.1,6.7,8.3,0.71,1.0,Oz,146,28.0,514
+Cookies, Shortbread, Reduced Fat,451,5.4,76.0,1.3,21.7,571,4.7,3.1,6.1,0.47,1.0,Cookie,53,12.0,451
+Cookies, Sugar Wafer, Chocolate-Covered,526,3.5,66.0,3.4,51.7,138,17.2,4.9,4.2,0.0,3.0,Cookie,153,29.0,526
+Cookies, Sugar Wafer, With Creme Filling,531,3.6,66.3,14.3,0.0,71,4.3,12.1,10.7,0.0,1.0,Oz,151,28.0,531
+Cookies, Sugar Wafers With Creme Filling, Regular,502,3.8,70.6,1.6,43.0,103,11.9,7.7,2.7,0.49,3.0,Cookies,181,36.0,502
+Cookies, Sugar, Commercially Prepared,464,5.4,67.3,1.3,27.3,385,7.7,7.0,3.7,0.49,1.0,Oz,132,28.0,464
+Cookies, Sugar, Prepared From Recipe,472,5.9,60.0,1.2,24.9,491,4.7,10.2,7.3,0.49,1.0,Oz,134,28.0,472
+Cookies, Vanilla Sandwich With Creme Filling, Prepared From Recipe,483,4.5,72.1,1.5,39.3,349,3.0,8.4,7.6,0.49,1.0,Oz,137,28.0,483
+Crackers,Crackers, Prepared From Recipe,383,9.3,80.9,2.6,0.3,16,0.3,0.2,0.7,0.49,1.0,Oz,109,28.0,383
+Crackers,Crackers, Reduced Fat,418,10.0,68.2,3.3,0.0,1167,3.3,2.1,5.3,0.0,1.0,Serving,125,30.0,418
+Crackers,Crackers, Fish-Shaped,463,10.2,65.7,3.1,1.2,970,2.1,10.3,3.9,0.06,10.0,Goldfish,24,5.0,463
+Crackers,Crackers, Multigrain And Vegetable,456,2.5,76.9,3.0,3.9,890,5.7,4.9,1.4,0.05,3.0,Crackers,49,11.0,456
+Crackers,Crackers, Multi-Seeded And Multigrain,453,11.3,66.3,10.2,0.9,438,2.1,7.0,6.0,0.02,3.0,Crackers,28,6.0,453
+Crackers,Crackers, Egg,391,12.3,78.6,2.8,19.0,21,0.5,0.6,0.5,0.49,0.5,Oz,56,14.0,391
+Crackers,Crackers, Egg And Onion,391,10.0,77.1,5.0,19.0,285,0.9,1.0,1.0,0.49,0.5,Oz,56,14.0,391
+Crackers,Crackers, Plain,395,10.0,83.7,3.0,0.3,0,0.2,0.1,0.6,0.49,0.5,Oz,56,14.0,395
+Crackers,Crackers, Whole-Wheat,351,13.1,78.9,11.8,19.0,2,0.2,0.2,0.7,0.49,0.5,Oz,50,14.0,351
+Crackers,Crackers, Rye (Includes Pumpernickel),389,11.6,77.3,8.0,19.0,899,0.5,0.9,1.3,0.49,0.5,Oz,55,14.0,389
+Crackers,Crackers, Wheat,374,12.9,76.4,7.4,19.0,837,0.3,0.5,0.9,0.49,0.5,Oz,53,14.0,374
+Crackers,Crackers, Prepared From Recipe,446,7.6,71.7,3.4,10.3,687,2.9,5.5,4.9,0.49,0.5,Oz,63,14.0,446
+Crackers,Crackers, Prepared From Recipe,482,7.1,67.6,3.5,12.0,883,3.3,5.0,11.8,0.19,4.0,Crackers,67,14.0,482
+Crackers,Crackers, Prepared From Recipe,407,13.5,72.3,3.33,19.0,253,1.4,2.8,2.3,0.49,0.5,Oz,58,14.0,407
+Crackers,Crackers, Soda,418,9.5,74.1,2.8,1.3,941,1.7,2.0,4.8,0.17,5.0,Crackers,62,15.0,418
+Crackers,Crackers, Fat-Free,393,10.5,82.3,2.7,0.4,849,0.2,0.1,0.7,0.49,3.0,Saltines,59,15.0,393
+Crackers,Crackers, Unsalted Tops (Includes Oyster,434,9.2,71.5,3.0,19.0,766,2.9,6.4,1.7,0.49,0.5,Oz,62,14.0,434
+Crackers,Crackers, Whole Wheat (Includes Multi-Grain),398,7.1,68.3,6.7,0.0,1214,0.0,2.8,7.2,0.0,1.0,Serving,56,14.0,398
+Crackers,Crackers, Peanut Butter Filled,437,8.3,63.5,2.8,11.1,639,2.8,5.6,6.9,0.0,1.0,Package,157,36.0,437
+Crackers,Crackers, Low Sodium,442,6.5,67.7,9.7,12.9,177,3.2,3.3,8.6,0.0,1.0,Serving,137,31.0,442
+Crackers,Crackers, Reduced Fat,444,9.3,71.5,3.4,15.0,776,2.1,3.3,7.1,0.2,1.0,Serving,129,29.0,444
+Crackers,Crackers, Reduced Fat,416,11.3,75.5,10.9,1.2,745,1.1,1.6,3.6,0.1,1.0,Serving,121,29.0,416
+Cream Puff ,Cream Puff , Prepared From Recipe,360,9.0,22.8,0.8,0.3,483,5.6,11.1,7.4,0.49,1.0,Oz,102,28.0,360
+Cream Puff,Cream Puff, Custard Or Cream Filled,334,4.4,37.4,0.9,22.1,265,7.1,6.1,4.2,0.0,4.0,Oz,260,113.0,334
+Croutons,Croutons, Prepared From Recipe,407,11.9,73.5,5.1,19.0,698,1.5,3.1,1.3,0.49,0.5,Oz,58,14.0,407
+Croutons,Croutons, Prepared From Recipe,465,10.8,63.5,5.0,4.4,1089,5.2,9.5,2.4,0.49,0.5,Oz,66,14.0,465
+Crunchmaster,Crunchmaster, Snack Crackers,456,10.9,67.2,7.5,0.8,370,2.1,7.0,6.0,0.02,3.0,Crackers,18,4.0,456
+Danish Pastry,Danish Pastry, Prepared From Recipe,374,8.0,37.2,1.0,7.0,417,6.8,11.3,2.6,0.49,1.0,Oz,106,28.0,374
+Danish Pastry,Danish Pastry, Enriched,403,7.0,44.6,1.3,19.8,414,5.7,12.5,2.9,0.49,1.0,Oz,114,28.0,403
+Danish Pastry,Danish Pastry, Unenriched,403,7.0,44.6,1.2,19.0,371,5.7,12.5,2.9,0.49,1.0,Oz,114,28.0,403
+Danish Pastry,Danish Pastry, Enriched (Includes Apple,371,5.4,47.8,1.9,27.5,445,4.9,10.0,2.4,0.49,1.0,Oz,105,28.0,371
+Danish Pastry,Danish Pastry, Unenriched,371,5.4,47.8,1.9,19.0,354,2.8,5.9,1.5,0.49,1.0,Oz,105,28.0,371
+Danish Pastry,Danish Pastry, Raisin Nut,430,7.1,45.7,2.0,25.9,298,5.8,13.7,4.3,0.49,1.0,Oz,122,28.0,430
+Doughnuts,Doughnuts, Chocolate,417,4.5,57.4,2.2,31.9,215,5.1,11.3,2.5,0.49,1.0,Oz,118,28.0,417
+Doughnuts,Doughnuts, Plain (Includes Unsugared,434,5.3,47.1,1.7,18.2,477,11.1,8.5,3.9,0.49,1.0,Donut,174,40.0,434
+Doughnuts,Doughnuts, Plain,452,4.9,51.3,1.9,26.7,326,13.5,8.6,2.0,0.49,1.0,Oz,128,28.0,452
+Doughnuts,Doughnuts, Plain,426,5.2,50.8,1.5,19.0,402,5.9,12.7,2.9,0.49,1.0,Oz,121,28.0,426
+Doughnuts,Doughnuts, Glazed,412,3.1,59.5,1.2,35.1,345,4.7,10.4,2.3,0.49,1.0,Oz,117,28.0,412
+Doughnuts,Doughnuts, Glazed,403,6.4,44.3,1.2,19.0,342,5.8,12.9,2.9,0.49,1.0,Oz,114,28.0,403
+Doughnuts,Doughnuts, With Creme Filling,361,6.4,30.0,0.8,14.6,309,5.4,12.1,3.1,0.49,1.0,Oz,102,28.0,361
+Doughnuts,Doughnuts, With Jelly Filling,340,5.9,39.0,0.9,21.1,455,4.8,10.2,2.4,0.49,1.0,Oz,96,28.0,340
+English Muffins,English Muffins, Prepared From Recipe,235,9.1,46.3,2.8,0.8,298,0.2,0.8,0.6,0.49,1.0,Oz,67,28.0,235
+English Muffins,English Muffins, Toasted (Includes Granola),255,9.9,50.3,3.0,0.9,324,0.3,0.9,0.6,0.49,1.0,Oz,72,28.0,255
+English Muffins,English Muffins, Enriched,227,8.9,44.2,3.5,3.5,425,0.7,0.4,0.5,0.0,1.0,Oz,64,28.0,227
+English Muffins,English Muffins, Enriched,235,7.7,46.0,2.7,19.0,464,0.3,0.3,0.9,0.49,1.0,Oz,67,28.0,235
+English Muffins,English Muffins, Toasted,270,10.3,52.7,2.8,3.5,477,0.5,0.5,0.9,0.0,1.0,Oz,77,28.0,270
+English Muffins,English Muffins, Unenriched,235,7.7,46.0,2.7,19.0,464,0.3,0.3,0.9,0.49,1.0,Oz,67,28.0,235
+English Muffins,English Muffins, Prepared From Recipe,240,7.9,48.1,2.6,14.8,299,0.5,0.8,0.3,0.0,1.0,Oz,68,28.0,240
+English Muffins,English Muffins, Toasted (Includes Apple-Cinnamon),276,8.9,55.0,3.0,13.3,342,0.6,1.1,0.5,0.0,1.0,Oz,78,28.0,276
+English Muffins,English Muffins, Prepared From Recipe,223,8.7,44.8,4.6,1.6,353,0.3,0.3,0.8,0.49,1.0,Oz,63,28.0,223
+English Muffins,English Muffins, Toasted,243,9.4,48.7,5.0,1.7,384,0.3,0.3,0.9,0.49,1.0,Oz,69,28.0,243
+English Muffins,English Muffins, Prepared From Recipe,203,8.8,40.4,6.7,8.1,364,0.3,0.5,0.8,0.49,1.0,Oz,58,28.0,203
+English Muffins,English Muffins, Toasted,221,9.6,44.1,7.3,8.8,396,0.4,0.6,0.9,0.49,1.0,Oz,63,28.0,221
+Famous Amos,Famous Amos, Prepared From Recipe,503,4.5,67.7,2.8,32.4,359,9.6,5.8,7.1,0.29,4.0,Cookies,146,29.0,503
+Famous Amos,Famous Amos, Prepared From Recipe,519,5.8,63.8,3.3,31.8,356,9.7,8.1,7.4,0.2,4.0,Cookies,151,29.0,519
+Famous Amos,Famous Amos, Prepared From Recipe,474,4.3,72.3,2.2,40.4,420,6.4,4.4,6.9,0.27,3.0,Cookies,161,34.0,474
+Famous Amos,Famous Amos, Prepared From Recipe,485,4.9,73.8,1.3,37.2,260,6.3,4.4,7.2,0.28,3.0,Cookies,165,34.0,485
+Focaccia,Focaccia, Plain,249,8.8,35.8,1.8,1.8,561,0.9,5.7,1.0,0.0,1.0,Piece,142,57.0,249
+French Toast,French Toast, Ready-To-Heat,213,7.4,32.1,1.1,19.0,495,1.5,2.0,1.2,0.49,1.0,Oz,60,28.0,213
+French Toast,French Toast, Made With Low Fat (2%) Milk,229,7.7,25.0,3.33,19.0,479,2.7,4.5,2.6,0.49,1.0,Oz,65,28.0,229
+General Mills,General Mills, Dry,413,3.8,81.3,3.33,43.9,672,2.3,4.51,4.37,0.49,1.0,Serving,178,43.0,413
+George Weston Bakeries,George Weston Bakeries, Dry,390,13.3,72.7,5.4,19.0,1680,0.9,2.0,0.8,0.49,1.0,Serving,260,67.0,390
+George Weston Bakeries,George Weston Bakeries, Prepared From Recipe,232,8.0,46.0,3.33,19.0,345,0.3,0.3,0.9,0.08,1.0,Serving,132,57.0,232
+Girl Scouts,Girl Scouts, Prepared From Recipe,520,5.1,64.8,1.3,29.6,225,11.2,5.6,8.6,0.36,4.0,Cookies,156,30.0,520
+Girl Scouts,Girl Scouts, Prepared From Recipe,478,4.2,72.3,1.5,35.4,247,6.4,4.2,6.9,0.27,3.0,Cookies,172,36.0,478
+Girl Scouts,Girl Scouts, Prepared From Recipe,478,8.1,66.0,3.7,31.1,301,5.9,6.5,7.3,0.2,2.0,Cookies,115,24.0,478
+Girl Scouts,Girl Scouts, Prepared From Recipe,489,3.5,64.1,4.4,35.8,182,17.7,2.8,3.7,0.2,2.0,Cookies,142,29.0,489
+Girl Scouts,Girl Scouts, Prepared From Recipe,558,8.1,52.2,3.5,30.9,371,19.2,8.4,6.3,0.27,2.0,Cookies,140,25.0,558
+Girl Scouts,Girl Scouts, Prepared From Recipe,491,4.6,70.0,1.8,28.9,305,7.8,4.5,7.2,0.29,2.0,Cookies,123,25.0,491
+Girl Scouts,Girl Scouts, Prepared From Recipe,502,4.5,67.3,2.3,32.0,380,16.5,2.6,3.6,0.37,4.0,Cookies,161,32.0,502
+Girl Scouts,Girl Scouts, Prepared From Recipe,498,5.7,68.0,1.6,20.7,343,7.3,5.1,8.1,0.33,5.0,Cookies,164,33.0,498
+Glutino,Glutino, Chocolate Vanilla Creme,474,2.2,76.0,2.5,49.0,275,7.9,6.1,1.8,0.1,3.0,Cookies,209,44.0,474
+Glutino,Glutino, Vanilla Creme,487,2.2,77.3,0.0,49.4,189,8.1,6.3,1.9,0.08,3.0,Cookies,219,45.0,487
+Glutino,Glutino, Lemon Flavored,515,0.0,74.4,0.0,42.3,111,10.5,8.3,2.7,0.04,3.0,Cookies,155,30.0,515
+Glutino,Glutino, Milk Chocolate,541,4.1,62.8,1.6,41.0,122,15.3,9.5,2.3,0.1,3.0,Cookies,124,23.0,541
+Hush Puppies,Hush Puppies, Prepared From Recipe,337,7.7,46.0,2.8,2.0,668,2.1,3.3,7.2,0.49,1.0,Oz,96,28.0,337
+Ice Cream Cones,Ice Cream Cones, Prepared From Recipe,417,8.1,79.0,3.0,6.0,256,1.2,1.8,3.3,0.49,1.0,Oz,118,28.0,417
+Ice Cream Cones,Ice Cream Cones, Rolled-Type,402,7.9,84.1,1.7,25.7,298,0.6,1.5,1.5,0.49,1.0,Oz,114,28.0,402
+Interstate Brands Corp,Interstate Brands Corp, Prepared From Recipe,273,8.1,50.8,2.6,11.1,488,1.0,0.8,2.2,0.49,1.0,Serving,117,43.0,273
+Jackson'S,Jackson'S, Prepared From Recipe,469,5.7,71.7,1.4,31.6,334,5.9,4.1,6.7,0.26,3.0,Cookies,150,32.0,469
+Jackson'S,Jackson'S, Prepared From Recipe,453,5.0,74.0,1.1,33.9,390,4.9,3.4,5.8,0.21,8.0,Cookies,136,30.0,453
+Kashi,Kashi, Prepared From Recipe,192,5.7,34.6,9.0,4.6,476,0.7,3.4,2.3,0.1,2.0,Pieces,138,72.0,192
+Kashi,Kashi, Original,396,10.6,73.4,12.2,0.4,283,1.1,6.0,4.5,0.0,7.0,Cracker,119,30.0,396
+Kashi,Kashi, Roasted Garlic,440,10.5,73.2,12.2,0.6,240,1.1,6.1,4.6,0.0,7.0,Cracker,132,30.0,440
+Kashi,Kashi, Prepared From Recipe,197,6.0,35.4,9.3,4.2,479,0.7,3.5,2.4,0.1,2.0,Pieces,142,72.0,197
+Kashi,Kashi, Country Cheddar Crackers,445,9.8,68.0,2.5,3.7,724,1.9,7.5,4.1,0.05,18.0,Cracker,134,30.0,445
+Kashi,Kashi, Fire Roasted Vegetable Crackers,389,12.0,64.6,8.7,7.3,664,1.1,5.8,3.7,0.2,15.0,Crackers,117,30.0,389
+Kashi,Kashi, Happy Trail Mix Cookies,451,8.1,63.9,13.7,26.6,249,4.1,7.8,5.6,0.01,1.0,Cookie,135,30.0,451
+Kashi,Kashi, Honey Sesame Crackers,398,8.7,72.2,5.8,16.1,471,0.9,5.0,3.6,0.0,15.0,Cracker,119,30.0,398
+Kashi,Kashi, Oatmeal Dark Chocolate Cookies,426,7.2,67.0,12.2,27.2,222,4.2,7.8,4.0,0.0,1.0,Cookie,128,30.0,426
+Kashi,Kashi, Oatmeal Raisin Flax Cookies,414,7.7,67.0,12.8,24.8,236,1.6,6.7,6.4,0.0,1.0,Cookie,124,30.0,414
+Kashi,Kashi, Original 7-Grain Crackers,385,13.9,63.2,9.0,13.5,530,1.2,5.5,3.9,0.2,15.0,Crackers,116,30.0,385
+Kashi,Kashi, Pita Crisps,381,10.5,72.4,14.7,5.4,585,0.9,4.4,2.9,0.1,11.0,Crisps,118,31.0,381
+Kashi,Kashi, Pita Crisps,381,11.0,71.6,15.3,2.9,585,0.9,4.4,2.9,0.1,11.0,Crisps,118,31.0,381
+Kashi,Kashi, Toasted Asiago Crackers,420,12.7,66.4,9.6,7.1,659,2.2,5.9,3.9,0.2,15.0,Crackers,130,31.0,420
+Keebler,Keebler, Chips Deluxe,452,4.7,77.7,3.1,40.3,441,5.3,3.3,3.8,0.2,1.0,Pouch,95,21.0,452
+Keebler,Keebler, Fudge Shoppe,471,4.0,72.2,2.4,39.7,423,12.7,2.1,3.7,0.39,1.0,Pouch,94,20.0,471
+Keebler,Keebler, Fudge Shoppe,479,4.5,71.2,3.2,39.3,392,13.4,2.3,3.6,0.4,1.0,Pouch,101,21.0,479
+Keebler,Keebler, Fudge Shoppe,455,7.5,71.3,3.9,32.9,595,15.2,0.8,0.2,0.1,1.0,Package,96,21.0,455
+Keebler,Keebler, Fudge Shoppe,455,4.5,65.1,2.8,31.5,284,7.4,4.9,6.5,0.2,1.0,Package,96,21.0,455
+Keebler,Keebler, Fudge Shoppe,467,4.5,73.2,2.3,34.8,349,11.1,2.1,3.9,0.36,1.0,Pouch,93,20.0,467
+Keebler,Keebler, Fudge Shoppe,470,4.0,74.3,1.9,39.2,314,12.9,1.5,2.8,0.38,1.0,Pouch,99,21.0,470
+Keebler,Keebler, Fudge Shoppe,456,5.2,75.0,2.9,34.5,343,10.3,1.7,2.9,0.31,1.0,Pouch,96,21.0,456
+Keebler,Keebler, Sandies Shortbread Cookies,468,5.2,73.9,1.4,25.8,438,6.8,3.6,5.1,0.32,1.0,Pouch,98,21.0,468
+Keebler,Keebler, Sandies Shortbread Cookies,462,4.1,72.4,13.2,27.0,253,11.2,2.7,5.1,0.4,1.0,Package,97,21.0,462
+Keebler,Keebler, White Fudge Dipped Pretzels,483,7.0,68.8,2.3,31.7,632,16.7,0.6,0.2,0.3,1.0,Pouch,101,21.0,483
+Keebler,Keebler, Holiday,482,5.1,70.1,1.6,26.0,407,6.3,4.6,6.9,0.29,4.0,Cookies,135,28.0,482
+Keebler,Keebler, Chocolate Chip Cookie,437,5.3,69.9,2.4,36.2,348,6.3,4.0,4.6,0.2,2.0,Cookies,140,32.0,437
+Keebler,Keebler, Oatmeal Raisin Cookie,420,6.1,69.1,3.6,32.3,321,4.6,3.3,5.3,0.2,2.0,Cookies,134,32.0,420
+Keebler,Keebler, Prepared From Recipe,502,8.1,59.5,1.3,13.4,760,6.4,5.5,12.2,0.66,1.0,Package,196,39.0,502
+Keebler,Keebler, Prepared From Recipe,492,10.8,59.0,3.2,9.0,843,3.7,8.4,12.0,0.15,1.0,Package,192,39.0,492
+Keebler,Keebler, Prepared From Recipe,499,8.4,59.8,1.8,14.2,790,6.3,5.3,11.9,0.66,1.0,Package,195,39.0,499
+Keebler,Keebler, Chocolate Lovers Cookies,508,5.5,63.0,3.1,34.0,417,11.7,7.2,6.8,0.3,2.0,Cookies,163,32.0,508
+Keebler,Keebler, Chocolate Malt Chunk Cookies,537,4.7,61.8,1.7,31.6,342,13.8,5.9,8.2,0.35,2.0,Cookies,166,31.0,537
+Keebler,Keebler, Coconut Cookies,530,5.7,61.5,3.7,28.4,293,14.1,5.5,7.7,0.33,2.0,Cookies,159,30.0,530
+Keebler,Keebler, Dark Chocolate Chunk Cookies,518,4.3,64.0,2.6,31.2,437,11.0,6.9,8.1,0.3,2.0,Cookies,166,32.0,518
+Keebler,Keebler, Mini Chocolate Chip Cookies,498,5.2,68.0,2.4,31.0,418,9.2,5.8,6.6,0.2,1.0,Pouch,169,34.0,498
+Keebler,Keebler, Oatmeal Chocolate Chip Cookies,500,6.4,65.3,4.4,32.3,332,9.4,6.3,6.9,0.28,2.0,Cookies,155,31.0,500
+Keebler,Keebler, Original Chocolate Chip Cookies,517,5.5,62.7,2.9,30.1,350,11.1,7.2,8.2,0.3,2.0,Cookies,155,30.0,517
+Keebler,Keebler, Peanut Butter Cups Cookies,519,6.0,60.8,2.3,30.2,285,12.8,6.4,7.7,0.3,2.0,Cookies,166,32.0,519
+Keebler,Keebler, Rainbow Chocolate Chip Cookies,502,5.1,65.0,2.4,33.5,332,10.4,5.2,6.9,0.3,2.0,Cookies,156,31.0,502
+Keebler,Keebler, Soft 'N Chewy Chocolate Chip Cookies,464,4.2,67.4,2.5,29.9,349,8.5,4.6,6.0,0.3,2.0,Cookies,144,31.0,464
+Keebler,Keebler, Prepared From Recipe,429,7.3,73.9,4.8,26.0,447,4.3,2.9,4.9,0.2,1.0,Package,159,37.0,429
+Keebler,Keebler, Prepared From Recipe,494,8.4,61.3,1.3,14.1,756,6.1,5.0,11.1,0.64,1.0,Package,193,39.0,494
+Keebler,Keebler, Snack Sticks,471,6.5,66.0,3.1,14.0,890,3.5,7.7,8.8,1.3,12.0,Crackers,137,29.0,471
+Keebler,Keebler, Snack Sticks,475,6.0,65.0,2.4,9.5,1106,3.7,8.0,9.2,1.3,12.0,Crackers,138,29.0,475
+Keebler,Keebler, Dash Of Salt Crackers,490,6.8,66.3,2.1,7.3,432,3.6,5.4,12.8,0.2,4.0,Crackers,69,14.0,490
+Keebler,Keebler, Minis Multigrain Crackers,470,7.3,67.4,3.7,10.7,876,4.5,4.8,9.2,1.0,17.0,Crackers,71,15.0,470
+Keebler,Keebler, Minis Original Crackers,479,6.0,66.4,2.2,8.0,972,4.8,5.1,9.9,1.1,17.0,Crackers,72,15.0,479
+Keebler,Keebler, Multigrain Crackers,466,7.1,65.9,3.5,12.0,883,3.3,5.0,11.8,0.19,4.0,Crackers,65,14.0,466
+Keebler,Keebler, Original Crackers,486,5.5,66.2,1.9,8.9,909,3.6,5.4,12.9,0.21,4.0,Crackers,68,14.0,486
+Keebler,Keebler, Reduced Fat Crackers,441,6.1,73.1,2.0,10.1,938,2.4,3.3,8.1,0.13,5.0,Crackers,71,16.0,441
+Keebler,Keebler, Prepared From Recipe,482,6.5,67.0,3.6,29.9,362,6.9,5.0,7.9,0.29,2.0,Cookies,135,28.0,482
+Keebler,Keebler, Prepared From Recipe,504,3.9,68.3,2.6,37.9,267,11.6,3.8,5.8,0.3,4.0,Cookies,131,26.0,504
+Keebler,Keebler, Butter Flavored Cookies,482,5.5,70.0,3.4,33.9,275,7.0,4.0,8.0,0.4,2.0,Cookies,174,36.0,482
+Keebler,Keebler, Double Stuffed Cookies,512,4.6,67.6,4.1,38.5,266,10.5,4.3,9.6,0.38,2.0,Cookies,179,35.0,512
+Keebler,Keebler, Caramel Filled Cookies,506,2.9,66.7,1.6,42.0,138,17.9,2.6,3.4,0.55,2.0,Cookies,152,30.0,506
+Keebler,Keebler, Cheesecake Middles,506,4.4,64.7,4.1,33.7,320,14.1,3.9,7.1,0.5,3.0,Cookies,132,26.0,506
+Keebler,Keebler, Cheesecake Middles,507,4.2,65.5,3.2,33.2,259,13.8,3.7,7.3,0.5,3.0,Cookies,132,26.0,507
+Keebler,Keebler, Coconut Dreams Cookies,499,3.5,61.4,3.3,34.5,193,20.7,2.6,3.1,0.3,2.0,Cookies,140,28.0,499
+Keebler,Keebler, Deluxe Grahams Cookies,511,4.0,66.6,2.2,37.3,265,17.2,2.7,4.9,0.55,3.0,Pieces,138,27.0,511
+Keebler,Keebler, Fudge Grahams,470,5.6,73.7,3.2,34.1,324,10.0,1.9,3.9,0.28,4.0,Cookies,127,27.0,470
+Keebler,Keebler, Fudge Sticks,529,2.6,68.8,1.3,53.0,131,16.9,3.2,5.9,0.57,3.0,Cookies,153,29.0,529
+Keebler,Keebler, Fudge Sticks,544,6.8,60.0,2.7,41.4,138,17.4,6.3,6.5,0.5,3.0,Cookies,158,29.0,544
+Keebler,Keebler, Fudge Stripes,487,4.3,70.1,3.1,39.9,370,14.5,2.5,3.8,0.4,3.0,Cookies,151,31.0,487
+Keebler,Keebler, Fudge Stripes,498,4.1,68.8,1.9,33.8,271,14.8,2.7,5.1,0.5,3.0,Cookies,154,31.0,498
+Keebler,Keebler, Fudge Stripes,497,4.2,68.7,1.8,31.8,367,13.8,2.9,5.5,0.47,1.0,Package,199,40.0,497
+Keebler,Keebler, Fudge Stripes,478,5.5,66.4,7.1,33.1,367,14.7,3.1,5.2,0.5,3.0,Cookies,148,31.0,478
+Keebler,Keebler, Fudge Stripes,500,4.1,68.6,1.9,33.8,348,14.8,2.7,5.1,0.49,3.0,Cookies,155,31.0,500
+Keebler,Keebler, Fudge-Dipped Ice Cream Cups,485,6.0,73.1,2.2,25.7,136,16.8,0.5,1.1,0.38,1.0,Cup,39,8.0,485
+Keebler,Keebler, Grasshopper Cookies,499,4.0,68.3,2.4,39.7,266,16.4,2.4,4.1,0.5,4.0,Cookies,145,29.0,499
+Keebler,Keebler, Jumbo Fudge Sticks,537,7.1,60.6,3.2,40.8,121,15.7,9.0,4.1,0.4,1.0,Cookie,166,31.0,537
+Keebler,Keebler, Jumbo Fudge Sticks,530,2.4,68.6,1.7,51.2,113,17.0,7.4,2.0,0.4,1.0,Cookie,164,31.0,530
+Keebler,Keebler, Magic Middles Fudge Filled Cookies,521,5.0,62.5,1.9,33.0,187,9.9,4.8,7.8,0.4,2.0,Cookies,156,30.0,521
+Keebler,Keebler, Magic Middles Fudge Filled Cookies,514,6.9,59.2,2.7,34.5,479,8.9,6.3,6.0,0.3,2.0,Cookies,154,30.0,514
+Keebler,Keebler, Merry Mint Patties,528,2.9,66.7,1.4,44.3,249,23.3,3.2,1.0,0.5,2.0,Cookies,137,26.0,528
+Keebler,Keebler, Mint Creme Middles,516,4.3,65.4,3.2,38.9,283,15.6,3.7,6.6,0.6,3.0,Cookies,134,26.0,516
+Keebler,Keebler, Peanut Creme Filled Cookies,537,7.2,57.6,3.3,30.3,354,16.9,6.8,6.0,0.3,2.0,Cookies,161,30.0,537
+Keebler,Keebler, Triple Fudge Filled Cookies,533,3.6,64.2,3.0,42.7,235,17.1,4.3,6.3,0.44,2.0,Cookies,165,31.0,533
+Keebler,Keebler, Holiday,444,4.9,77.9,2.1,32.9,420,3.9,2.7,4.5,0.2,5.0,Cookies,147,33.0,444
+Keebler,Keebler, Cinnamon Crisp,430,5.9,76.3,3.3,26.9,474,2.7,2.9,5.7,0.57,8.0,Crackers,129,30.0,430
+Keebler,Keebler, Chips Deluxe,473,5.3,71.3,2.5,31.4,385,7.7,4.9,5.6,0.2,1.0,Pouch,118,25.0,473
+Keebler,Keebler, Chips Deluxe,470,4.7,74.3,1.8,33.5,383,7.1,4.0,5.5,0.2,1.0,Pouch,118,25.0,470
+Keebler,Keebler, Chocolate Chip Grahams,433,7.4,75.6,11.0,22.8,289,4.8,3.1,4.0,0.1,1.0,Pouch,108,25.0,433
+Keebler,Keebler, Cinnamon Grahams,415,7.4,75.6,10.4,20.5,324,4.1,2.8,4.9,0.2,1.0,Pouch,104,25.0,415
+Keebler,Keebler, Prepared From Recipe,470,5.0,73.9,1.5,28.2,380,5.5,3.8,6.2,0.25,6.0,Cookies,136,29.0,470
+Keebler,Keebler, Prepared From Recipe,467,6.5,69.5,4.1,35.6,297,5.8,4.4,6.9,0.24,2.0,Cookies,135,29.0,467
+Keebler,Keebler, Prepared From Recipe,465,7.1,71.8,3.33,26.5,357,3.2,8.4,2.2,0.49,1.0,Serving,144,31.0,465
+Keebler,Keebler, Prepared From Recipe,478,7.1,67.7,4.5,30.9,325,6.3,4.9,7.5,0.27,2.0,Cookies,139,29.0,478
+Keebler,Keebler, Chocolate Pie Crust,490,5.1,67.7,1.8,28.7,507,5.0,6.7,0.8,9.4,0.12,"Crust, 1 Serving (From 9"" Shell)",103,21.0,490
+Keebler,Keebler," Graham Pie Crust (10"")",472,4.9,73.5,2.5,29.7,483,3.8,5.2,0.5,7.54,0.12,Crust,99,21.0,472
+Keebler,Keebler, Shortbread Pie Crust,502,4.4,69.1,1.3,26.6,430,5.1,6.9,0.5,0.0,0.12,"Crust, 9"" Crust",105,21.0,502
+Keebler,Keebler, Cashew Shortbread Cookies,535,6.3,59.3,1.5,23.2,370,9.5,8.3,10.2,0.44,2.0,Cookies,161,30.0,535
+Keebler,Keebler, Chocolate Chip & Pecan Shortbread Cookies,546,5.6,59.2,2.4,26.5,304,10.7,8.9,10.4,0.37,2.0,Cookies,169,31.0,546
+Keebler,Keebler, Dark Chocolate Almond Shortbread Cookies,540,6.1,59.9,2.6,26.5,303,10.8,7.0,9.4,0.37,2.0,Cookies,162,30.0,540
+Keebler,Keebler, Pecan Shortbread Cookies,541,5.0,59.0,1.9,22.5,354,9.5,8.4,11.4,0.4,2.0,Cookies,168,31.0,541
+Keebler,Keebler, Pecan Shortbread Cookies,488,6.7,67.1,2.1,23.9,401,6.6,5.6,7.8,0.28,2.0,Cookies,151,31.0,488
+Keebler,Keebler, Simply Shortbread Cookies,528,6.0,62.2,1.4,22.6,291,13.2,6.4,6.4,0.69,2.0,Cookies,164,31.0,528
+Keebler,Keebler, Chocolate Chip Cookies,477,3.6,66.2,1.7,36.9,350,9.0,4.7,6.8,0.3,2.0,Cookies,153,32.0,477
+Keebler,Keebler, Prepared From Recipe,375,7.3,78.0,2.1,26.4,326,0.8,2.0,0.8,0.0,1.0,Cone,49,13.0,375
+Keebler,Keebler, Prepared From Recipe,469,4.5,71.0,1.3,32.0,267,6.5,6.4,1.4,5.42,2.0,Cookies,178,38.0,469
+Keebler,Keebler, Prepared From Recipe,489,10.6,60.2,3.2,11.6,772,3.6,8.2,8.5,0.14,1.0,Package,191,39.0,489
+Keebler,Keebler, Prepared From Recipe,475,3.8,69.9,2.3,41.2,324,10.3,5.2,1.1,4.27,2.0,Cookies,181,38.0,475
+Keebler,Keebler, Buttercrisps Crackers,495,5.5,65.0,1.8,8.4,930,4.0,5.8,13.7,0.24,5.0,Crackers,79,16.0,495
+Keebler,Keebler, Onion Crackers,479,5.7,67.7,2.2,9.7,1006,3.4,5.0,12.0,0.2,5.0,Crackers,77,16.0,479
+Keebler,Keebler, Party Pack Cracker Assortment,483,6.5,64.4,2.9,7.2,904,3.8,5.8,13.1,0.2,5.0,Crackers,77,16.0,483
+Keebler,Keebler, Sesame Crackers,496,6.6,62.6,2.8,4.1,887,3.5,5.2,15.4,0.2,5.0,Crackers,79,16.0,496
+Keebler,Keebler, Wheat Crackers,466,8.3,66.1,4.0,9.0,875,3.2,5.0,11.4,0.18,5.0,Crackers,75,16.0,466
+Keebler,Keebler, Bistro Multigrain Crackers,460,7.3,67.0,3.4,8.6,797,4.3,6.6,3.5,5.1,2.0,Crackers,74,16.0,460
+Keebler,Keebler, Flatbread Crisps,443,8.0,72.8,3.6,5.2,942,2.1,3.1,7.2,0.1,8.0,Crackers,66,15.0,443
+Keebler,Keebler, Flipsides,476,8.0,61.3,2.1,5.4,1454,4.0,5.0,11.9,0.2,5.0,Crackers,71,15.0,476
+Keebler,Keebler, Flipsides,486,6.5,63.0,2.2,6.6,1517,4.1,5.6,13.3,0.23,5.0,Crackers,73,15.0,486
+Keebler,Keebler, Flipsides,487,6.6,64.3,2.1,6.8,1240,3.8,5.6,13.2,0.22,5.0,Crackers,73,15.0,487
+Keebler,Keebler, Flipsides,450,7.2,70.4,2.3,7.5,1288,2.6,3.8,9.1,0.1,5.0,Crackers,63,14.0,450
+Keebler,Keebler, Original Crackers,526,5.1,59.8,1.7,6.5,826,4.8,7.9,16.6,0.29,5.0,Crackers,84,16.0,526
+Keebler,Keebler, Reduced Fat Crackers,431,6.6,77.1,2.2,8.4,868,2.0,2.6,6.5,0.1,6.0,Crackers,65,15.0,431
+Keebler,Keebler, Toppers,483,6.4,71.6,2.8,8.0,958,3.0,5.4,10.5,0.12,3.0,Crackers,68,14.0,483
+Keebler,Keebler, Toppers,462,7.6,68.4,3.4,13.7,871,3.0,4.5,10.6,0.17,3.0,Crackers,65,14.0,462
+Keebler,Keebler, Toppers,483,7.6,66.8,2.6,8.0,967,2.9,5.7,11.8,0.11,3.0,Crackers,68,14.0,483
+Keebler,Keebler, Wheat Crackers,489,6.3,63.2,2.8,3.1,876,4.0,6.0,14.1,0.2,5.0,Crackers,78,16.0,489
+Keebler,Keebler, Iced Lemonade Cookies,502,4.5,66.3,1.0,29.9,262,8.0,5.5,9.0,0.36,4.0,Cookies,146,29.0,502
+Keebler,Keebler, Iced Oatmeal Cookies,463,5.4,71.0,2.7,36.3,493,5.8,4.2,6.7,0.25,4.0,Cookies,148,32.0,463
+Keebler,Keebler, Prepared From Recipe,462,4.0,73.1,1.4,31.6,402,5.7,3.9,6.6,0.25,8.0,Cookies,139,30.0,462
+Keebler,Keebler, Rainbow,466,4.0,72.3,1.3,31.1,400,6.0,4.1,6.8,0.28,18.0,Cookies,140,30.0,466
+Keebler,Keebler, Prepared From Recipe,492,4.5,73.2,1.5,33.6,301,6.7,3.7,9.3,0.37,2.0,Cookies,153,31.0,492
+Keebler,Keebler, Reduced Fat,465,4.5,78.1,1.5,37.2,366,4.9,2.7,7.1,0.27,2.0,Cookies,144,31.0,465
+Keebler,Keebler, Prepared From Recipe,424,6.5,87.7,1.8,31.6,149,0.9,1.9,1.4,0.92,1.0,Waffle,51,12.0,424
+Keebler,Keebler, Prepared From Recipe,424,6.5,87.7,1.8,31.6,149,0.9,1.9,1.4,0.92,1.0,Cone,51,12.0,424
+Keebler,Keebler, Honey Wheat Crackers,482,7.6,67.0,3.3,15.0,679,4.7,6.5,7.9,1.26,17.0,Crackers,145,30.0,482
+Keebler,Keebler, Nut Crisp Crackers,472,8.4,66.5,3.9,11.7,743,3.1,6.1,10.6,0.2,16.0,Crackers,142,30.0,472
+Keebler,Keebler, Nut Crisp Crackers,483,7.6,65.7,3.8,11.6,654,3.6,6.6,11.2,0.2,16.0,Crackers,145,30.0,483
+Keebler,Keebler, Export Sodas Crackers,414,5.6,74.0,3.3,2.3,597,2.3,3.6,1.1,4.5,3.0,Crackers,58,14.0,414
+Keebler,Keebler, Saltines With Whole Wheat,416,8.4,75.1,3.2,2.1,1532,1.4,2.4,5.8,0.0,5.0,Crackers,62,15.0,416
+Keebler,Keebler, Saltines,418,8.2,76.1,2.5,1.6,1021,1.3,2.2,5.5,0.0,5.0,Crackers,63,15.0,418
+Keikitos (Muffins),Keikitos (Muffins), Prepared From Recipe,467,6.8,53.2,1.2,25.8,515,4.84,4.51,4.37,0.49,1.0,Piece,196,42.0,467
+Kellogg'S,Kellogg'S Eggo Lowfat Blueberry Nutri-Grain Waffles, Prepared From Recipe,208,6.0,42.7,3.5,8.9,591,0.4,1.2,0.8,0.49,1.0,"Waffle, Round (4"" Dia) (Include Frozen)",73,35.0,208
+Kellogg'S,Kellogg'S, Garlic And Herb Crackers,467,8.6,63.5,16.3,10.0,850,3.2,5.2,11.5,0.0,18.0,Crackers,140,30.0,467
+Kellogg'S,Kellogg'S, Multigrain Crackers,415,8.6,65.7,16.4,12.9,690,3.2,4.8,11.3,0.2,18.0,Crackers,125,30.0,415
+Kellogg'S,Kellogg'S, Original 3-Bean Chips,487,22.9,46.5,14.2,5.3,794,2.0,19.5,2.6,0.1,12.0,Chips,136,28.0,487
+Kellogg'S,Kellogg'S, Pancakes,255,5.0,43.4,1.0,15.6,456,1.2,1.6,3.6,0.1,3.0,Pancakes,260,105.0,255
+Kellogg'S,Kellogg'S, Pancakes,258,5.0,43.1,1.1,14.9,456,1.6,1.7,3.6,0.1,3.0,Pancakes,260,105.0,258
+Kellogg'S,Kellogg'S, Prepared From Recipe,367,7.5,84.4,1.2,9.3,638,0.1,0.1,0.2,0.0,6.0,Tbsp,121,33.0,367
+Kellogg'S,Kellogg'S, Pancakes,251,5.5,39.6,1.0,10.3,521,1.3,1.9,4.4,0.1,11.0,Pancakes,260,110.0,251
+Kellogg'S,Kellogg'S, Waffles,281,10.8,37.0,1.2,2.7,562,2.5,2.6,4.2,0.2,2.0,Waffles,197,70.0,281
+Kellogg'S,Kellogg'S, Waffles,296,5.5,41.4,1.5,9.2,540,3.1,3.1,5.2,0.2,2.0,Waffles,207,70.0,296
+Kellogg'S,Kellogg'S, Biscuit Scramblers,258,8.8,38.3,2.1,4.7,610,4.1,1.5,1.1,0.0,1.0,Bscuit,260,105.0,258
+Kellogg'S,Kellogg'S, Biscuit Scramblers,254,8.8,38.3,2.3,4.7,583,4.0,1.5,1.1,0.0,1.0,Bscuit,260,105.0,254
+Kellogg'S,Kellogg'S, Fiberplus Waffles,227,4.7,41.8,13.2,4.7,559,2.1,2.0,3.2,0.2,2.0,Waffles,159,70.0,227
+Kellogg'S,Kellogg'S, Fiberplus Waffles,259,4.3,44.4,12.9,10.9,503,3.3,2.8,3.7,0.2,2.0,Waffles,181,70.0,259
+Kellogg'S,Kellogg'S, French Toaster Sticks,250,4.8,42.6,1.0,16.2,550,1.9,1.8,2.7,0.1,2.0,Pieces,225,90.0,250
+Kellogg'S,Kellogg'S, French Toaster Sticks,239,5.3,39.4,0.9,10.9,598,1.7,1.8,2.9,0.1,2.0,Pieces,215,90.0,239
+Kellogg'S,Kellogg'S, Mini Muffin Tops,293,5.0,45.8,1.0,18.1,586,2.8,2.5,4.0,0.2,1.0,Set,135,46.0,293
+Kellogg'S,Kellogg'S, Mini Muffin Tops,300,5.2,45.0,1.2,18.5,582,3.5,2.9,4.0,0.2,1.0,Set,138,46.0,300
+Kellogg'S,Kellogg'S, Nutri-Grain Frozen Fruit Pizza,259,6.4,41.4,3.0,11.5,262,3.8,1.6,1.9,0.0,1.0,Pizza,260,150.0,259
+Kellogg'S,Kellogg'S, Nutri-Grain Frozen Fruit Pizza,266,6.5,43.7,2.7,11.9,263,3.7,1.6,1.9,0.0,1.0,Pizza,260,150.0,266
+Kellogg'S,Kellogg'S, Nutri-Grain,257,6.2,43.6,3.9,10.0,527,1.8,1.9,3.3,0.2,2.0,Waffles,180,70.0,257
+Kellogg'S,Kellogg'S, Nutri-Grain,268,6.6,44.1,3.8,10.5,544,2.0,2.2,3.7,0.2,2.0,Waffles,188,70.0,268
+Kellogg'S,Kellogg'S, Nutri-Grain,239,6.6,37.6,3.9,3.6,567,2.0,2.1,3.7,0.2,2.0,Waffles,167,70.0,239
+Kellogg'S,Kellogg'S, Pancakes,245,5.3,39.9,1.0,10.1,480,1.2,1.6,3.8,0.1,3.0,Pancakes,257,105.0,245
+Kellogg'S,Kellogg'S, Pancakes,253,5.5,39.9,1.3,11.2,471,1.8,2.0,3.8,0.1,3.0,Pancakes,260,105.0,253
+Kellogg'S,Kellogg'S, Thick & Fluffy,307,5.8,44.5,1.1,15.8,490,3.2,3.1,5.0,0.2,1.0,Waffle,169,55.0,307
+Kellogg'S,Kellogg'S, Thick & Fluffy,295,6.5,37.4,1.1,4.7,553,3.3,3.5,6.0,0.2,1.0,Waffle,162,55.0,295
+Kellogg'S,Kellogg'S, Wafflers,331,4.8,52.2,1.3,21.0,672,3.4,2.9,4.6,0.2,2.0,Waffles,252,76.0,331
+Kellogg'S,Kellogg'S, Wafflers,318,5.0,50.0,1.2,16.8,691,2.7,2.8,4.6,0.2,2.0,Waffles,242,76.0,318
+Kellogg'S,Kellogg'S, Waffles,265,5.5,41.7,1.1,9.1,520,2.1,2.1,3.5,0.2,2.0,Waffles,186,70.0,265
+Kellogg'S,Kellogg'S, Waffles,278,6.6,39.0,1.2,2.9,526,2.7,2.8,4.6,0.2,2.0,Waffles,195,70.0,278
+Kellogg'S,Kellogg'S, Waffles,291,5.8,44.8,1.5,13.1,529,3.8,2.1,3.4,0.2,2.0,Waffles,204,70.0,291
+Kellogg'S,Kellogg'S, Waffles,325,5.5,49.5,1.4,18.2,524,3.4,3.1,4.6,0.2,3.0,Sets,260,92.0,325
+Kellogg'S,Kellogg'S, Waffles,305,5.8,43.4,1.2,11.5,537,4.0,2.9,4.6,0.2,1.0,Waffle,137,45.0,305
+Kellogg'S,Kellogg'S, Waffles,265,5.5,41.6,1.1,9.3,525,2.1,2.2,3.5,0.2,2.0,Waffles,186,70.0,265
+Kellogg'S,Kellogg'S, Cinnamon Brown Sugar Baked Bites,433,4.8,79.0,1.7,33.4,525,3.5,2.5,4.1,0.2,1.0,Pouch,100,23.0,433
+Kellogg'S,Kellogg'S, Frosted Chocolate Baked Bites,438,5.0,78.9,2.2,35.8,487,3.9,2.5,3.9,0.2,1.0,Pouch,101,23.0,438
+Kellogg'S,Kellogg'S, Frosted Strawberry Baked Bites,440,4.7,79.1,1.5,35.3,510,4.5,2.4,4.0,0.1,1.0,Pouch,44,10.0,440
+Kellogg'S,Kellogg'S, Chocolate Chip Cookie Dough Toaster Pastries,387,4.5,69.4,1.5,35.5,382,3.8,2.4,3.4,0.2,1.0,Pastry,194,50.0,387
+Kellogg'S,Kellogg'S, Frosted Apple Strudel Toaster Pastries,395,4.4,70.5,1.5,28.0,329,3.5,2.4,4.0,0.2,1.0,Pastry,198,50.0,395
+Kellogg'S,Kellogg'S, Frosted Blueberry Muffin Toaster Pastries,397,4.0,70.9,1.1,27.6,398,3.5,2.4,4.0,0.2,1.0,Pastry,199,50.0,397
+Kellogg'S,Kellogg'S, Frosted Cinnamon Roll Toaster Pastries,416,4.7,67.8,1.4,26.2,329,4.6,3.1,5.3,0.2,1.0,Pastry,208,50.0,416
+Kellogg'S,Kellogg'S, Frosted Confetti Cake Toaster Pastries,375,4.4,73.0,1.3,29.3,460,2.5,1.5,2.6,0.1,1.0,Pastry,188,50.0,375
+Kellogg'S,Kellogg'S, Frosted Cookies & Creme Toaster Pastries,379,4.9,69.3,2.6,38.3,597,3.4,2.2,3.4,0.2,1.0,Pastry,190,50.0,379
+Kellogg'S,Kellogg'S, Frosted Orange Cream Toaster Pastries,401,3.9,70.6,1.1,31.8,387,3.9,2.4,4.0,0.15,1.0,Pastry,201,50.0,401
+Kellogg'S,Kellogg'S, Frosted Pumpkin Pie Toaster Pastries,394,4.7,70.6,1.5,28.6,345,3.4,2.3,3.9,0.1,1.0,Pastry,197,50.0,394
+Kellogg'S,Kellogg'S, Frosted Spring Berry Toaster Pastries,390,4.0,72.3,1.3,31.3,321,3.1,2.1,3.6,0.1,1.0,Pastry,203,52.0,390
+Kellogg'S,Kellogg'S, Frosted Waffle Cone Toaster Pastries,373,3.9,74.3,1.2,32.4,432,2.3,1.4,2.4,0.1,1.0,Pastry,187,50.0,373
+Kellogg'S,Kellogg'S, Frosted Wild Fruit Fusion Toaster Pastries,391,3.9,72.3,1.3,30.8,334,3.1,2.1,3.6,0.2,1.0,Pastry,196,50.0,391
+Kellogg'S,Kellogg'S, Frosted Wild Grape Toaster Pastries,390,4.1,71.8,1.3,30.5,334,3.1,2.1,3.6,0.2,1.0,Pastry,195,50.0,390
+Kellogg'S,Kellogg'S, Frosted Wild Strawberry Toaster Pastries,391,3.9,72.1,1.3,30.6,333,3.1,2.1,3.6,0.1,1.0,Pastry,196,50.0,391
+Kellogg'S,Kellogg'S, Ice Cream Shoppe Frosted Hot Fudge Sundae Toaster Pastries,391,4.4,69.8,3.3,24.7,399,3.9,2.2,3.6,0.2,1.0,Pastry,188,48.0,391
+Kellogg'S,Kellogg'S, Ice Cream Shoppe Frosted Ice Creme Sandwich Toaster Pastries,390,4.6,69.4,3.5,23.5,374,3.8,2.2,3.7,0.2,1.0,Pastry,187,48.0,390
+Kellogg'S,Kellogg'S, Ice Cream Shoppe Frosted Rainbow Chip Toaster Pastries,400,4.0,70.8,1.1,30.3,391,4.0,2.3,3.8,0.2,1.0,Pastry,200,50.0,400
+Kellogg'S,Kellogg'S, Ice Cream Shoppe Frosted Strawberry Milkshake Toaster Pastries,397,4.0,70.0,2.7,23.9,390,3.9,2.4,4.0,0.2,1.0,Pastry,191,48.0,397
+Kellogg'S,Kellogg'S, Ice Cream Shoppe Frosted Vanilla Milkshake Toaster Pastries,398,4.0,70.1,2.7,23.9,391,4.0,2.4,4.0,0.2,1.0,Pastry,191,48.0,398
+Kellogg'S,Kellogg'S, Yum-Azing Vanilla Milkshake Toaster Pastries,398,4.1,70.2,2.7,23.4,389,3.8,2.3,3.9,0.2,1.0,Pastry,199,50.0,398
+Kellogg'S,Kellogg'S, Original,294,6.2,43.3,1.3,5.9,636,2.8,2.0,4.9,0.2,2.0,Waffles,206,70.0,294
+Kellogg'S,Kellogg'S, Cracker Chips,382,6.4,73.7,9.2,4.3,750,2.4,1.8,4.1,0.1,27.0,Chips,115,30.0,382
+Kellogg'S,Kellogg'S, Cracker Chips,361,6.8,75.4,10.8,0.6,760,1.4,2.1,4.0,0.1,30.0,Chips,108,30.0,361
+Kellogg'S,Kellogg'S, Cracker Chips,365,7.1,74.3,9.8,3.5,764,2.2,2.0,3.7,0.1,27.0,Chips,110,30.0,365
+Kellogg'S,Kellogg'S, Cracker Chips,380,6.2,74.8,9.3,4.3,750,1.8,1.9,4.3,0.1,27.0,Chips,114,30.0,380
+Kellogg'S,Kellogg'S, Multigrain Crackers,401,9.0,75.4,8.6,20.8,848,1.4,2.2,4.9,0.1,24.0,Crackers,120,30.0,401
+Kellogg'S,Kellogg'S, Savory Herb Crackers,406,10.9,73.8,9.8,10.6,809,1.5,2.2,5.1,0.1,24.0,Crackers,122,30.0,406
+Kraft,Kraft Foods, Coating For Pork,377,6.1,79.8,3.33,19.0,2182,4.84,4.51,4.37,0.49,1.0,Serving,106,28.0,377
+Leavening Agents,Leavening Agents, Double-Acting,53,0.0,27.7,0.2,0.0,10600,0.0,0.0,0.0,0.49,1.0,Tsp,2,5.0,53
+Leavening Agents,Leavening Agents, Double-Acting,51,0.1,24.1,0.2,0.0,7893,0.0,0.0,0.0,0.49,1.0,Tsp,2,5.0,51
+Leavening Agents,Leavening Agents, Low-Sodium,97,0.1,46.9,2.2,0.0,90,0.1,0.0,0.1,0.49,1.0,Tsp,5,5.0,97
+Leavening Agents,Leavening Agents, Prepared From Recipe,258,0.0,61.5,0.2,0.0,52,0.0,0.0,0.0,0.49,1.0,Tsp,8,3.0,258
+Leavening Agents,Leavening Agents, Baker'S,325,40.4,41.2,26.9,0.0,51,1.0,4.3,0.0,0.49,1.0,Tsp,13,4.0,325
+Martha White Foods,Martha White Foods, Dry,388,7.8,59.4,1.5,4.5,1295,4.1,4.51,4.37,3.77,1.0,Serving,159,41.0,388
+Martha White Foods,Martha White Foods, Dry,407,4.4,83.6,2.9,54.8,457,1.7,4.51,4.37,0.49,1.0,Serving,114,28.0,407
+Mary'S Gone Crackers,Mary'S Gone Crackers, Organic Gluten Free,446,12.1,64.3,16.2,1.0,587,4.84,4.51,4.37,0.49,3.0,Crackers,33,7.0,446
+Mckee Baking,Mckee Baking, Wafers With Peanut Butter,548,8.0,55.2,3.33,34.0,223,6.3,4.51,4.37,0.49,1.0,Serving,260,57.0,548
+Mission Foods,Mission Foods, Soft Taco,287,8.7,49.6,3.33,19.0,898,0.7,2.8,0.9,0.49,1.0,Serving,146,51.0,287
+Mother'S,Mother'S, Prepared From Recipe,487,3.8,68.3,0.8,44.2,192,24.7,0.2,0.3,0.0,6.0,Cookies,141,29.0,487
+Mother'S,Mother'S, Prepared From Recipe,490,5.7,67.6,1.7,32.9,527,8.1,5.2,6.8,0.27,4.0,Cookies,147,30.0,490
+Mother'S,Mother'S, Prepared From Recipe,515,3.8,68.3,0.8,43.5,192,24.7,0.2,0.3,0.0,6.0,Cookies,149,29.0,515
+Mother'S,Mother'S, Prepared From Recipe,500,5.7,65.1,3.0,27.8,430,12.8,4.1,6.2,0.2,5.0,Cookies,160,32.0,500
+Mother'S,Mother'S, Prepared From Recipe,457,5.3,70.0,3.3,33.1,245,7.7,4.9,2.8,4.09,2.0,Cookies,174,38.0,457
+Mother'S,Mother'S, Prepared From Recipe,469,4.5,71.0,1.3,32.0,267,6.5,6.4,1.4,5.42,2.0,Cookies,178,38.0,469
+Mother'S,Mother'S, Prepared From Recipe,514,3.8,68.1,0.8,43.9,191,24.7,0.2,0.3,0.0,6.0,Cookies,149,29.0,514
+Mother'S,Mother'S, Prepared From Recipe,515,3.8,68.3,0.8,44.3,192,24.7,0.2,0.3,0.01,6.0,Cookies,149,29.0,515
+Mother'S,Mother'S, Prepared From Recipe,502,4.5,66.3,1.0,29.9,262,8.0,5.5,9.0,0.36,4.0,Cookies,146,29.0,502
+Mother'S,Mother'S, Prepared From Recipe,463,5.4,71.0,2.7,36.3,493,5.8,4.2,6.7,0.25,4.0,Cookies,148,32.0,463
+Mother'S,Mother'S, Prepared From Recipe,514,3.8,68.3,0.8,44.2,192,24.3,0.4,0.3,0.1,6.0,Cookies,149,29.0,514
+Mother'S,Mother'S, Prepared From Recipe,552,6.1,55.7,4.1,25.4,284,18.1,5.4,8.1,0.32,2.0,Cookies,171,31.0,552
+Mother'S,Mother'S, Prepared From Recipe,500,5.4,66.0,2.2,34.0,383,9.1,5.9,7.4,0.29,2.0,Cookies,160,32.0,500
+Mother'S,Mother'S, Prepared From Recipe,461,6.0,72.8,2.7,35.8,597,5.4,4.0,6.3,0.23,2.0,Cookies,143,31.0,461
+Mother'S,Mother'S, Prepared From Recipe,470,6.5,71.2,3.0,31.3,640,5.9,4.3,6.9,0.26,2.0,Cookies,127,27.0,470
+Mother'S,Mother'S, Prepared From Recipe,482,7.4,65.7,2.7,32.3,434,4.2,8.5,3.4,4.0,2.0,Cookies,183,38.0,482
+Mother'S,Mother'S, Prepared From Recipe,475,3.8,69.9,2.3,41.2,324,10.3,5.2,1.1,4.27,2.0,Cookies,181,38.0,475
+Mother'S,Mother'S, Prepared From Recipe,469,4.8,68.9,1.3,30.1,276,7.3,4.8,2.9,4.24,2.0,Cookies,178,38.0,469
+Muffins,Muffins, Commercially Prepared (Includes Mini-Muffins),375,4.5,53.0,1.1,31.5,336,2.8,4.8,8.1,0.2,1.0,Oz,106,28.0,375
+Muffins,Muffins, Prepared From Recipe,285,6.5,40.7,3.33,19.0,441,2.0,2.6,5.4,0.49,1.0,Oz,81,28.0,285
+Muffins,Muffins, Commercially Prepared,305,5.9,51.0,3.4,17.8,467,1.4,2.1,3.2,0.49,1.0,Oz,86,28.0,305
+Muffins,Muffins, Dry Mix,321,7.4,49.1,2.4,19.0,795,2.8,5.2,1.3,0.49,1.0,Oz,91,28.0,321
+Muffins,Muffins, Prepared From Recipe,316,7.1,44.2,3.33,19.0,585,2.3,3.0,6.2,0.49,1.0,Oz,90,28.0,316
+Muffins,Muffins, Prepared From Recipe,270,7.0,48.3,4.6,8.2,393,1.1,1.7,4.1,0.49,1.0,Oz,77,28.0,270
+Muffins,Muffins, Prepared From Recipe,296,6.9,41.4,2.7,19.0,467,2.2,2.8,5.7,0.49,1.0,Oz,84,28.0,296
+Murray,Murray, Prepared From Recipe,473,4.9,71.3,2.2,38.4,507,6.5,4.5,7.0,0.28,3.0,Cookies,137,29.0,473
+Murray,Murray, Prepared From Recipe,466,7.1,73.6,2.0,23.2,439,6.5,3.3,5.4,0.23,8.0,Cookies,140,30.0,466
+Murray,Murray, Butter Cookies,463,7.2,74.3,1.9,22.3,441,5.1,3.5,5.8,0.23,8.0,Cookies,139,30.0,463
+Murray,Murray, Coconut Bars Cookies,461,7.1,73.9,2.0,22.6,488,5.3,3.4,5.7,0.22,6.0,Cookies,148,32.0,461
+Murray,Murray, Prepared From Recipe,475,4.9,72.6,1.8,37.6,412,6.2,4.3,6.9,0.27,3.0,Cookies,138,29.0,475
+Murray,Murray, Prepared From Recipe,445,5.9,75.7,2.7,22.0,477,3.2,5.5,3.8,0.7,8.0,Crackers,138,31.0,445
+Murray,Murray, Prepared From Recipe,438,4.8,78.1,1.1,37.6,331,3.8,2.6,4.4,0.17,9.0,Cookies,140,32.0,438
+Murray,Murray, Prepared From Recipe,479,4.7,73.7,1.2,37.8,308,6.1,4.3,7.0,0.27,3.0,Cookies,139,29.0,479
+Murray,Murray, Prepared From Recipe,463,5.1,73.9,1.3,31.4,541,5.3,3.7,6.1,0.24,5.0,Cookies,139,30.0,463
+Murray,Murray, Prepared From Recipe,459,5.0,71.0,1.7,32.5,589,5.6,4.0,6.6,0.25,5.0,Cookies,151,33.0,459
+Murray,Murray, Chocolate Chip Cookies,493,5.5,66.5,2.5,30.5,493,9.1,6.0,7.2,0.3,2.0,Cookies,138,28.0,493
+Murray,Murray, Coconut Cookies,511,5.7,65.5,3.0,30.4,202,11.5,4.7,7.3,0.28,2.0,Cookies,148,29.0,511
+Murray,Murray, Iced Oatmeal Cookies,467,6.5,69.5,4.1,35.6,297,5.8,4.4,6.9,0.24,2.0,Cookies,135,29.0,467
+Murray,Murray, Oatmeal Cookies,478,7.1,67.7,4.5,30.9,325,6.3,4.9,7.5,0.27,2.0,Cookies,139,29.0,478
+Murray,Murray, Chocolate Chip & Pecan Cookies,497,6.0,58.6,5.1,1.5,390,9.6,9.9,9.8,0.32,3.0,Cookies,159,32.0,497
+Murray,Murray, Chocolate Chip Cookies,469,5.6,63.6,4.8,1.2,411,10.5,6.7,8.1,0.31,3.0,Cookies,150,32.0,469
+Murray,Murray, Chocolate Creme Sandwich Cookies,465,5.3,65.9,4.5,1.1,329,8.3,5.6,8.8,0.38,3.0,Cookies,130,28.0,465
+Murray,Murray, Fudge Dipped Grahams,483,5.7,63.3,3.8,0.4,278,19.1,2.9,4.2,0.43,4.0,Cookies,145,30.0,483
+Murray,Murray, Fudge Dipped Mint Cookies,481,6.0,63.5,4.6,0.6,364,18.9,2.9,3.8,0.42,4.0,Cookies,125,26.0,481
+Murray,Murray, Fudge Dipped Wafers,486,3.4,61.2,13.3,0.4,71,21.2,3.9,7.1,0.59,4.0,Cookies,151,31.0,486
+Murray,Murray, Lemon Creme Sandwich Cookies,469,4.9,68.3,3.3,1.2,189,7.8,5.4,8.8,0.37,3.0,Cookies,131,28.0,469
+Murray,Murray, Oatmeal Cookies,451,6.7,66.6,8.5,1.2,410,7.2,5.2,8.3,0.34,3.0,Cookies,144,32.0,451
+Murray,Murray, Peanut Butter Cookies,505,9.5,55.8,5.7,1.7,458,8.3,10.9,11.2,0.4,3.0,Cookies,146,29.0,505
+Murray,Murray, Pecan Shortbread Cookies,514,5.9,57.3,4.6,1.1,351,10.1,8.8,12.1,0.44,3.0,Cookies,164,32.0,514
+Murray,Murray, Shortbread Bites,371,6.5,75.3,14.9,1.2,518,4.9,3.1,5.3,0.4,1.0,Pouch,78,21.0,371
+Murray,Murray, Shortbread Cookies,431,7.0,71.6,5.7,1.3,476,5.7,3.9,6.4,0.3,8.0,Cookies,129,30.0,431
+Murray,Murray, Vanilla Creme Sandwich Cookies,467,4.9,70.0,3.4,1.2,192,7.5,5.2,8.5,0.36,3.0,Cookies,131,28.0,467
+Murray,Murray, Vanilla Sugar Wafer,458,3.2,68.5,14.3,0.8,81,9.3,6.9,10.9,0.5,4.0,Cookies,128,28.0,458
+Murray,Murray, Vanilla Wafer,412,5.9,74.0,5.6,1.4,281,5.4,3.7,6.1,0.26,9.0,Cookies,132,32.0,412
+Murray,Murray, Prepared From Recipe,477,4.9,73.9,1.3,36.9,317,6.0,4.1,6.8,0.3,3.0,Cookies,138,29.0,477
+Murray,Murray, Prepared From Recipe,527,3.9,70.0,1.0,41.0,92,8.6,6.5,10.1,0.5,5.0,Cookies,148,28.0,527
+Murray,Murray, Prepared From Recipe,461,4.0,72.9,1.4,31.5,401,5.7,3.9,6.6,0.25,8.0,Cookies,138,30.0,461
+Nabisco,Nabisco, Prepared From Recipe,424,7.0,76.2,3.4,23.0,659,1.6,3.6,0.5,0.49,1.0,Serving,119,28.0,424
+Nabisco,Nabisco, Cookie Crumb Topping,476,4.8,70.2,3.2,36.0,528,4.1,3.2,0.8,0.49,1.0,Serving,52,11.0,476
+Nabisco,Nabisco, Prepared From Recipe,305,5.0,74.3,1.6,43.4,174,0.4,0.2,0.2,0.49,1.0,Serving,49,16.0,305
+Pancakes,Pancakes, Ready-To-Heat (Includes Buttermilk),233,5.2,37.8,1.0,8.3,461,1.2,1.6,3.8,0.03,1.0,Oz,66,28.0,233
+Pancakes,Pancakes, Prepared From Recipe,222,6.1,29.0,3.33,19.0,412,2.0,2.3,4.2,0.49,1.0,Oz,63,28.0,222
+Pancakes,Pancakes, Prepared From Recipe,227,6.8,28.7,3.33,19.0,522,1.8,2.4,4.5,0.49,1.0,Oz,64,28.0,227
+Pancakes,Pancakes, Frozen,215,3.3,40.3,1.5,4.1,331,0.5,2.4,1.2,0.01,1.0,Pancake,103,48.0,215
+Pancakes,Pancakes, Dry Mix,368,9.8,73.7,2.9,16.0,1082,0.8,1.3,0.9,0.38,0.33,Cup,191,52.0,368
+Pancakes,Pancakes, Dry Mix,194,5.2,36.7,1.3,19.0,628,0.5,0.9,0.8,0.49,1.0,Oz,55,28.0,194
+Pancakes,Pancakes, Dry Mix,218,7.8,28.9,1.9,19.0,505,2.0,2.1,2.9,0.49,1.0,Oz,62,28.0,218
+Pancakes,Pancakes, Frozen,239,5.9,43.3,2.5,7.1,566,0.9,2.5,1.0,0.49,1.0,Oz,68,28.0,239
+Pancakes,Pancakes, Prepared From Recipe,227,6.4,28.3,3.33,19.0,439,2.1,2.5,4.4,0.49,1.0,Oz,64,28.0,227
+Pancakes,Pancakes, Dry Mix,208,8.5,29.4,2.8,19.0,572,1.7,1.7,2.4,0.49,1.0,Oz,59,28.0,208
+Pastry,Pastry, Prepared From Recipe,379,5.5,47.8,2.2,17.0,231,5.5,8.5,2.8,2.85,1.0,Piece,260,86.0,379
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,257,0.0,43.2,5.9,5.1,371,0.8,0.6,1.5,0.0,1.0,Serving,131,51.0,257
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,300,0.0,52.9,3.2,14.6,386,1.1,1.1,3.2,0.0,1.0,Serving,84,28.0,300
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,247,0.0,44.7,4.7,2.8,548,0.9,0.6,1.6,0.3,1.0,Serving,79,32.0,247
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,269,0.0,46.1,7.7,7.2,349,1.3,0.9,2.3,0.02,1.0,Serving,116,43.0,269
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,267,0.0,60.2,2.0,9.6,548,1.0,0.6,1.2,0.07,1.0,Serving,115,43.0,267
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,275,0.0,50.7,3.0,6.9,465,1.0,0.9,1.9,0.02,1.0,Serving,118,43.0,275
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,269,0.0,50.3,1.6,4.7,491,0.9,0.7,1.7,0.07,1.0,Serving,116,43.0,269
+Pepperidge Farm,Pepperidge Farm, Baked Snack Crackers,457,11.7,66.2,3.33,0.7,874,4.84,4.51,4.37,0.49,10.0,Goldfish,24,5.0,457
+Pepperidge Farm,Pepperidge Farm, Baked Snack Crackers,458,9.6,67.2,3.33,2.4,868,4.84,4.51,4.37,0.49,10.0,Goldfish,24,5.0,458
+Pepperidge Farm,Pepperidge Farm, Baked Snack Crackers,467,9.4,65.8,2.4,1.0,947,1.4,11.0,4.3,0.03,10.0,Goldfish,24,5.0,467
+Pepperidge Farm,Pepperidge Farm, Baked Snack Crackers,459,11.2,64.7,3.5,0.8,1187,2.6,9.2,3.4,0.08,10.0,Goldfish,24,5.0,459
+Pepperidge Farm,Pepperidge Farm, Baked Snack Crackers,469,9.7,65.1,3.5,0.9,815,2.1,11.1,4.0,0.06,10.0,Goldfish,24,5.0,469
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,278,0.0,50.0,1.8,7.7,381,1.0,0.7,1.8,0.2,1.0,Serving,142,51.0,278
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,280,0.0,49.9,3.1,7.2,379,1.0,0.9,2.0,0.02,1.0,Serving,148,53.0,280
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,253,0.0,45.0,4.7,3.1,528,0.9,0.6,1.2,0.3,1.0,Serving,81,32.0,253
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,256,0.0,45.6,7.5,4.4,378,0.7,0.4,0.9,0.0,1.0,Serving,146,57.0,256
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,259,0.0,46.9,5.3,3.4,586,0.9,0.6,1.6,0.3,1.0,Serving,83,32.0,259
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,286,0.0,52.1,1.4,17.1,344,1.1,1.1,2.5,0.0,1.0,Serving,80,28.0,286
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,256,0.0,48.4,6.6,3.1,518,0.6,0.6,0.9,0.3,1.0,Serving,82,32.0,256
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,280,0.0,50.2,1.6,5.1,511,1.3,1.3,1.3,0.9,1.0,Serving,126,45.0,280
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,296,0.0,50.7,4.5,4.8,361,2.5,1.9,3.9,0.0,1.0,Serving,204,69.0,296
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,263,0.0,47.2,9.3,7.4,248,0.7,0.7,1.9,0.0,3.08,Oz,129,33.95,263
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,270,0.0,45.8,10.7,6.5,262,0.9,0.9,2.8,0.0,1.0,Serving,116,43.0,270
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,263,0.0,47.7,9.8,8.1,262,0.9,0.7,1.9,0.0,1.0,Serving,113,43.0,263
+Pepperidge Farm,Pepperidge Farm, Prepared From Recipe,258,0.0,46.5,9.8,7.2,261,0.9,0.7,1.9,0.0,1.0,Serving,111,43.0,258
+Pie Crust,Pie Crust, Chocolate,484,6.1,64.5,2.7,26.3,503,4.7,14.5,2.0,0.0,1.0,Crust,260,182.0,484
+Pie Crust,Pie Crust, Graham Cracker,501,5.1,64.3,1.9,18.1,471,5.0,16.9,1.7,0.49,1.0,Oz,142,28.0,501
+Pie Crust,Pie Crust, Prepared From Recipe,531,3.7,50.2,0.1,7.3,515,7.4,15.6,10.7,0.49,1.0,Cup,260,129.0,531
+Pie Crust,Pie Crust, Dry Mix,501,6.7,50.4,1.8,19.0,729,7.7,17.3,3.8,0.49,1.0,"Piece, (1/8 Of 9"" Crust)",100,20.0,501
+Pie Crust,Pie Crust, Frozen,457,3.9,44.1,0.9,19.0,576,4.4,12.4,11.0,0.49,1.0,"Crust, Single 9""",260,142.0,457
+Pie Crust,Pie Crust, Prepared From Recipe,527,6.4,47.5,1.7,0.2,542,8.6,15.2,9.1,0.49,1.0,"Piece, (1/8 Of 9"" Crust)",121,23.0,527
+Pie Crust,Pie Crust, Prepared From Recipe,469,5.7,42.3,3.4,0.2,482,7.7,13.5,8.1,0.49,1.0,"Piece, (1/8 Of 9"" Crust)",113,24.0,469
+Pie,Pie, Commercially Prepared,237,1.9,34.0,1.6,15.7,201,3.8,4.4,2.2,0.49,1.0,Oz,67,28.0,237
+Pie,Pie, Commercially Prepared,237,1.9,34.0,1.6,19.0,266,3.8,4.4,2.2,0.49,1.0,Oz,67,28.0,237
+Pie,Pie, Prepared From Recipe,265,2.4,37.1,3.33,19.0,211,3.1,5.4,3.3,0.49,1.0,Oz,75,28.0,265
+Pie,Pie, Prepared From Mix,251,3.4,31.6,0.6,19.0,290,6.9,4.6,0.8,0.49,1.0,Oz,71,28.0,251
+Pie,Pie, Commercially Prepared,232,1.8,34.9,1.0,9.9,287,1.7,4.2,3.5,0.49,1.0,Oz,66,28.0,232
+Pie,Pie, Prepared From Recipe,245,2.7,33.5,3.33,19.0,185,2.9,5.1,3.1,0.49,1.0,Oz,69,28.0,245
+Pie,Pie, Commercially Prepared,260,2.0,39.8,0.8,14.3,246,2.6,5.8,2.1,0.49,1.0,Oz,74,28.0,260
+Pie,Pie, Prepared From Recipe,270,2.8,38.5,3.33,19.0,191,3.0,5.3,3.2,0.49,1.0,Oz,77,28.0,270
+Pie,Pie, Prepared From Mix,260,3.5,29.6,3.33,19.0,460,8.2,5.1,0.8,0.49,1.0,Oz,74,28.0,260
+Pie,Pie, Prepared From Mix,276,2.8,28.5,0.5,19.0,329,8.9,6.6,1.2,0.49,1.0,Oz,78,28.0,276
+Pie,Pie, Commercially Prepared,298,2.1,37.3,1.3,18.5,204,7.0,7.3,1.5,0.49,1.0,Oz,84,28.0,298
+Pie,Pie, Commercially Prepared,260,5.9,30.2,1.8,19.0,335,5.9,5.5,1.2,0.49,1.0,Oz,74,28.0,260
+Pie,Pie, Commercially Prepared,290,2.2,44.5,1.6,22.0,200,2.3,5.8,2.1,0.49,0.12,"Pie, 1 Pie (1/8 Of 9"" Pie)",260,131.0,290
+Pie,Pie, Commercially Prepared,210,5.5,20.8,1.6,11.6,275,2.3,4.8,3.7,0.49,1.0,Oz,60,28.0,210
+Pie,Pie, Cherry,316,3.0,42.6,2.6,19.0,374,2.5,7.4,5.4,0.49,1.0,Oz,90,28.0,316
+Pie,Pie, Fruit,316,3.0,42.6,2.6,21.4,333,2.5,7.4,5.4,0.49,1.0,Oz,90,28.0,316
+Pie,Pie, Lemon,316,3.0,42.6,2.6,19.0,374,2.5,7.4,5.4,0.49,1.0,Oz,90,28.0,316
+Pie,Pie, Commercially Prepared,268,1.5,47.2,1.2,23.9,172,1.8,2.7,3.6,0.49,1.0,Oz,76,28.0,268
+Pie,Pie, Prepared From Recipe,285,3.8,39.1,3.33,19.0,242,3.2,5.6,3.3,0.49,1.0,Oz,81,28.0,285
+Pie,Pie, Prepared From Recipe,289,2.6,48.0,2.6,28.3,254,2.7,4.7,2.8,0.49,1.0,Oz,82,28.0,289
+Pie,Pie, Prepared From Recipe,224,1.9,32.9,0.8,16.2,217,1.5,4.2,3.7,0.49,1.0,Oz,64,28.0,224
+Pie,Pie, Commercially Prepared,407,4.5,59.6,2.1,25.2,275,2.7,8.3,3.6,0.49,1.0,Oz,115,28.0,407
+Pie,Pie, Prepared From Recipe,412,4.9,52.2,3.33,19.0,262,4.0,11.2,5.7,0.49,1.0,Oz,117,28.0,412
+Pie,Pie, Commercially Prepared,243,3.9,34.8,1.8,18.9,239,2.0,4.6,1.8,0.49,1.0,Oz,69,28.0,243
+Pie,Pie, Prepared From Recipe,204,4.5,26.4,3.33,19.0,225,3.2,3.7,1.8,0.49,1.0,Oz,58,28.0,204
+Pie,Pie, Prepared From Recipe,278,4.8,32.6,0.6,12.7,260,4.0,6.0,3.4,0.49,1.0,Oz,79,28.0,278
+Pillsbury,Pillsbury Golden Layer Buttermilk Biscuits, Refrigerated Dough,307,5.9,41.2,1.2,5.9,1059,2.9,4.51,4.37,4.41,1.0,Serving,104,34.0,307
+Pillsbury,Pillsbury Grands, Refrigerated Dough,293,6.2,42.4,1.5,4.6,1066,4.1,4.51,4.37,0.88,1.0,Biscuit,100,34.0,293
+Pillsbury,Pillsbury, Artificial Flavor,236,6.4,47.1,1.6,4.5,854,0.4,4.51,4.37,0.59,1.0,Biscuit,151,64.0,236
+Pillsbury,Pillsbury, Refrigerated Dough,243,8.6,46.4,2.6,5.1,575,0.7,4.51,4.37,0.64,1.0,Serving,126,52.0,243
+Pillsbury,Pillsbury, Dry,441,4.8,78.3,3.33,49.6,292,2.6,5.9,0.8,0.49,1.0,Serving,132,30.0,441
+Puff Pastry,Puff Pastry, Ready-To-Bake,551,7.3,45.1,1.5,0.7,249,9.6,21.6,4.9,0.49,1.0,Oz,156,28.0,551
+Rolls,Rolls, Egg,307,9.5,52.0,3.7,4.3,566,1.6,2.9,1.1,0.49,1.0,Oz,87,28.0,307
+Rolls,Rolls, Oat Bran,236,9.5,40.2,4.1,6.7,413,0.6,1.5,1.6,0.49,1.0,Oz,67,28.0,236
+Rolls,Rolls, Plain,316,8.5,53.4,1.9,19.0,415,1.8,2.9,2.0,0.49,1.0,Oz,90,28.0,316
+Rolls,Rolls, Rye,286,10.3,53.1,4.9,1.2,650,0.6,1.2,0.7,0.49,1.0,"Large, (Approx 3-1/2"" To 4"" Dia)",123,43.0,286
+Rolls,Rolls, Sweet,321,10.0,53.6,3.1,15.4,253,3.5,1.9,0.9,0.17,1.0,Roll,96,30.0,321
+Rolls,Rolls, Prepared From Recipe,277,8.6,50.2,3.2,0.3,574,1.0,2.0,0.8,0.49,1.0,Oz,79,28.0,277
+Rolls,Rolls, White,310,8.0,55.1,3.6,9.5,707,4.84,4.51,4.37,0.49,1.0,Roll,112,36.0,310
+Rolls,Rolls, White,257,5.7,40.2,2.9,3.0,544,4.84,4.51,4.37,0.49,1.0,Roll,177,69.0,257
+Rolls,Rolls, White,239,3.3,50.5,5.1,6.9,593,0.2,1.4,0.6,0.01,1.0,Roll,186,78.0,239
+Rolls,Rolls, Whole Grain,329,11.8,44.3,11.2,4.2,507,1.4,5.4,4.9,0.03,1.0,Roll,145,44.0,329
+Rolls,Rolls, Wheat/Cracked Wheat,269,11.7,47.3,4.2,6.9,463,0.7,0.7,1.8,0.02,1.0,Roll,137,51.0,269
+Rolls,Rolls, Whole Wheat,269,12.4,44.9,6.1,5.9,427,0.9,0.7,1.8,0.02,1.0,Roll,151,56.0,269
+Rolls,Rolls, Mixed-Grain,263,9.6,44.6,3.8,6.3,458,1.4,2.8,1.2,0.49,1.0,Oz,75,28.0,263
+Rolls,Rolls, Reduced-Calorie,196,8.3,42.1,6.2,4.8,410,0.3,0.5,0.8,0.49,1.0,Oz,56,28.0,196
+Rolls,Rolls, Prepared From Recipe,293,9.9,52.7,2.3,1.8,544,0.6,1.1,1.7,0.49,1.0,Oz,83,28.0,293
+Rolls,Rolls, Prepared From Recipe,276,10.8,51.9,5.4,0.4,492,0.5,0.6,1.2,0.49,1.0,"Medium, (2-1/2"" Dia)",99,36.0,276
+Rudi'S,Rudi'S, Original Sandwich Bread,320,3.1,52.8,3.5,8.4,528,0.3,7.4,2.2,0.02,1.0,Slice,109,34.0,320
+Sage Valley,Sage Valley, Prepared From Recipe,499,3.1,71.9,1.0,43.9,212,5.9,10.2,3.8,0.04,3.0,Cookies,220,44.0,499
+Schar,Schar, Classic White Rolls,239,3.3,50.5,5.1,6.9,593,0.2,1.4,0.6,0.01,1.0,Roll,186,78.0,239
+Schar,Schar, Wheat-Free,240,3.8,46.1,5.1,3.3,441,1.0,2.0,0.5,0.01,3.08,Oz,129,33.95,240
+Strudel,Strudel, Prepared From Recipe,274,3.3,41.1,2.2,25.8,135,2.0,3.3,5.3,0.49,1.0,Oz,78,28.0,274
+Sunshine,Sunshine, 100 Calorie Right Bites,473,8.5,65.3,3.1,2.7,1338,3.9,3.5,7.1,0.2,1.0,Pouch,99,21.0,473
+Sunshine,Sunshine, 100 Calorie Right Bites,452,13.3,67.0,2.2,0.8,823,3.5,4.0,6.5,0.2,1.0,Package,95,21.0,452
+Sunshine,Sunshine, Asiago Crackers,502,8.7,62.6,2.1,1.3,763,5.6,5.8,12.0,0.2,25.0,Crackers,151,30.0,502
+Sunshine,Sunshine, Baby Swiss Crackers,503,8.6,63.1,2.2,1.4,629,5.6,5.8,12.0,0.2,25.0,Crackers,151,30.0,503
+Sunshine,Sunshine, Big Crackers,507,11.4,57.4,2.4,0.5,753,6.1,7.2,12.6,0.3,13.0,Crackers,152,30.0,507
+Sunshine,Sunshine, Cheddar Jack Crackers,460,9.5,57.6,2.4,1.2,813,5.5,6.0,9.9,0.3,25.0,Crackers,138,30.0,460
+Sunshine,Sunshine, Colby Crackers,512,9.6,59.3,2.2,1.2,761,6.4,7.1,12.6,0.3,25.0,Crackers,154,30.0,512
+Sunshine,Sunshine, Crackers (Made With Whole Grain),511,10.7,58.2,4.3,0.5,824,6.1,7.2,12.7,0.28,27.0,Crackers,153,30.0,511
+Sunshine,Sunshine, Duoz Sharp Cheddar Parmesan Crackers,500,9.7,60.5,2.3,1.5,866,5.8,6.2,11.9,0.38,25.0,Crackers,150,30.0,500
+Sunshine,Sunshine, Duoz Smoked Cheddar Monterey Jack Crackers,507,9.0,60.8,2.2,0.9,898,6.1,6.6,12.2,0.3,25.0,Crackers,152,30.0,507
+Sunshine,Sunshine, Hot & Spicy Crackers,513,8.3,61.2,2.9,1.0,988,6.3,7.1,12.5,0.28,25.0,Crackers,154,30.0,513
+Sunshine,Sunshine, Italian Four Cheese Crackers,500,8.4,62.4,2.2,0.7,833,5.5,5.8,12.0,0.23,25.0,Crackers,150,30.0,500
+Sunshine,Sunshine, Mozzarella Crackers,500,8.6,64.1,2.2,1.4,593,5.4,5.6,11.5,0.2,25.0,Crackers,150,30.0,500
+Sunshine,Sunshine, Original Crackers,507,11.4,57.4,2.4,0.5,753,6.1,7.2,12.6,0.3,27.0,Crackers,152,30.0,507
+Sunshine,Sunshine, Parmesan Garlic Crackers,503,8.5,62.0,2.1,1.6,869,5.5,5.9,12.3,0.43,25.0,Crackers,151,30.0,503
+Sunshine,Sunshine, Pepper Jack Crackers,503,8.8,61.9,2.6,0.8,865,5.6,5.9,12.3,0.25,25.0,Crackers,151,30.0,503
+Sunshine,Sunshine, Reduced Fat Crackers,449,13.3,67.0,2.2,0.8,823,3.5,4.0,6.5,0.2,29.0,Crackers,135,30.0,449
+Sunshine,Sunshine, Scrabble Jr. Crackers,466,10.9,67.9,2.6,0.6,612,4.5,3.1,7.5,0.12,26.0,Crackers,140,30.0,466
+Sunshine,Sunshine, Snack Mix,438,9.0,66.7,3.7,2.2,1107,3.2,3.8,7.3,0.17,0.5,Cup,131,30.0,438
+Sunshine,Sunshine, White Cheddar,443,9.7,72.0,2.5,1.2,789,4.0,3.0,5.3,0.13,25.0,Crackers,133,30.0,443
+Sunshine,Sunshine, Cheez-It Crackers,491,11.0,61.0,2.5,0.5,809,6.4,6.0,9.8,0.23,1.0,Package,123,25.0,491
+Sunshine,Sunshine, Cheez-It Mixx And Cheesy Pizza Crackers,484,10.8,63.7,2.5,1.0,919,6.7,5.2,7.7,0.2,1.0,Pouch,121,25.0,484
+Sunshine,Sunshine, Soup & Oyster Crackers (Large),416,8.6,76.1,2.6,2.4,1536,1.6,2.1,5.2,0.08,16.0,Crackers,62,15.0,416
+Sweet Rolls,Sweet Rolls, Prepared From Recipe,360,7.1,43.7,1.2,19.0,357,6.1,9.1,2.0,0.49,1.0,Oz,102,28.0,360
+Sweet Rolls,Sweet Rolls, Commercially Prepared With Raisins,372,6.2,50.9,2.4,31.7,304,3.1,4.8,7.5,0.49,1.0,Oz,105,28.0,372
+Sweet Rolls,Sweet Rolls, Refrigerated Dough With Frosting,333,5.0,51.6,3.33,19.0,765,3.1,6.8,1.6,0.49,1.0,Oz,94,28.0,333
+Sweet Rolls,Sweet Rolls, Refrigerated Dough With Frosting,362,5.4,56.1,3.33,19.0,832,3.3,7.4,1.7,0.49,1.0,Oz,103,28.0,362
+Taco Shells,Taco Shells, Prepared From Recipe,476,6.4,63.5,6.7,1.5,324,7.1,6.9,5.5,0.17,1.0,Shell,61,13.0,476
+Taco Shells,Taco Shells, Without Added Salt,468,7.2,62.4,7.5,19.0,15,3.2,8.9,8.5,0.49,1.0,Oz,133,28.0,468
+Toaster Pastries,Toaster Pastries, Prepared From Recipe,370,4.1,72.6,2.3,27.2,361,4.84,4.51,4.37,0.49,1.0,Oz,105,28.0,370
+Toaster Pastries,Toaster Pastries, Blueberry,388,4.2,70.3,1.0,26.1,334,3.6,2.7,3.2,0.03,1.0,Oz,110,28.0,388
+Toaster Pastries,Toaster Pastries, Frosted (Include Apples,385,4.0,71.8,1.8,31.0,311,3.1,2.2,3.4,0.03,1.0,Piece,204,53.0,385
+Toaster Pastries,Toaster Pastries, Toasted (Include Apple,409,4.7,72.7,1.0,29.0,354,2.6,6.6,1.3,0.49,1.0,Pastry,209,51.0,409
+Toaster Pastries,Toaster Pastries, Kellogg'S Low Fat Pop Tarts,366,4.7,73.7,5.5,30.5,379,1.9,1.2,2.1,0.1,1.0,Pastry,183,50.0,366
+Toaster Pastries,Toaster Pastries, Kellogg'S Low Fat Pop Tarts,363,4.2,74.4,5.6,29.4,357,1.7,1.1,1.9,0.1,1.0,Pastry,182,50.0,363
+Toaster Pastries,Toaster Pastries, Kellogg'S Pop Tarts,412,4.6,68.4,1.1,30.9,398,2.0,6.5,4.8,0.49,1.0,Pastry,214,52.0,412
+Toaster Pastries,Toaster Pastries, Kellogg'S Pop Tarts,438,5.4,64.4,1.5,25.4,380,2.1,7.1,9.1,0.49,1.0,Pastry,219,50.0,438
+Toaster Pastries,Toaster Pastries, Kellogg'S Pop Tarts,391,4.6,71.8,1.1,31.2,320,2.0,6.8,1.1,0.49,1.0,Pastry,203,52.0,391
+Toaster Pastries,Toaster Pastries, Kellogg'S Pop Tarts,417,4.6,69.0,1.4,32.3,343,4.5,3.1,5.2,0.2,1.0,Pastry,209,50.0,417
+Toaster Pastries,Toaster Pastries, Kellogg'S Pop Tarts,397,4.2,72.0,1.0,36.0,320,1.9,6.7,1.6,0.49,1.0,Pastry,206,52.0,397
+Toaster Pastries,Toaster Pastries, Kellogg'S Pop Tarts,384,4.9,70.4,2.1,35.0,437,3.2,2.0,3.2,0.2,1.0,Pastry,200,52.0,384
+Toaster Pastries,Toaster Pastries, Kellogg'S Pop Tarts,399,4.2,71.6,1.0,35.4,320,1.9,6.2,2.6,0.49,1.0,Pastry,207,52.0,399
+Toaster Pastries,Toaster Pastries, Kellogg'S Pop Tarts,390,4.1,71.7,1.3,30.3,331,3.1,2.1,3.6,0.2,1.0,Pastry,203,52.0,390
+Toaster Pastries,Toaster Pastries, Kellogg'S Pop Tarts,390,4.0,72.4,1.3,31.7,315,3.1,2.1,3.5,0.2,1.0,Pastry,203,52.0,390
+Toaster Pastries,Toaster Pastries, Kellogg'S Pop Tarts,392,6.2,69.6,1.4,36.5,410,2.8,5.9,1.8,0.49,1.0,Pastry,204,52.0,392
+Toaster Pastries,Toaster Pastries, Kellogg'S Pop Tarts,398,4.7,71.1,1.1,33.0,355,2.9,6.2,1.5,0.49,1.0,Pastry,207,52.0,398
+Tortillas,Tortillas, Corn,218,5.7,44.6,6.3,0.9,45,0.5,0.7,1.4,0.49,1.0,Oz,62,28.0,218
+Tortillas,Tortillas, Corn,222,5.7,46.6,5.2,19.0,11,0.3,0.6,1.1,0.49,1.0,Oz,63,28.0,222
+Tortillas,Tortillas, Flour,306,8.2,49.4,3.5,3.7,736,2.9,1.8,2.3,0.05,1.0,Tortilla,147,48.0,306
+Tortillas,Tortillas, Flour,325,8.7,55.6,3.3,19.0,478,1.7,3.8,1.1,0.49,1.0,Oz,92,28.0,325
+Udi'S,Udi'S, Classic French Dinner Rolls,310,8.0,55.1,3.6,9.5,707,4.84,4.51,4.37,0.49,1.0,Roll,112,36.0,310
+Udi'S,Udi'S, Soft & Delicious White Sandwich Bread,298,5.4,51.2,5.5,11.3,515,0.6,4.7,2.0,0.02,1.0,Slice,83,28.0,298
+Udi'S,Udi'S, Soft & Hearty Whole Grain Bread,309,7.3,49.1,4.9,9.8,510,0.3,5.4,2.4,0.02,1.0,Slice,77,25.0,309
+Udi'S,Udi'S, Whole Grain Dinner Rolls,329,11.8,44.3,11.2,4.2,507,1.4,5.4,4.9,0.03,1.0,Roll,145,44.0,329
+Usda Commodity,Usda Commodity, Flour Mix,400,8.5,62.5,7.1,19.0,1410,3.1,6.8,2.0,0.49,3.08,Oz,129,33.95,400
+Usda Commodity,Usda Commodity, Flour Mix Low-Fat,361,9.1,70.6,3.5,19.0,1360,0.9,1.8,0.7,0.49,3.08,Oz,129,33.95,361
+Van'S,Van'S, Totally Original Pancakes,215,3.3,40.3,1.5,4.1,331,0.5,2.4,1.2,0.01,1.0,Pancake,103,48.0,215
+Van'S,Van'S, Totally Original Waffles,248,3.0,40.5,3.33,1.7,508,0.8,4.5,2.4,0.01,1.0,Waffle,117,47.0,248
+Van'S,Van'S, Crispy Six Whole Grain + Four Seed Baked Crackers,471,7.6,67.6,3.33,19.0,730,4.84,4.51,4.37,0.49,3.0,Crackers,40,8.0,471
+Waffles,Waffles, Frozen,289,6.9,44.2,2.4,4.5,663,2.1,4.9,1.6,0.49,1.0,Waffle,101,35.0,289
+Waffles,Waffles, Frozen,309,7.4,48.4,2.6,4.4,710,2.3,5.3,1.5,0.49,1.0,Oz,87,28.0,309
+Waffles,Waffles, Frozen,298,6.7,45.4,2.4,5.0,682,1.6,5.2,2.2,0.49,1.0,"Waffle, Round (4""Dia)",95,32.0,298
+Waffles,Waffles, Frozen,297,5.8,45.7,1.5,13.1,529,3.6,2.6,3.3,0.2,2.0,Waffles,208,70.0,297
+Waffles,Waffles, Frozen,263,2.7,43.1,1.4,1.7,505,0.8,4.5,2.4,0.01,1.0,Waffle,118,45.0,263
+Waffles,Waffles, Frozen,312,7.2,49.3,2.4,5.0,730,1.6,4.9,2.2,0.49,1.0,Oz,88,28.0,312
+Waffles,Waffles, Frozen,285,6.5,43.0,2.2,4.9,638,1.5,5.1,2.2,0.49,1.0,Oz,81,28.0,285
+Waffles,Waffles, Prepared From Recipe,291,7.9,32.9,3.33,19.0,511,2.9,3.5,6.8,0.49,1.0,Oz,82,28.0,291
+Wonton Wrappers,Wonton Wrappers (Includes Egg Roll Wrappers),Wonton Wrappers (Includes Egg Roll Wrappers),291,9.8,57.9,1.8,19.0,572,0.3,0.2,0.6,0.49,1.0,Oz,82,28.0,291
