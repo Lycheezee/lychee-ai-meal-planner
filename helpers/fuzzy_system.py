@@ -13,6 +13,19 @@ def trapmf(x: float, a: float, b: float, c: float, d: float) -> float:
         return (d - x) / (d - c)
     return 0.0
 
+def resolve_pal_value(pal_input: str) -> float:
+    """
+    Convert a PAL category string to a central PAL value for fuzzy membership.
+    """
+    mapping = {
+        'sedentary':    (1.0 + 1.55) / 2,  # average of [1.0, 1.55]
+        'light':        (1.40 + 1.75) / 2,
+        'moderate':     (1.70 + 1.90) / 2,
+        'active':       (1.86 + 2.05) / 2,
+        'very_active':  (1.99 + 2.40) / 2,
+    }
+    return mapping.get(pal_input.lower(), (1.0 + 2.40) / 2)
+
 # 2. Fuzzy variables membership functions
 
 BMI_CATEGORIES = {
@@ -61,6 +74,7 @@ Rules: List[Tuple[str, str, str, float]] = [
 
 # 4. Fuzzy inference engine
 def fuzzy_calorie_adjustment(bmi: float, pal: float, age: float) -> float:
+    pal = resolve_pal_value(pal)
     # 4a. Compute all memberships
     bmi_mem = {cat: fn(bmi) for cat, fn in BMI_CATEGORIES.items()}
     ex_mem  = {cat: fn(pal)  for cat, fn in EXERCISE_CATEGORIES.items()}

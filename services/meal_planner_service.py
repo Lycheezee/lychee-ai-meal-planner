@@ -1,5 +1,5 @@
 import pandas as pd
-from helpers.helper import generate_first_meal_plan
+from helpers.meal_plan_generator import generate_first_meal_plan
 from helpers.calculate_bmi import calculate_bmi
 from helpers.calculate_age import calculate_age
 from pandas.api.types import CategoricalDtype
@@ -12,28 +12,22 @@ def generate_meal_plan_api(
     dob: str,
     macro_preference: str
 ):
-    # Use the cleaned dataset with new column names
-    df = pd.read_csv("./dataset/daily_food_nutrition_dataset_cleaned.csv")
+    # Use the final cleaned dataset
+    df = pd.read_csv("./dataset/process_dataset/final_usable_food_dataset.csv")
 
     age = calculate_age(dob)
     bmi = calculate_bmi(height,weight)
     
     meal_plan, daily_targets = generate_first_meal_plan(df, gender, bmi, exercise_rate, age, macro_preference)
-
-    # Reorder and export (optional)
-    meal_order = ['Breakfast', 'Lunch', 'Snack', 'Dinner']
-    meal_type_order = CategoricalDtype(categories=meal_order, ordered=True)
     
-    result_df = meal_plan[['meal_type', 'category', 'food_item']].copy()
-    result_df['meal_type'] = result_df['meal_type'].astype(meal_type_order)
-    result_df = result_df.sort_values('meal_type').reset_index(drop=True)
-    result_df.to_csv("results/first_meal_plan.csv", index=False)    # Transform the meal plan data to the new format
+    # Use the complete meal_plan instead of just selecting food_item
+    result_df = meal_plan.copy()
+
     transformed_meal_plan = []
-    for _, row in meal_plan.iterrows():
+    for _, row in result_df.iterrows():
         transformed_item = {
-            "foodId": row.get("id", ""),
+            "foodId": row.get("_id", ""),
             "name": row.get("food_item", ""),
-            "mealType": row.get("meal_type", ""),
             "fats": float(row.get("fats", 0)),
             "calories": float(row.get("calories", 0)),
             "sugars": float(row.get("sugars", 0)),
