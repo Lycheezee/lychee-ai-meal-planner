@@ -10,8 +10,7 @@ def bmi_membership(bmi):
     - Normal weight: 18.5-24.9
     - Overweight: 25.0-29.9
     - Obese Class I: 30.0-34.9
-    - Obese Class II: 35.0-39.9
-    - Obese Class III: ≥ 40.0
+    - Obese Class II: ≥ 35.0
     """
     return {
         'Severely_Underweight': max(0, min(1, (16.5 - bmi) / 3)) if bmi < 16.5 else 0,
@@ -19,8 +18,7 @@ def bmi_membership(bmi):
         'Normal': max(0, min((bmi - 18.5) / 2, (24.9 - bmi) / 2)) if 18.5 <= bmi <= 24.9 else 0,
         'Overweight': max(0, min((bmi - 25.0) / 2, (29.9 - bmi) / 2)) if 25.0 <= bmi <= 29.9 else 0,
         'Obese_I': max(0, min((bmi - 30.0) / 2, (34.9 - bmi) / 2)) if 30.0 <= bmi <= 34.9 else 0,
-        'Obese_II': max(0, min((bmi - 35.0) / 2, (39.9 - bmi) / 2)) if 35.0 <= bmi <= 39.9 else 0,
-        'Obese_III': max(0, min(1, (bmi - 40.0) / 5)) if bmi >= 40.0 else 0
+        'Obese_II': max(0, min(1, (bmi - 35.0) / 5)) if bmi >= 35.0 else 0
     }
 
 def exercise_membership(exercise_rate):
@@ -166,7 +164,7 @@ def fuzzy_calorie_adjustment(bmi, exercise_rate, age):
     
     This refined implementation uses the detailed data from the research table
     and incorporates more nuanced rules for different combinations of:
-    - BMI categories (7 levels from severely underweight to obese class III)
+    - BMI categories (6 levels from severely underweight to obese class II)
     - Activity levels (5 levels from sedentary to very active)
     - Age groups (6 groups from youth to elderly)
     
@@ -244,18 +242,11 @@ def fuzzy_calorie_adjustment(bmi, exercise_rate, age):
         (bmi_mem['Obese_I'] * ex_mem['Sedentary']   * age_mem['Senior'],       0.65),
         (bmi_mem['Obese_I'] * ex_mem['Light']       * age_mem['Youth'],        0.80),
         (bmi_mem['Obese_I'] * ex_mem['Moderate']    * age_mem['Youth'],        0.85),
-        
-        # ----- OBESE CLASS II CASES ----- #
+          # ----- OBESE CLASS II CASES ----- #
         # More significant reductions
         (bmi_mem['Obese_II'] * ex_mem['Sedentary']   * age_mem['Youth'],        0.70),
         (bmi_mem['Obese_II'] * ex_mem['Sedentary']   * age_mem['Young_Adult'],  0.65),
         (bmi_mem['Obese_II'] * ex_mem['Light']       * age_mem['Youth'],        0.75),
-        
-        # ----- OBESE CLASS III CASES ----- #
-        # Most significant reductions with medical supervision implied
-        (bmi_mem['Obese_III'] * ex_mem['Sedentary']   * age_mem['Youth'],        0.65),
-        (bmi_mem['Obese_III'] * ex_mem['Sedentary']   * age_mem['Young_Adult'],  0.60),
-        (bmi_mem['Obese_III'] * ex_mem['Sedentary']   * age_mem['Adult'],        0.60),
     ]
     
     # Calculate the weighted average of all rule outputs
