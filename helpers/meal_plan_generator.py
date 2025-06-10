@@ -112,7 +112,7 @@ def compare_meal_plan_to_targets(meal_plan: pd.DataFrame, daily_targets: Dict[st
     print("-" * 60)
     
     comparison_results = {}
-    
+    print(meal_plan.columns)
     for nutrient in nutritional_columns:
         if nutrient in meal_plan.columns:
             # Sum all values for this nutrient, handling NaN values
@@ -125,17 +125,28 @@ def compare_meal_plan_to_targets(meal_plan: pd.DataFrame, daily_targets: Dict[st
             # Calculate difference and percentage
             difference = total - target
             percentage = (total / target * 100) if target > 0 else 0
-            
-            # Determine status
+              # Determine status
             if target > 0:
-                if 90 <= percentage <= 110:
-                    status = "✅ Perfect"
-                elif 80 <= percentage <= 120:
-                    status = "✓ Good"
-                elif percentage < 80:
-                    status = "⚠️ Low"
+                if nutrient in ['calories', 'carbohydrates', 'fats']:
+                    # Stricter criteria for critical nutrients
+                    if 95 <= percentage <= 105:
+                        status = "🎯 Perfect"
+                    elif 90 <= percentage <= 110:
+                        status = "✓ Good"
+                    elif 85 <= percentage <= 115:
+                        status = "⚠️ Acceptable"
+                    else:
+                        status = "❌ Poor"
                 else:
-                    status = "⚠️ High"
+                    # Regular criteria for other nutrients
+                    if 90 <= percentage <= 110:
+                        status = "✅ Perfect"
+                    elif 80 <= percentage <= 120:
+                        status = "✓ Good"
+                    elif percentage < 80:
+                        status = "⚠️ Low"
+                    else:
+                        status = "⚠️ High"
             else:
                 status = "❓ No target"
             
@@ -203,9 +214,7 @@ def create_meal_plan_dataframe(meal_plans: List[pd.Series]) -> pd.DataFrame:
     final_meal_plan = pd.DataFrame(meal_plans)
 
       # Reorder columns for better presentation
-    column_order = ['food_item', 'calories', '_id'
-                   'proteins', 'carbohydrates', 'fats', 'fibers', 
-                   'sugars', 'sodium', 'cholesterol']
+    column_order = ['food_item', 'calories', '_id', 'proteins', 'carbohydrates', 'fats', 'fibers', 'sugars', 'sodium', 'cholesterol']
     
     # Only include columns that exist in the dataframe
     available_columns = [col for col in column_order if col in final_meal_plan.columns]
@@ -214,7 +223,7 @@ def create_meal_plan_dataframe(meal_plans: List[pd.Series]) -> pd.DataFrame:
     # Sort by food name since we're not using meal types anymore
     if 'food_item' in final_meal_plan.columns:
         final_meal_plan = final_meal_plan.sort_values('food_item').reset_index(drop=True)
-    
+    print(final_meal_plan.columns)
     return final_meal_plan
 
 def calculate_meal_plan_summary(meal_plan: pd.DataFrame) -> Dict[str, float]:
@@ -312,7 +321,8 @@ def generate_meal_plan_report(meal_plan: pd.DataFrame, daily_targets: Dict[str, 
 
 def select_foods_for_daily_targets(df: pd.DataFrame, daily_targets: Dict[str, float], max_foods: int = 8) -> List[pd.Series]:
     """
-    Select foods that collectively meet the daily nutritional targets.
+    Select foods that collectively meet the daily nutritional targets with precision.
+    Prioritizes staying within 95-105% for calories, carbohydrates, and fats.
     
     Args:
         df: Food database DataFrame
@@ -323,56 +333,110 @@ def select_foods_for_daily_targets(df: pd.DataFrame, daily_targets: Dict[str, fl
         List of selected food items
     """
     selected_foods = []
-    remaining_targets = daily_targets.copy()
+    current_totals = {nutrient: 0.0 for nutrient in daily_targets.keys()}
     selected_food_names = []
     
+    # Critical nutrients that must stay within 95-105%
+    critical_nutrients = ['calories', 'carbohydrates', 'fats']
+    
+    print(f"\n🎯 TARGET PRECISION MODE for {critical_nutrients}")
+    print(f"Daily targets: {daily_targets}")
+    
     for i in range(max_foods):
-        # Calculate targets for this food item
-        foods_remaining = max_foods - i
-        if foods_remaining > 0:
-            # Distribute remaining targets across remaining food slots
-            item_targets = {k: v / foods_remaining for k, v in remaining_targets.items()}
-        else:
-            item_targets = remaining_targets.copy()
+        print(f"\n--- Selecting food {i+1}/{max_foods} ---")
+        
+        # Calculate remaining needs
+        remaining_needs = {}
+        for nutrient, target in daily_targets.items():
+            remaining_needs[nutrient] = max(0, target - current_totals[nutrient])
+        
+        print(f"Current totals: {current_totals}")
+        print(f"Remaining needs: {remaining_needs}")
         
         # Filter out already selected foods
         available_foods = df[~df['food_item'].isin(selected_food_names)]
         if available_foods.empty:
+            print("No more available foods")
             break
-            
-        # Find best food for current targets
+        
+        # Find best food with precision scoring
         best_food = None
-        best_score = -1
+        best_score = -999999
         
         for idx, food_row in available_foods.iterrows():
-            # Calculate how well this food meets the current targets
-            score = 0
-            for nutrient, target in item_targets.items():
-                if nutrient in food_row and target > 0:
-                    # Score based on how close the food's nutrient content is to the target
+            # Calculate what totals would be after adding this food
+            projected_totals = current_totals.copy()
+            for nutrient in daily_targets.keys():
+                if nutrient in food_row:
                     food_nutrient = food_row[nutrient] if pd.notna(food_row[nutrient]) else 0
-                    if food_nutrient > 0:
-                        # Prefer foods that meet but don't exceed targets too much
-                        ratio = min(food_nutrient / target, 2.0)  # Cap at 2x target
-                        score += ratio
+                    projected_totals[nutrient] += food_nutrient
             
-            if score > best_score:
-                best_score = score
+            # Calculate precision score
+            score = 0
+            penalty = 0
+            
+            for nutrient, target in daily_targets.items():
+                if target > 0:
+                    projected_value = projected_totals[nutrient]
+                    percentage = (projected_value / target) * 100
+                    
+                    if nutrient in critical_nutrients:
+                        # Heavy penalty for going outside 95-105% range for critical nutrients
+                        if 95 <= percentage <= 105:
+                            score += 100  # Perfect range bonus
+                        elif 90 <= percentage <= 110:
+                            score += 50   # Acceptable range
+                        elif 85 <= percentage <= 115:
+                            score += 10   # Tolerable range
+                        else:
+                            penalty += 1000  # Heavy penalty for going too far
+                            
+                        # Extra penalty for overshooting critical nutrients
+                        if percentage > 105:
+                            penalty += (percentage - 105) * 50
+                    else:
+                        # Less strict scoring for other nutrients
+                        if 80 <= percentage <= 120:
+                            score += 20
+                        elif 70 <= percentage <= 130:
+                            score += 10
+                        else:
+                            penalty += 100
+            
+            final_score = score - penalty
+            
+            if final_score > best_score:
+                best_score = final_score
                 best_food = food_row
         
         if best_food is not None:
             selected_foods.append(best_food)
             selected_food_names.append(best_food['food_item'])
             
-            # Update remaining targets
-            for nutrient in remaining_targets:
+            # Update current totals
+            for nutrient in daily_targets.keys():
                 if nutrient in best_food:
                     food_nutrient = best_food[nutrient] if pd.notna(best_food[nutrient]) else 0
-                    remaining_targets[nutrient] = max(0, remaining_targets[nutrient] - food_nutrient)
+                    current_totals[nutrient] += food_nutrient
             
-            # If we've met most targets, we can stop early
-            targets_met = sum(1 for target in remaining_targets.values() if target <= 0)
-            if targets_met >= len(remaining_targets) * 0.8:  # 80% of targets met
+            print(f"Selected: {best_food['food_item']} (score: {best_score:.1f})")
+            
+            # Check if we're in acceptable range for critical nutrients
+            all_critical_in_range = True
+            for nutrient in critical_nutrients:
+                if nutrient in daily_targets and daily_targets[nutrient] > 0:
+                    percentage = (current_totals[nutrient] / daily_targets[nutrient]) * 100
+                    if not (95 <= percentage <= 105):
+                        all_critical_in_range = False
+                        break
+            
+            # Stop early if all critical nutrients are in perfect range
+            if all_critical_in_range and i >= 3:  # Minimum 4 foods
+                print(f"🎯 Perfect range achieved for critical nutrients after {i+1} foods!")
                 break
+        else:
+            print("No suitable food found")
+            break
     
+    print(f"\n✅ Selected {len(selected_foods)} foods total")
     return selected_foods
