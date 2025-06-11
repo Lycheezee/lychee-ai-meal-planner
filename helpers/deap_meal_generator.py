@@ -9,24 +9,14 @@ import pandas as pd
 from typing import Dict, List, Tuple
 from deap import base, creator, tools
 import warnings
+import multiprocessing
 warnings.filterwarnings('ignore')
 
 class DEAPMealGenerator:
-    """
-    Genetic Algorithm-based meal plan generator using DEAP.
-    """
-    
     def __init__(self, df: pd.DataFrame):
-        """
-        Initialize the DEAP meal generator.
-        
-        Args:
-            df: Food database DataFrame
-        """
         self.df = df.copy()
         self.n_items = len(df)
-        
-        # Map column names to match expected format
+
         self.nutrition_columns = {
             'calories': 'calories',
             'proteins': 'proteins', 
@@ -69,6 +59,8 @@ class DEAPMealGenerator:
         self.toolbox.register("mate", tools.cxTwoPoint)
         self.toolbox.register("mutate", self._custom_mutation)  # Custom mutation
         self.toolbox.register("select", tools.selTournament, tournsize=3)
+        pool = multiprocessing.Pool(processes=4)
+        self.toolbox.register("map", pool.map)   
     
     def _biased_selection(self) -> int:
         """Biased selection that favors 0 (not selected) over 1 (selected)."""
