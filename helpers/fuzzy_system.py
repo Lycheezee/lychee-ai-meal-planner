@@ -1,4 +1,4 @@
-from typing import Dict, List, Tuple
+from typing import List, Tuple
 
 # 1. Membership definitions using trapezoidal/triangular helper
 
@@ -48,25 +48,27 @@ EXERCISE_CATEGORIES = {
 AGE_CATEGORIES = {
     'Youth':        lambda age: trapmf(age, 18, 18, 22, 25),
     'Young_Adult':  lambda age: trapmf(age, 25, 30, 35, 35),
-    'Adult':        lambda age: trapmf(age, 36, 40, 46, 50),
-    'Middle_Aged':  lambda age: trapmf(age, 51, 55, 61, 65),
-    'Senior':       lambda age: trapmf(age, 66, 70, 75, 75),
-    'Elderly':      lambda age: trapmf(age, 76, 80, 90, 90),
+    'Adult':        lambda age: trapmf(age, 35, 40, 50, 65),
+    'Senior':       lambda age: trapmf(age, 65, 70, 75, 75),
+    'Elderly':      lambda age: trapmf(age, 75, 80, 90, 200),
 }
 
-# 3. Rule base as a list of (bmi_cat, ex_cat, age_cat, adjustment)
 Rules: List[Tuple[str, str, str, float]] = [
-    # Severely underweight: big boosts
     ('Severely_Underweight', 'Any', 'Any',         1.30),
-    # Underweight: moderate boost
+
     ('Underweight',           'Any', 'Any',         1.20),
-    # Normal: maintenance or slight mod
-    ('Normal',                'Sedentary', 'Middle_Aged', 0.85),
+
+    ('Normal',                'Sedentary', 'Adult', 0.85),
     ('Normal',                'Light',     'Any',         0.95),
     ('Normal',                'Moderate',  'Any',         1.00),
     ('Normal',                'Active',    'Any',         1.05),
     ('Normal',                'Very_Active','Any',         1.10),
-    # Overweight and above: reductions
+    ('Normal',                'Very_Active','Youth',         1.2),
+    ('Normal',                'Very_Active','Young_Adult',         1.30),
+    
+    ('Any',                   'Active',     'Any',         1.20),
+    ('Any',                   'Very_Active','Any',         1.30),
+
     ('Overweight',            'Any',       'Any',         0.85),
     ('Obese_I',               'Any',       'Any',         0.75),
     ('Obese_II',              'Any',       'Any',         0.70),
@@ -79,15 +81,19 @@ def fuzzy_calorie_adjustment(bmi: float, pal: float, age: float) -> float:
     bmi_mem = {cat: fn(bmi) for cat, fn in BMI_CATEGORIES.items()}
     ex_mem  = {cat: fn(pal)  for cat, fn in EXERCISE_CATEGORIES.items()}
     age_mem = {cat: fn(age) for cat, fn in AGE_CATEGORIES.items()}
-
+    print("BMI Memberships:", bmi_mem)
+    print("Exercise Memberships:", ex_mem)
+    print("Age Memberships:", age_mem)
     # 4b. Evaluate rules
     numerator = 0.0
     denominator = 0.0
     for bmi_cat, ex_cat, age_cat, adj in Rules:
-        # 'Any' matches sum of all categories
-        mem = bmi_mem[bmi_cat]
+        mem = 1.0
+ 
+        if bmi_cat != 'Any': mem = min(mem, bmi_mem[bmi_cat])
         if ex_cat != 'Any': mem = min(mem, ex_mem[ex_cat])
         if age_cat != 'Any': mem = min(mem, age_mem[age_cat])
+        print(mem, adj)
         numerator   += mem * adj
         denominator += mem
 
@@ -99,4 +105,4 @@ def fuzzy_calorie_adjustment(bmi: float, pal: float, age: float) -> float:
 
 # Example usage:
 if __name__ == '__main__':
-    print(fuzzy_calorie_adjustment(bmi=23, pal=1.2, age=23))
+    print(fuzzy_calorie_adjustment(bmi=29, pal='very_active', age=20))

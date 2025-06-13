@@ -7,6 +7,7 @@ import random
 import numpy as np
 import pandas as pd
 from typing import Dict, List, Tuple
+from deap.algorithms import eaMuPlusLambda
 from deap import base, creator, tools
 import warnings
 import multiprocessing
@@ -36,40 +37,28 @@ class DEAPMealGenerator:
         self._setup_deap()
     
     def _setup_deap(self):
-        """Set up DEAP genetic algorithm framework."""
-        
-        # Clear any existing creators
         if hasattr(creator, "FitnessMin"):
             del creator.FitnessMin
         if hasattr(creator, "Individual"):
             del creator.Individual
-            
-        # Create fitness and individual classes
+
         creator.create("FitnessMin", base.Fitness, weights=(-1.0,))  # Minimize error
         creator.create("Individual", list, fitness=creator.FitnessMin)
-        
-        # Create toolbox
+
         self.toolbox = base.Toolbox()
-        
-        # Register genetic operators with bias toward fewer selections
-        self.toolbox.register("attr_bool", self._biased_selection)  # Custom selection
+
+        self.toolbox.register("attr_bool", self._biased_selection)
         self.toolbox.register("individual", tools.initRepeat, creator.Individual, 
                              self.toolbox.attr_bool, n=self.n_items)
         self.toolbox.register("population", tools.initRepeat, list, self.toolbox.individual)
         self.toolbox.register("mate", tools.cxTwoPoint)
-        self.toolbox.register("mutate", self._custom_mutation)  # Custom mutation
+        self.toolbox.register("mutate", self._custom_mutation)
         self.toolbox.register("select", tools.selTournament, tournsize=3)
-        pool = multiprocessing.Pool(processes=4)
-        self.toolbox.register("map", pool.map)   
     
     def _biased_selection(self) -> int:
-        """Biased selection that favors 0 (not selected) over 1 (selected)."""
         return 1 if random.random() < 0.01 else 0
     
     def _custom_mutation(self, individual, indpb=0.05):
-        """
-        Custom mutation that aggressively maintains small food counts.
-        """
         current_count = sum(individual)
 
         if current_count > 8:
@@ -93,31 +82,116 @@ class DEAPMealGenerator:
         
         return individual,
     
-    def _evaluate_nutrition(self, individual: List[int], targets: Dict[str, float]) -> Tuple[float]:
-        """
-        Evaluate fitness of an individual (food selection).
+    def _custom_eaMuPlusLambda_with_convergence(self, population, toolbox, mu, lambda_, cxpb, mutpb, 
+                                               ngen, stats=None, halloffame=None, verbose=False,
+                                               convergence_threshold=0.001, patience=10):
+
+        logbook = tools.Logbook()
+        logbook.header = ['gen', 'nevals'] + (stats.fields if stats else [])
         
-        Args:
-            individual: Binary list indicating which foods are selected
-            targets: Target nutritional values
+        # Convergence tracking
+        fitness_history = []
+        stagnation_count = 0
+        best_fitness = float('inf')
+        
+        # Evaluate the individuals with an invalid fitness
+        invalid_ind = [ind for ind in population if not ind.fitness.valid]
+        fitnesses = toolbox.map(toolbox.evaluate, invalid_ind)
+        for ind, fit in zip(invalid_ind, fitnesses):
+            ind.fitness.values = fit
+
+        if halloffame is not None:
+            halloffame.update(population)
+
+        record = stats.compile(population) if stats is not None else {}
+        logbook.record(gen=0, nevals=len(invalid_ind), **record)
+        if verbose:
+            print(logbook.stream)
+
+        # Begin the generational process
+        for gen in range(1, ngen + 1):
+            # Vary the population
+            offspring = tools.selRandom(population, lambda_)
+            offspring = [toolbox.clone(ind) for ind in offspring]
+
+            # Apply crossover and mutation
+            for i in range(1, len(offspring), 2):
+                if random.random() < cxpb:
+                    offspring[i - 1], offspring[i] = toolbox.mate(offspring[i - 1], offspring[i])
+                    del offspring[i - 1].fitness.values, offspring[i].fitness.values
+
+            for i in range(len(offspring)):
+                if random.random() < mutpb:
+                    offspring[i], = toolbox.mutate(offspring[i])
+                    del offspring[i].fitness.values
+
+            # Evaluate the individuals with an invalid fitness
+            invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
+            fitnesses = toolbox.map(toolbox.evaluate, invalid_ind)
+            for ind, fit in zip(invalid_ind, fitnesses):
+                ind.fitness.values = fit
+
+            # Select the next generation population
+            population[:] = toolbox.select(population + offspring, mu)
+
+            # Update the hall of fame with the generated individuals
+            if halloffame is not None:
+                halloffame.update(population)
+
+            # Append the current generation statistics to the logbook
+            record = stats.compile(population) if stats is not None else {}
+            logbook.record(gen=gen, nevals=len(invalid_ind), **record)
             
-        Returns:
-            Fitness score (lower is better)
-        """
-        # Count selected foods
+            # Convergence detection
+            current_best = min(ind.fitness.values[0] for ind in population)
+            fitness_history.append(current_best)
+            
+            if verbose:
+                print(f"Generation {gen:3d}: Best fitness = {current_best:8.4f}")
+            
+            # Check for improvement
+            if current_best < best_fitness - convergence_threshold:
+                best_fitness = current_best
+                stagnation_count = 0
+            else:
+                stagnation_count += 1
+            
+            # Check convergence based on variance in recent generations
+            if len(fitness_history) >= patience:
+                recent_variance = np.var(fitness_history[-patience:])
+                
+                if recent_variance < convergence_threshold:
+                    if verbose:
+                        print(f"\n🛑 CONVERGENCE DETECTED at generation {gen}!")
+                        print(f"   Recent {patience} generations variance: {recent_variance:.6f}")
+                        print(f"   Best fitness: {best_fitness:.4f}")
+                    break
+            
+            # Early stopping if no improvement
+            if stagnation_count >= patience:
+                if verbose:
+                    print(f"\n🛑 EARLY STOPPING at generation {gen}!")
+                    print(f"   No improvement for {patience} generations")
+                    print(f"   Best fitness: {best_fitness:.4f}")
+                break
+                
+            if verbose and gen % 10 == 0:
+                print(logbook.stream)
+
+        return population, logbook
+    
+    def _evaluate_nutrition(self, individual: List[int], targets: Dict[str, float]) -> Tuple[float]:
         num_selected = sum(individual)
-        
-        # Extremely harsh penalties for too many foods
+
         if num_selected == 0:
             return (1e10,)
-        elif num_selected > 12:  # Catastrophic penalty
+        elif num_selected > 12:
             return (1e9 + num_selected * 100000,)
-        elif num_selected > 8:   # Very high penalty
+        elif num_selected > 8:
             return (1e8 + (num_selected - 8) * 50000,)
-        elif num_selected < 3:   # Too few foods
+        elif num_selected < 3:
             return (1e7,)
-        
-        # Get nutrition matrix for selected foods
+
         selected_foods = self.df[np.array(individual, dtype=bool)]
         
         # Calculate total nutrition
@@ -163,136 +237,72 @@ class DEAPMealGenerator:
         
         return (error,)
     
+
+
     def generate_meal_plan(self, daily_targets: Dict[str, float], 
-                          pop_size: int = 176, n_gen: int = 282,
-                          cxpb: float = 0.862, mutpb: float = 0.462) -> pd.DataFrame:
-        """
-        Generate optimized meal plan using genetic algorithm.
-        
-        Args:
-            daily_targets: Target nutritional values
-            pop_size: Population size
-            n_gen: Number of generations
-            cxpb: Crossover probability
-            mutpb: Mutation probability
-            
-        Returns:
-            DataFrame containing selected foods
-        """
-        print(f"\n🧬 DEAP GENETIC ALGORITHM MEAL PLANNING")
-        print(f"Population: {pop_size}, Generations: {n_gen}")
-        print(f"Dataset: {self.n_items} foods available")
+                      pop_size: int = 99, n_gen: int = 98,
+                      cxpb: float = 0.893, mutpb: float = 0.591,
+                      enable_convergence: bool = True,
+                      convergence_threshold: float = 0.1,
+                      patience: int = 5) -> pd.DataFrame:
+
+        print(f"\n🧬 DEAP MEAL PLANNER")
+        print(f"Population: {pop_size}, Max Generations: {n_gen}")
+        print(f"Convergence: {'Enabled' if enable_convergence else 'Disabled'}")
         print(f"Targets: {daily_targets}")
-        
-        # Register evaluation function with current targets
+
         self.toolbox.register("evaluate", self._evaluate_nutrition, targets=daily_targets)
-        
-        # Initialize population
-        population = self.toolbox.population(n=pop_size)
-        
-        # Evaluate initial population
-        fitnesses = list(map(self.toolbox.evaluate, population))
-        for ind, fit in zip(population, fitnesses):
-            ind.fitness.values = fit
-        
-        print(f"Initial best fitness: {min(fitnesses)[0]:.4f}")
-        
-        # Evolution loop
-        for generation in range(n_gen):
-            # Select offspring
-            offspring = self.toolbox.select(population, len(population))
-            offspring = list(map(self.toolbox.clone, offspring))
-            
-            # Apply crossover
-            for child1, child2 in zip(offspring[::2], offspring[1::2]):
-                if random.random() < cxpb:
-                    self.toolbox.mate(child1, child2)
-                    del child1.fitness.values
-                    del child2.fitness.values
-            
-            # Apply mutation
-            for mutant in offspring:
-                if random.random() < mutpb:
-                    self.toolbox.mutate(mutant)
-                    del mutant.fitness.values
-            
-            # Evaluate invalid individuals
-            invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
-            fitnesses = list(map(self.toolbox.evaluate, invalid_ind))
-            for ind, fit in zip(invalid_ind, fitnesses):
-                ind.fitness.values = fit
-            
-            # Replace population
-            population[:] = offspring
-            
-            # Print progress every 10 generations
-            if generation % 10 == 0:
-                best_fitness = min(ind.fitness.values[0] for ind in population)
-                print(f"Generation {generation:2d}: Best fitness = {best_fitness:.4f}")
-          # Get best individual
-        best_individual = tools.selBest(population, 1)[0]
+
+        mu = pop_size
+        lambda_ = int(pop_size * 1.5)
+
+        population = self.toolbox.population(n=mu)
+        hof = tools.HallOfFame(1)
+
+        stats = tools.Statistics(lambda ind: ind.fitness.values)
+        stats.register("min", np.min)
+        stats.register("avg", np.mean)
+        stats.register("std", np.std)
+
+        if enable_convergence:
+            # Use custom algorithm with convergence detection
+            population, logbook = self._custom_eaMuPlusLambda_with_convergence(
+                population, self.toolbox,
+                mu=mu, lambda_=lambda_,
+                cxpb=cxpb, mutpb=mutpb,
+                ngen=n_gen,
+                stats=stats,
+                halloffame=hof,
+                verbose=True,
+                convergence_threshold=convergence_threshold,
+                patience=patience
+            )
+        else:
+            # Use standard DEAP algorithm
+            population, logbook = eaMuPlusLambda(
+                population, self.toolbox,
+                mu=mu, lambda_=lambda_,
+                cxpb=cxpb, mutpb=mutpb,
+                ngen=n_gen,
+                stats=stats,
+                halloffame=hof,
+                verbose=True
+            )
+
+        best_individual = hof[0]
         best_fitness = best_individual.fitness.values[0]
-        
-        # Post-process: ensure reasonable number of foods
-        num_selected = sum(best_individual)
-        if num_selected > 15:
-            print(f"⚠️  Too many foods selected ({num_selected}), applying post-processing...")
-            # Keep only the top foods based on their individual contribution
-            selected_indices = [i for i, selected in enumerate(best_individual) if selected]
-            food_scores = []
-            
-            for idx in selected_indices:
-                food = self.df.iloc[idx]
-                score = 0
-                for nutrient, target in daily_targets.items():
-                    if nutrient in food and target > 0:
-                        contribution = food[nutrient] / target if not pd.isna(food[nutrient]) else 0
-                        score += min(contribution, 1.0)  # Cap contribution at 100%
-                food_scores.append((idx, score))
-            
-            # Keep top 10 foods
-            food_scores.sort(key=lambda x: x[1], reverse=True)
-            best_foods = [idx for idx, _ in food_scores[:10]]
-            
-            # Create new individual with only top foods
-            new_individual = [0] * len(best_individual)
-            for idx in best_foods:
-                new_individual[idx] = 1
-            
-            best_individual = new_individual
-            num_selected = sum(best_individual)
+        generations_run = len(logbook)
         
         print(f"\n🏆 OPTIMIZATION COMPLETE")
-        print(f"Final best fitness: {best_fitness:.4f}")
-        print(f"Foods selected: {num_selected}")
-        
-        # Extract selected foods
+        print(f"   Generations run: {generations_run}/{n_gen}")
+        print(f"   Best fitness: {best_fitness:.4f}")
+        print(f"   Foods selected: {sum(best_individual)}")
+
         selected_foods = self.df[np.array(best_individual, dtype=bool)].copy()
-        
-        if len(selected_foods) == 0:
-            print("❌ No foods selected by genetic algorithm!")
-            return pd.DataFrame()
-        
-        # Display selected foods
-        print(f"\n📋 SELECTED FOODS:")
-        for i, (_, food) in enumerate(selected_foods.iterrows(), 1):
-            name = food.get('food_item', 'Unknown')
-            calories = food.get('calories', 0)
-            print(f"{i:2d}. {name}: {calories:.1f} cal")
-        
+        selected_foods['selected'] = True
         return selected_foods
     
     def evaluate_meal_plan(self, meal_plan: pd.DataFrame, daily_targets: Dict[str, float]) -> Dict[str, float]:
-        """
-        Evaluate how well the meal plan meets targets.
-        
-        Args:
-            meal_plan: Selected foods DataFrame
-            daily_targets: Target nutritional values
-            
-        Returns:
-            Dictionary with nutrition totals and percentages
-        """
         if meal_plan.empty:
             return {}
         
@@ -308,43 +318,39 @@ class DEAPMealGenerator:
                 target = daily_targets[nutrient]
                 percentage = (total / target * 100) if target > 0 else 0
                 
-                # Status determination
+                # Calculate numerical score
                 if nutrient in critical_nutrients:
                     if 95 <= percentage <= 105:
                         status = "🎯 Perfect"
+                        score = 100
                     elif 90 <= percentage <= 110:
                         status = "✓ Good"
+                        score = 80
                     else:
                         status = "❌ Poor"
+                        score = 20
                 else:
                     if 80 <= percentage <= 120:
                         status = "✓ Good"
+                        score = 80
                     else:
                         status = "⚠️ Outside range"
+                        score = 40
                 
                 results[nutrient] = {
                     'total': total,
                     'target': target,
                     'percentage': percentage,
-                    'status': status
+                    'status': status,
+                    'score': score  # Add this line
                 }
                 
-                print(f"{nutrient.capitalize():15}: {total:8.1f} / {target:8.1f} ({percentage:6.1f}%) {status}")
+                print(f"{nutrient.capitalize():15}: {total:8.1f} / {target:8.1f} ({percentage:6.1f}%) {status} - score: {score}")
         
         return results
 
 
 def generate_deap_meal_plan(df: pd.DataFrame, daily_targets: Dict[str, float]) -> pd.DataFrame:
-    """
-    Convenience function to generate meal plan using DEAP algorithm.
-    
-    Args:
-        df: Food database DataFrame
-        daily_targets: Target nutritional values
-        
-    Returns:
-        DataFrame containing optimized food selection
-    """
     try:
         generator = DEAPMealGenerator(df)
         meal_plan = generator.generate_meal_plan(daily_targets)

@@ -33,7 +33,7 @@ def generate_meal_plan_api(
         Tuple of (transformed_meal_plan, daily_targets)
     """
     # Use the final cleaned dataset
-    df = pd.read_csv("./dataset/process_dataset/final_usable_food_dataset.csv")
+    df = pd.read_csv("./dataset/product_dataset/food_dataset_with_ids.csv")
 
     age = calculate_age(dob)
     bmi = calculate_bmi(height, weight)
