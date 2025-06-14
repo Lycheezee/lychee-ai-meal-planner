@@ -93,7 +93,7 @@ def fuzzy_calorie_adjustment(bmi: float, pal: float, age: float) -> float:
         if bmi_cat != 'Any': mem = min(mem, bmi_mem[bmi_cat])
         if ex_cat != 'Any': mem = min(mem, ex_mem[ex_cat])
         if age_cat != 'Any': mem = min(mem, age_mem[age_cat])
-        print(mem, adj)
+
         numerator   += mem * adj
         denominator += mem
 

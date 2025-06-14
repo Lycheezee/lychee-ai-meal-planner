@@ -240,8 +240,8 @@ class DEAPMealGenerator:
 
 
     def generate_meal_plan(self, daily_targets: Dict[str, float], 
-                      pop_size: int = 99, n_gen: int = 98,
-                      cxpb: float = 0.893, mutpb: float = 0.591,
+                      pop_size: int = 87, n_gen: int = 85,
+                      cxpb: float = 0.821, mutpb: float = 0.356,
                       enable_convergence: bool = True,
                       convergence_threshold: float = 0.1,
                       patience: int = 5) -> pd.DataFrame:

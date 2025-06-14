@@ -1,0 +1,46 @@
+{
+  "generation_timestamp": "20250613_221444",
+  "n_samples": 500,
+  "target_nutrition": {
+    "calories": 2901,
+    "proteins": 73,
+    "carbohydrates": 363,
+    "fats": 97,
+    "fibers": 32,
+    "sugars": 50,
+    "sodium": 2300,
+    "cholesterol": 300
+  },
+  "param_ranges": {
+    "pop_size": [
+      55,
+      95
+    ],
+    "n_gen": [
+      50,
+      100
+    ],
+    "cxpb": [
+      0.7,
+      0.9
+    ],
+    "mutpb": [
+      0.3,
+      0.7
+    ]
+  },
+  "dataset_shape": [
+    500,
+    8
+  ],
+  "column_names": [
+    "pop_size",
+    "n_gen",
+    "cxpb",
+    "mutpb",
+    "overall_score",
+    "critical_score",
+    "num_foods",
+    "exec_time"
+  ]
+}
