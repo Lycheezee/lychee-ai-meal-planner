@@ -5,68 +5,12 @@
 # American Heart Association — dietary cholesterol recommendation
 # Calorie ranges updated based on research data for ages 18-60, weight ranges 50-90kg (male) and 45-85kg (female)
 
-# Base calories for different age groups and activity levels based on Vietnamese dietary guidelines
-activity_calories = {
-    'male': {
-        # Children & Youth (1-18 years)
-        'youth': {
-            'light': 2503,      # Light activity
-            'moderate': 2948,   # Moderate activity - 1-2 years: 948 kcal/day, 17-18 years: 3410 kcal/day
-            'vigorous': 3410    # Vigorous activity
-        },
-        # Adults (18-29.9 years)
-        'young_adult': {
-            'light': 3050,      # Light activity (PAL 1.75)
-            'moderate': 3600,   # Moderate activity (PAL 1.75)
-            'vigorous': 4200    # Vigorous activity (PAL 1.75)
-        },
-        # Adults (30-59.9 years)
-        'adult': {
-            'light': 2950,      # Light activity (PAL 1.75)
-            'moderate': 3400,   # Moderate activity (PAL 1.75) 
-            'vigorous': 3950    # Vigorous activity (PAL 1.75)
-        },
-        # Elderly (60+ years)
-        'elderly': {
-            'light': 2450,      # Light activity (PAL 1.75)
-            'moderate': 2850,   # Moderate activity (PAL 1.75)
-            'vigorous': 3300    # Vigorous activity (PAL 1.75)
-        }
-    },
-    'female': {
-        # Children & Youth (1-18 years)
-        'youth': {
-            'light': 2100,      # Light activity
-            'moderate': 2450,   # Moderate activity - 1-2 years: 865 kcal/day, 17-18 years: 2503 kcal/day  
-            'vigorous': 2800    # Vigorous activity
-        },
-        # Adults (18-29.9 years)
-        'young_adult': {
-            'light': 2400,      # Light activity (PAL 1.75)
-            'moderate': 2800,   # Moderate activity (PAL 1.75)
-            'vigorous': 3250    # Vigorous activity (PAL 1.75)
-        },
-        # Adults (30-59.9 years)  
-        'adult': {
-            'light': 2250,      # Light activity (PAL 1.75)
-            'moderate': 2600,   # Moderate activity (PAL 1.75)
-            'vigorous': 3000    # Vigorous activity (PAL 1.75)
-        },
-        # Elderly (60+ years)
-        'elderly': {
-            'light': 2100,      # Light activity (PAL 1.75)
-            'moderate': 2450,   # Moderate activity (PAL 1.75)
-            'vigorous': 2800    # Vigorous activity (PAL 1.75)
-        }
-    }
-}
-
 # Default targets (average across all age groups and activity levels)
 male_targets = {
-    'calories': 3218,  # Average of all male activity_calories: (2954+3617+3433+2867)/4
-    'proteins': 80,    # ~10% of calories - 1g protein = 4 kcal
-    'carbohydrates': 402,  # ~50% of calories - 1g carb = 4 kcal
-    'fats': 107,       # ~30% of calories - 1g fat = 9 kcal
+    'calories': 1794.29,
+    'proteins': 67,        # 15% of calories, 4 kcal/g
+    'carbohydrates': 247,   # 55% of calories, 4 kcal/g
+    'fats': 60,            # 30% of calories, 9 kcal/g
     'fibers': 38,      # Based on dietary guidelines for adult men
     'sugars': 50,      # Limit based on WHO recommendations
     'sodium': 2300,    # FDA guidance in mg
@@ -74,10 +18,10 @@ male_targets = {
 }
 
 female_targets = {
-    'calories': 2584,  # Average of all female activity_calories: (2450+2817+2617+2450)/4
-    'proteins': 65,    # ~10% of calories - 1g protein = 4 kcal
-    'carbohydrates': 323,  # ~50% of calories - 1g carb = 4 kcal
-    'fats': 86,        # ~30% of calories - 1g fat = 9 kcal
+    'calories': 1434.29,
+    'proteins': 54,        # 15% of calories, 4 kcal/g
+    'carbohydrates': 197,   # 55% of calories, 4 kcal/g
+    'fats': 48,            # 30% of calories, 9 kcal/g
     'fibers': 25,      # Based on dietary guidelines for adult women
     'sugars': 50,      # Limit based on WHO recommendations
     'sodium': 2300,    # FDA guidance in mg
@@ -85,10 +29,10 @@ female_targets = {
 }
 
 test_targets = {
-    'calories': 2901,
-    'proteins': 73,
-    'carbohydrates': 363,
-    'fats': 97,
+    'calories': 1614.29,
+    'proteins': 61,
+    'carbohydrates': 222,
+    'fats': 54,
     'fibers': 32,
     'sugars': 50,
     'sodium': 2300, 

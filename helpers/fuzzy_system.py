@@ -54,24 +54,22 @@ AGE_CATEGORIES = {
 }
 
 Rules: List[Tuple[str, str, str, float]] = [
-    ('Severely_Underweight', 'Any', 'Any',         1.30),
+    ('Severely_Underweight',    'Any', 'Any',         1.20),
+    ('Underweight',             'Any', 'Any',         1.10),
+    ('Normal',                  'Any', 'Any',         1.0),
+    ('Overweight',              'Any', 'Any',         0.9),
+    ('Obese_I',                 'Any', 'Any',         0.8),
+    ('Obese_II',                'Any', 'Any',         0.7),
 
-    ('Underweight',           'Any', 'Any',         1.20),
-
-    ('Normal',                'Sedentary', 'Adult', 0.85),
-    ('Normal',                'Light',     'Any',         0.95),
-    ('Normal',                'Moderate',  'Any',         1.00),
-    ('Normal',                'Active',    'Any',         1.05),
-    ('Normal',                'Very_Active','Any',         1.10),
-    ('Normal',                'Very_Active','Youth',         1.2),
-    ('Normal',                'Very_Active','Young_Adult',         1.30),
+    ('Normal',                 'Sedentary',  'Adult',       1.2),
+    ('Normal',                 'Light',      'Any',         1.3),
+    ('Normal',                 'Moderate',   'Any',         1.7),
+    ('Normal',                 'Active',     'Any',         2.0),
+    ('Normal',                 'Very_Active','Any',         2.5),
+    ('Normal',                 'Very_Active','Young_Adult', 3.0),
     
-    ('Any',                   'Active',     'Any',         1.20),
-    ('Any',                   'Very_Active','Any',         1.30),
-
-    ('Overweight',            'Any',       'Any',         0.85),
-    ('Obese_I',               'Any',       'Any',         0.75),
-    ('Obese_II',              'Any',       'Any',         0.70),
+    ('Any',                     'Active',     'Any',        2.0),
+    ('Any',                     'Very_Active','Any',        2.40),
 ]
 
 # 4. Fuzzy inference engine
