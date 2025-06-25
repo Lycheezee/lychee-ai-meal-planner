@@ -46,6 +46,7 @@ EXERCISE_CATEGORIES = {
 }
 
 AGE_CATEGORIES = {
+    'Child':        lambda age: trapmf(age, 12, 14, 16, 18),
     'Youth':        lambda age: trapmf(age, 18, 18, 22, 25),
     'Young_Adult':  lambda age: trapmf(age, 25, 30, 35, 35),
     'Adult':        lambda age: trapmf(age, 35, 40, 50, 65),
